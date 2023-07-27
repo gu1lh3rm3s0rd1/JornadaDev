@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .cor {
+      color: red;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇOES ScrollTop e ScrollLeft</h1>
+  <h1 id="subtitulo">
+    Funções para gerenciar a barra de rolagem, tanto na horizontal quanto na
+    vertical.
+  </h1>
+  <br /><br />
+
+  <div class="menu">
+    <button id="bt_rolar_left">Rolar Left</button>
+    <button id="bt_rolar_top">Rolar Top</button>
+    <button id="bt_pos_left">Posição Left</button>
+    <button id="bt_pos_top">Posição Top</button>
+    <button id="bt_reset_pos">Resetar Posição</button>
+  </div>
+  <br /><br />
+
+  <div id="texto" style="
+        border: 1px solid black;
+        width: 200px;
+        height: 300px;
+        overflow: scroll;
+      ">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat.
+  </div>
+
+  <script>
+    //definindo a posicao de rolagem p/ os elementos
+    $("#bt_rolar_left").click(() => {
+      $("#texto").scrollLeft(45);
+    });
+
+    $("#bt_rolar_top").click(() => {
+      $("#texto").scrollTop(150);
+    });
+
+    //obtendo a posicao dos elementos - basta remover os valores definidos
+    $("#bt_pos_left").click(() => {
+      alert.$("#texto").scrollLeft();
+    });
+
+    $("#bt_pos_top").click(() => {
+      alert.$("#texto").scrollTop();
+    });
+
+    //resetando a posicao
+    $("#bt_reset_pos").click(() => {
+      $("#texto").scrollLeft(0).scrollTop(0);
+      //$('#texto').scrollTop(0)
+    });
+  </script>
+</body>
+
+</html>

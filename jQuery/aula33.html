@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .cor {
+      background-color: yellow;
+      border: 1px solid red;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇAO EACH</h1>
+  <h1 id="subtitulo">
+    Permite atribuir uma função para CADA elemento de um conjunto de
+    elementos.
+  </h1>
+  <br />
+
+  <div>
+    <button id="btn_each">Função each()</button>
+    <button id="btn_cor">Classe cor</button>
+  </div>
+  <br />
+
+  <p>Cursos</p>
+  <p>Curso de JQuery</p>
+  <p>Função each()</p>
+  <p>Cursos.com.br</p>
+  <p>youtube.com/cursos</p>
+
+  <script>
+    //percorrera cada elemento p encontrado e informara oq esta atribuido nele
+    $("#btn_each").click(() => {
+      $("p").each(function () {
+        alert($(this).text());
+      });
+    });
+
+    //para cada elemento com a tag p, adicionara a classe cor
+    $("#btn_cor").click(() => {
+      $("p").each(function () {
+        $(this).addClass("cor");
+      });
+    });
+  </script>
+</body>
+
+</html>

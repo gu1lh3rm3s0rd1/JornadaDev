@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">SELECIONANDO AS POSIÇOES DOS ELEMENTOS - POSITION</h1>
+  <h1 id="subtitulo">
+    A função retorna valores de propriedades e permite alterar esses valores.
+  </h1>
+  <br />
+
+  <p>
+    <button id="btnPosicao">Posição</button><br /><br />
+    <label>Topo:</label>
+    <input type="range" id="top" name="top" min="0" max="500" />
+    <label>Left:</label>
+    <input type="range" id="left" name="top" min="0" max="500" />
+  </p>
+
+  <div id="caixa" class="caixa" style="position: absolute; left: 100px; top: 260px; background-color: red"></div>
+  <br /><br /><br /><br /><br /><br />
+
+  <h1 id="titulo">FUNÇAO OFFSET</h1>
+  <h1 id="subtitulo">
+    Com ela podemos alterar as propriedades dos elementos referenciados
+  </h1>
+
+  <script>
+    //position - obtem o top/left - as propriedades de um elemento
+    $("#btnPosicao").click(() => {
+      //position top/left
+      let pt = $("#caixa").position().top;
+      let pl = $("#caixa").position().left;
+      //offset - vamos alterar as propriedades se quisermos
+      //offset top/left
+      let ot = $("#caixa").offset().top;
+      let ol = $("#caixa").offset().left;
+      alert(
+        "top p:" +
+        pt +
+        " | left p:" +
+        pl +
+        "\ntop o:" +
+        ot +
+        " | left o:" +
+        ol
+      );
+    });
+
+    $("#top").change((e) => {
+      let valor = document.getElementById(e.target.id).value;
+      //$('#caixa').css({"top": valor + 'px'})
+      //ao contrario do css, o offset faz a definicao sozinho da propriedade
+      $("#caixa").offset({ top: valor });
+    });
+
+    $("#left").change((e) => {
+      let valor = document.getElementById(e.target.id).value;
+      //$('#caixa').css({"left": valor + 'px'})
+      $("#caixa").offset({ left: valor });
+    });
+  </script>
+</body>
+
+</html>

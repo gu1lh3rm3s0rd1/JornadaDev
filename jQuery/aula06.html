@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    div {
+      border: 1px solid red;
+      padding: 10px;
+    }
+
+    p {
+      border: 1px solid blue;
+      padding: 10px;
+    }
+
+    span {
+      border: 1px solid green;
+      padding: 10px;
+    }
+
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- EVENTOS -->
+  <h1 id="titulo">EVENTOS</h1>
+  <h2 id="subtitulo">
+    DESCOBRINDO QUEM DISPAROU O EVENTO E QUAL O EVENTO QUE FOI DISPARADO
+  </h2>
+
+  <p id="texto1">Cursos</p>
+  <br />
+  <p id="resultado"></p>
+  <br />
+
+  <h2 id="subtitulo">APRENDA COMO PARAR A PROPAGACAO DE UM EVENTO</h2>
+
+  <div>
+    <p>Cursos <br /><br /><span>Curso de JQuery</span></p>
+  </div>
+
+  <script>
+    //EVENTOS
+    $(document).on({
+      click: () => {
+        $("#resultado").text(
+          event.type + " - um click foi detectado: " + event.witch
+        );
+      },
+
+      keydown: () => {
+        $("#resultado").text(
+          event.type + " - uma tecla foi pressionada: " + event.witch
+        );
+      },
+    });
+
+    //a funcao stoppropagation limitara a propagacao ao elemento atual a qual ela for atribuido, ou seja, ao iniciar o
+    //'programa' daremos um click e o evento funcionara somente à aquele click, propagara ao evento anterior ou superior
+    $("div").click(() => {
+      alert("Evento disparado na DIV");
+    });
+
+    $("p").click(() => {
+      event.stopPropagation();
+      alert("Evento disparado na tag P");
+    });
+
+    $("span").click(() => {
+      event.stopPropagation();
+      alert("Evento disparado no span");
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO TOGGLE</h1>
+  <h1 id="subtitulo">
+    CONTROLA A VISIBILIDADE DO COMPONENTE SEM TER QEU RECORRER AO HIDE/SHOW
+  </h1>
+  <br />
+
+  <div id="caixa" style="border: 1px solid black; width: 200px">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+  <br />
+
+  <button id="btn_mostrar_ocultar">Mostrar/Ocultar</button><br /><br />
+
+  <div id="caixa2" style="border: 1px solid black; width: 200px">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+  <br />
+
+  <button id="btn_mostrar_ocultar2">Ocultar</button>
+
+  <script>
+    //mostra/oculta os itens no click
+    $("#btn_mostrar_ocultar").click(function () {
+      $(caixa).toggle();
+    });
+
+    //mostra/oculta os itens no click e troca o titulo do botao
+    $("#btn_mostrar_ocultar2").click(function () {
+      $(caixa2).toggle();
+      if ($("#caixa2").is(":visible")) {
+        $("#btn_mostrar_ocultar2").text("Ocultar");
+      } else {
+        $("#btn_mostrar_ocultar2").text("Mostrar");
+      }
+    });
+  </script>
+</body>
+
+</html>

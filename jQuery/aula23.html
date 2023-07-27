@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 10px 0px 0px 0px;
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    .subcaixa {
+      width: 100px;
+      height: 100px;
+      margin: 0px 0px 10px 10px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">MANIPULANDO PROPRIEDADES CSS C/ JQUERY</h1>
+  <h1 id="subtitulo">
+    Para manipular um elemento, basta entrar na função e adicionar as
+    propriedades e valores desejados.
+  </h1>
+
+  <p>
+    <button id="btnVerde">Verde</button>
+    <button id="btnVermelho">Vermelho</button>
+    <button id="btnAzul">Azul</button>
+  </p>
+
+  <div id="caixa" class="caixa">
+    <div id="d0" class="subcaixa" style="background-color: white">0</div>
+  </div>
+
+  <script>
+    //
+    $("#btnVerde").click(() => {
+      //altera a propriedade css de um elemento
+      $("#caixa").css({ "background-color": "#0f0", color: "#f0f" });
+      //descobrir o valor aplicado a um elemento
+      alert($("#caixa").css("background-color"));
+    });
+
+    $("#btnVermelho").click(() => {
+      $("#caixa").css({ "background-color": "#f00", color: "#0ff" });
+      alert($("#caixa").css("background-color"));
+    });
+
+    $("#btnAzul").click(() => {
+      $("#caixa").css({ "background-color": "#00f", color: "#f00" });
+      alert($("#caixa").css("background-color"));
+    });
+  </script>
+</body>
+
+</html>

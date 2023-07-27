@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO FINISH</h1>
+  <h1 id="subtitulo">
+    PERMITE FINALIZAR UMA ANIMAÇAO, INTERROMPELA DURANTE O PROCESSO
+  </h1>
+  <br /><br />
+
+  <p>
+    <button id="btnAumentar">Aumentar</button>
+    <button id="btnDiminuir">Diminuir</button>
+  </p>
+
+  <p>
+    <button id="btnFinalizar">Finalizar</button>
+  </p>
+
+  <div id="caixa" class="caixa"></div>
+  <br />
+
+  <h1 id="titulo">FUNÇÃO QUEUE</h1>
+  <h1 id="subtitulo">PERMITE OBTER INFORMACOES DA FILA DE ANIMACOES</h1>
+  <br /><br />
+  <p>clique nos botões novamente</p>
+
+  <p id="info"></p>
+
+  <script>
+    const cx = $("#caixa");
+    //
+    $("#btnAumentar").click(function () {
+      $("#caixa").animate(
+        { width: "500px" },
+        {
+          duration: 5000,
+          complete: () => {
+            $("#info").text(cx.queue().length);
+          },
+        }
+      );
+      //a funcao queue ira aramzazenar e mostrar dados relacionados as animaçoes
+      $("#info").text(cx.queue().length);
+    });
+
+    //
+    $("#btnDiminuir").click(function () {
+      $("#caixa").animate(
+        { width: "200px" },
+        {
+          duration: 5000,
+          complete: () => {
+            $("#info").text(cx.queue().length);
+          },
+        }
+      );
+      //a funcao queue ira aramzazenar e mostrar dados relacionados as animaçoes
+      $("#info").text(cx.queue().length);
+    });
+
+    //encerra a aniamcao-animate
+    $("#btnFinalizar").click(function () {
+      $("#caixa").finish();
+    });
+  </script>
+</body>
+
+</html>

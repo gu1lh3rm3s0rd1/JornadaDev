@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #bloco {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    }
+
+    #bloco2 {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(255, 0, 0);
+    }
+
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- EVENTOS -->
+  <h1 id="titulo">EVENTOS</h1>
+  <h2 id="subtitulo">OBJETOS - COMO USAR O OBJETO-EVENT</h2>
+  <h2 id="subtitulo">ORIENTANDO A POSIÇÃO DO MOUSE</h2>
+
+  <p id="texto"></p>
+  <br />
+
+  <h2 id="subtitulo">OBJETOS - COMO USAR O TARGET-EVENT</h2>
+  <h2 id="subtitulo">ORIENTANDO A POSIÇÃO DO MOUSE</h2>
+
+  <p id="texto1">Cursos de tcheba</p>
+  <br />
+  <div id="texto2">Cursos de JQuery</div>
+  <p id="resultado"></p>
+  <br />
+
+  <p id="textoo1">Cursos de tcheba</p>
+  <br />
+  <div id="textoo2">Cursos de JQuery</div>
+  <p id="resultadoo"></p>
+
+  <script>
+    //EVENTOS
+
+    let posicaox = 0;
+    let posicaoy = 0;
+
+    //posicao do mouse
+    $(document).mousemove((event) => {
+      posicaox = event.pageX;
+      posicaoy = event.pageY;
+      $("#texto").text(
+        "Mouse X: " + posicaox + "px , Mouse Y: " + posicaoy + "px"
+      );
+    });
+
+    /////////////////////////////////////////////////
+
+    //aponta qual tag o texto1 esta inserida
+    $("#texto1").click((event) => {
+      $("#resultado").text(
+        "Objeto que foi clicado: " + event.target.nodeName
+      );
+    });
+
+    //aponta qual tag o texto2 esta inserida
+    $("#texto2").click((event) => {
+      $("#resultado").text(
+        "Objeto que foi clicado: " + event.target.nodeName
+      );
+    });
+
+    //aponta qualquer tag do documento atual
+    $(document).click((event) => {
+      $("#resultadoo").text("A TAG deste obejto é: " + event.target.tagName);
+    });
+
+    //pegando o id do documento atual
+    $(document).click((event) => {
+      $("#resultadoo").text("ID deste objeto é: " + event.target.id);
+      if (event.target.id == "resultadoo") {
+        alert("Resultado clicado");
+      }
+    });
+  </script>
+</body>
+
+</html>

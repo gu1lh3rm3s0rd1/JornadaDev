@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de JQuery</title>
+
+    <!-- acessando o arquivo diretametne da documentacao - online -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- acessando o arquivo diretamente do download -->
+    <!--script src="./jquery-3.7.0.min.js"></script-->
+
+    <!-- tambem é possivel e correto chamar as funcoes js e jq diretamten no head de um projeto -->
+    <script>
+      $(document).ready(() => {
+        //com o ready, o codigo é executado assim q o document é feito, nesse caso Cursos sera imprimido na pagina
+        $("#texto").text("Cursos");
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- chamando jq de maneira simples -->
+    <h1>teste</h1>
+    <p>teste</p>
+
+    <!-- usando js e jq de maneiras quase identicas -->
+    <div id="calc">
+      <label for="">Valor 1</label>
+      <input type="text" id="v1" value="0" /><br /><br />
+
+      <label for="">Valor 2</label>
+      <input type="text" id="v2" value="0" /><br /><br />
+
+      <label for="">Resultado</label>
+      <input type="text" id="res" value="0" /><br /><br />
+
+      <button id="btn_somarjs">Somar JS</button>
+      <button id="btn_somarjq">Somar JQ</button>
+    </div>
+
+    <!-- usando jq diretamente do head -->
+    <h2 id="texto"></h2>
+  </body>
+
+  <script>
+    //seletores em jquery - $ ou JQuery
+    $("p").css("color", "#f00");
+    jQuery("h1").css("color", "#f00");
+
+    //primeiro em JS puro para vermos as diferenças entre JS e JQ
+    //JavaScript ----- eu selciono um item e coloco dentro de uma vairavel
+    let btn_somarjs = document
+      .getElementById("btn_somarjs")
+      .addEventListener("click", () => {
+        let v1 = document.getElementById("v1").value;
+        let v2 = document.getElementById("v2").value;
+        let soma = parseInt(v1) + parseInt(v2);
+        let res = (document.getElementById("res").value = soma);
+      });
+
+    //JQuery ----- eu aponto o item que eu quero trabalhar
+    $("#btn_somarjq").click(() => {
+      let v1 = parseInt($("#v1").val());
+      let v2 = parseInt($("#v2").val());
+      let soma = v1 + v2;
+      $("#res").val(soma);
+    });
+  </script>
+</html>

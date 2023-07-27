@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: yellow;
+      border: 3px solid red;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇAO INDEX</h1>
+  <h1 id="subtitulo">
+    Permite retornar a posiçao do elemento dentro da pagina.
+  </h1>
+
+  <div id="caixa" class="caixa">
+    <p id="p1">Cursos</p>
+    <p id="p2">Curso de JQuery</p>
+    <p id="p3">Função each()</p>
+    <p id="p4">Cursos.com.br</p>
+    <p id="p5">youtube.com/cursos</p>
+  </div>
+
+  <h4 id="p1">Cursos</h4>
+  <h4 id="p2">Curso de JQuery</h4>
+  <h4 id="p3">Função each()</h4>
+  <h4 id="p4">Cursos.com.br</h4>
+  <h4 id="p5">youtube.com/cursos</h4>
+
+  <h1 id="titulo">FUNÇAO NOCONFLICT</h1>
+  <h1 id="subtitulo">
+    Permite substituir o seletor do JQuery por qualquer outro que desejar.
+  </h1>
+
+  <h5 id="p1">Cursos</h5>
+  <h5 id="p2">Curso de JQuery</h5>
+  <h5 id="p3">Função each()</h5>
+  <h5 id="p4">Cursos.com.br</h5>
+  <h5 id="p5">youtube.com/cursos</h5>
+
+  <h1 id="titulo">FUNÇAO LENGTH</h1>
+  <h1 id="subtitulo">
+    Permite retornar a quantidade de elementos de um container.
+  </h1>
+
+  <button id="btn_p">Qtd de p</button>
+  <button id="btn_h4">Qtd de h4</button>
+  <button id="btn_h5">Qtd de h5</button>
+
+  <script>
+    //index
+    $("p").click((e) => {
+      alert("INDEX - POSICAO NO BODY: " + $(e.currentTarget).index());
+    });
+
+    $("h4").click(function () {
+      alert("INDEX - POSICAO NO BODY: " + $(this).index());
+    });
+
+    //trocaremos a variavel padrao do jquery - novo indicador
+    let x = $.noConflict();
+    x("h5").click(function () {
+      alert("INDEX - POSICAO NO BODY: " + x(this).index());
+    });
+
+    //funcao length - conta a qtd
+    x("#btn_p").click(function () {
+      alert("LENGTH: A QTD ATUAL DESSA TAG É: " + x("p").length);
+    });
+
+    x("#btn_h4").click(function () {
+      alert("LENGTH: A QTD ATUAL DESSA TAG É: " + x("h4").length);
+    });
+
+    x("#btn_h5").click(function () {
+      alert("LENGTH: A QTD ATUAL DESSA TAG É: " + x("h5").length);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #bloco {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    }
+
+    #bloco2 {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(255, 0, 0);
+    }
+
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- EVENTOS -->
+  <h1 id="titulo">EVENTOS</h1>
+  <h2 id="subtitulo">TRIGGER - ACIONANDO EVENTOS DE FORMA DINAMICA</h2>
+  <h2 id="subtitulo">
+    O METODO TRIGGER DISPARA UM EVENTO ESPECIFICO PARA UM ELEMENTO INDICADO
+  </h2>
+
+  <div style="display: flex; justify-content: space-around">
+    <div id="bloco"></div>
+    <div id="bloco2"></div>
+  </div>
+  <p id="texto"></p>
+
+  <script>
+    //EVENTOS
+    $("#bloco").on({
+      acao: () => {
+        $("#texto").text("De um clique no quadrado vermelho!!");
+      },
+      click: () => {
+        $("#texto").text(
+          "Você deu um clique no quadrado vermelho e agora as açoes do quadrado acima estao disponiveis!!"
+        );
+      },
+      mouseenter: () => {
+        $("#texto").text("Mouse está dentro do quadrado!!");
+      },
+      mouseleave: () => {
+        $("#texto").text("Mouse saiu do quadrado!!");
+      },
+      dbclick: () =>
+        $("#texto").text("Você deu um clique duplo no quadrado!!"),
+    });
+
+    //acioando o evento 'automaticamente' ele ira mostrar na tela o texto de 'acao'
+    $("#bloco").trigger("acao");
+
+    //acionaremos os eventos  do bloco preto atraves de um click no bloco veremlho
+    $("#bloco2").click(() => {
+      $("#bloco").trigger("click");
+    });
+  </script>
+</body>
+
+</html>

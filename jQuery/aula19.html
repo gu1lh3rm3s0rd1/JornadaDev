@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .menu {
+      background-color: gray;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .itemMenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+
+    .submenu {
+      display: none;
+      border: 1px solid black;
+      width: 100%;
+      height: 30px;
+      justify-content: center;
+    }
+
+    .itemSubMenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      text-transform: capitalize;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO FADE-TO</h1>
+  <h1 id="subtitulo">PERMITE CONTROLAR A OPACIDADE DE FORMA PERSONALIZADA</h1>
+  <br /><br />
+
+  <div id="menu" class="menu">
+    <div class="itemMenu">home</div>
+    <div class="itemMenu">jquery</div>
+    <div class="itemMenu">canvas</div>
+    <div class="itemMenu">python</div>
+    <div class="itemMenu">javaScript</div>
+  </div>
+  <br /><br /><br /><br />
+
+  <h1 id="titulo">FUNÇÃO FADE TOGGLE</h1>
+  <h1 id="subtitulo">PERMITE CONTROLAR A VISIBILIDADE DE UM ELEMENTO</h1>
+  <br /><br />
+
+  <div id="menu" class="menu">
+    <div class="itemMenu">home</div>
+    <div id="menujquery" class="itemMenu">jquery</div>
+    <div id="menucanvas" class="itemMenu">canvas</div>
+    <div id="menupython" class="itemMenu">python</div>
+    <div id="menujavaScript" class="itemMenu">javaScript</div>
+  </div>
+
+  <div id="submenu_jquery" class="submenu">
+    <div class="itemSubMenu">Aulas JQuery</div>
+    <div class="itemSubMenu">Material JQuery</div>
+  </div>
+  <div id="submenu_canvas" class="submenu">
+    <div class="itemSubMenu">Aulas Canvas</div>
+    <div class="itemSubMenu">Material Canvas</div>
+  </div>
+  <div id="submenu_python" class="submenu">
+    <div class="itemSubMenu">Aulas Python</div>
+    <div class="itemSubMenu">Material Python</div>
+  </div>
+  <div id="submenu_javaScript" class="submenu">
+    <div class="itemSubMenu">Aulas javaScript</div>
+    <div class="itemSubMenu">Material javaScript</div>
+  </div>
+
+  <script>
+    //configuramos a velocidade(200 - 2miliS) do efeito, eo nivel da opacidade
+    $(".itemMenu").mouseover(function () {
+      $(this).fadeTo(200, 0.3);
+    });
+
+    //opacidade volta a ser um - 1
+    $(".itemMenu").mouseleave(function () {
+      $(this).fadeTo(200, 1);
+    });
+
+    //explorando a opacidade para habilitar um sub-menu com o toggle
+    $("#menujquery").click(function () {
+      $("#submenu_jquery").fadeToggle();
+      $("#submenu_jquery").css("display", "flex");
+    });
+
+    //ao click o toggle deixa visivel ou nao o elemento do id informado
+    $("#menucanvas").click(function () {
+      $("#submenu_canvas").fadeToggle();
+      $("#submenu_canvas").css("display", "flex");
+    });
+
+    $("#menupython").click(function () {
+      $("#submenu_python").fadeToggle();
+      $("#submenu_python").css("display", "flex");
+    });
+
+    $("#menujavaScript").click(function () {
+      $("#submenu_javaScript").fadeToggle();
+      $("#submenu_javaScript").css("display", "flex");
+    });
+  </script>
+</body>
+
+</html>

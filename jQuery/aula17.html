@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      border: 1px solid black;
+      width: 200px;
+      background-color: blue;
+      color: white;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 180px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">TOGGLE NA FUNÇÃO ANIMATE</h1>
+  <h1 id="subtitulo">
+    TOGGLE FARA A ALTERNANCIA DA PROPRIEDADE CSS DENTRO DO ANIMATE
+  </h1>
+
+  <div id="caixa" class="caixa">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+
+  <button id="btn_tamanho">Aumentar / Diminuir</button>
+  <button id="btn_mostrar">Ocultar / Mostrar</button>
+
+  <script>
+    //
+    $("#btn_tamanho").click(function () {
+      $("#caixa").animate({ width: "toggle", height: "toggle" });
+    });
+
+    //ao inves de ocultar, vamos alterar a opacidade dele de 1 pra 0
+    $("#btn_mostrar").click(function () {
+      $("#caixa").animate({ opacity: "toggle" });
+    });
+  </script>
+</body>
+
+</html>

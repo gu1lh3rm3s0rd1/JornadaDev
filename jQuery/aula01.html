@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <!-- codigo que procurará diretemente o elemento desejado no body -->
+  <!--script>
+    $(document).ready(() => {
+      //com o ready, o codigo é executado assim q o document é feito, nesse caso Cursos sera imprimido na pagina
+      $("#texto").text("Cursos")
+
+    })
+  </script-->
+
+  <style>
+    #bloco {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    }
+
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- EVENTOS -->
+  <h1 id="titulo">EVENTOS</h1>
+
+  <h2 id="subtitulo">EVENTO 1</h2>
+  <div id="bloco"></div>
+  <p id="texto"></p>
+
+  <h2 id="subtitulo">EVENTO 2</h2>
+  <label for="">Digite seu nome: </label>
+  <input type="text" id="nome" />
+  <p id="textoo"></p>
+
+  <!-- a diferenca de colocar o script no head ou diretamente no body é que no head precisamos chamar uma funcao ou evento que 
+  relacione com algum item presente no body. chamando diretamente no body, precisamos de estruturas funcionais, basta chamar a seleçao desejada
+  e atribuir a acao desejada -->
+  <script>
+    //EVENTOS
+    //olhara diretament para o id 'texto' e escrevera a mensagem
+    $("#texto").text("CFB Cursos");
+    //evento de click para alterar a msg da tela
+    $("#bloco").click(() => {
+      $("#texto").text("Clicado no quadrado!!");
+    });
+    //evento que mostrara na tela quando o mouse estiver sobre o quadrado
+    $("#bloco").mouseenter(() => {
+      $("#texto").text("Mouse entrou no quadrado!!");
+    });
+    //evento que mostrara na tela quando o mouse sair
+    $("#bloco").mouseleave(() => {
+      $("#texto").text("Mouse saiu do quadrado!!");
+    });
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //evento que ira 'espelhar' td que for inserido no input
+    $("#nome").keyup(() => {
+      $("#textoo").text($("#nome").val());
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: yellow;
+      border: 3px solid red;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">APRENDENDO SOBRE A FUNÇAO GET</h1>
+  <h1 id="subtitulo">
+    Permite obter um elemento e todas as suas informações.
+  </h1>
+  <br />
+
+  <div>
+    <button id="btn_get">GET</button>
+  </div>
+  <br />
+
+  <div id="elementos" class="caixa"></div>
+  <br />
+
+  <p id="p1">Cursos</p>
+  <p id="p2">Curso de JQuery</p>
+  <p id="p3">Função each()</p>
+  <p id="p4">Cursos.com.br</p>
+  <p id="p5">youtube.com/cursos</p>
+
+  <script>
+    //vamos ver as propriedades dos elementso encontrados por indice e verificar o seu id
+    $("#btn_get").click(() => {
+      let el = $("p").get();
+      console.log(el[0].id);
+    });
+
+    //obter os elementos p e mover para a div de id elementos
+    $("#btn_get").click(() => {
+      $("#elementos").append($("p").get());
+    });
+  </script>
+</body>
+
+</html>

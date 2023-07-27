@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      margin-right: 10px;
+    }
+
+    .caixas {
+      display: flex;
+      width: 100%;
+    }
+
+    .ocultar {
+      display: none;
+    }
+
+    .btnFechar {
+      background-color: red;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO HASCLASS</h1>
+  <h1 id="subtitulo">
+    A função Class verifica se um elemento possui classe e retorna verdadeiro
+    ou falso.
+  </h1>
+  <br /><br />
+
+  <p>
+    <button id="btnReset">Reset</button>
+  </p>
+
+  <div id="caixas" class="caixas">
+    <div id="caixa1" class="caixa" style="background-color: pink">
+      <button id="btnFechar1" class="btnFechar">X</button>
+    </div>
+    <div id="caixa2" class="caixa" style="background-color: green">
+      <button id="btnFechar2" class="btnFechar">X</button>
+    </div>
+    <div id="caixa3" class="caixa" style="background-color: yellow">
+      <button id="btnFechar3" class="btnFechar">X</button>
+    </div>
+    <div id="caixa4" class="caixa" style="background-color: blue">
+      <button id="btnFechar4" class="btnFechar">X</button>
+    </div>
+    <div id="caixa5" class="caixa" style="background-color: aqua">
+      <button id="btnFechar5" class="btnFechar">X</button>
+    </div>
+  </div>
+
+  <script>
+    $(".btnFechar").click((e) => {
+      //ira correr para localizar o ID do elemento clickado e oculatara ele com a classe adicionada
+      $("#" + e.target.id)
+        .parent()
+        .addClass("ocultar");
+    });
+
+    //hasclass verifica se o elemento possui a classe, se sim true, senao false
+    $("#btnReset").click((e) => {
+      let itens = $(".caixa");
+      for (let i = 0; i < itens.length; i++) {
+        let item = $(itens[i]);
+        if (item.hasClass("ocultar")) {
+          item.removeClass("ocultar");
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

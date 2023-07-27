@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 10px 0px 0px 0px;
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    .subcaixa {
+      width: 100px;
+      height: 100px;
+      margin: 0px 0px 10px 10px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇOES APPEND E APPEND-TO</h1>
+  <h1 id="subtitulo">
+    Para adicionar o elemento desejado, basta referenciar a classe e chamar a
+    função "append".
+  </h1>
+
+  <p>
+    <button id="btnAdicionar">Adicionar</button>
+    <button id="btnAdicionar5">Adicionar 5x</button><br /><br />
+    <button id="btnAdicionarr">Adicionar c/ Append To</button>
+  </p>
+
+  <div id="caixa" class="caixa">
+    <div id="d0" class="subcaixa" style="background-color: white">0</div>
+  </div>
+  <br /><br />
+
+  <h1 id="titulo">FUNÇOES REMOVE E EMPTY</h1>
+  <h1 id="subtitulo">
+    Para remover um elemento específico, basta indicá-lo na função. No caso da
+    função "empty", é possível eliminar todos os filhos de um elemento
+    especificado, tornando-o vazio.
+  </h1>
+
+  <p>
+    <button id="btnRemover">Remover Elemento</button>
+    <button id="btnRemoverConteudo">Remover Conteúdo</button>
+  </p>
+
+  <script>
+    //Podemos adicionar um novo elemento com formatação e classe através de uma função anônima
+    $("#btnAdicionar").click(() => {
+      $("#caixa").append("<div class='subcaixa'></div>");
+    });
+
+    let r, g, b;
+    let num = 1;
+    $("#btnAdicionar5").click(() => {
+      for (let i = 0; i < 5; i++) {
+        r = Math.floor(Math.random() * 255);
+        g = Math.floor(Math.random() * 255);
+        b = Math.floor(Math.random() * 255);
+        $("#caixa").append(
+          "<div id='d" +
+          num +
+          "'class='subcaixa' style='background-color: rgb(" +
+          r +
+          "," +
+          g +
+          "," +
+          b +
+          ")'>" +
+          num +
+          "</div>"
+        );
+        num++;
+      }
+    });
+
+    //append to - defnimos um parametor primeiro, depois referenciamos a QUEM ele vai ser aplicado
+    $("#btnAdicionarr").click(() => {
+      for (let i = 0; i < 5; i++) {
+        r = Math.floor(Math.random() * 255);
+        g = Math.floor(Math.random() * 255);
+        b = Math.floor(Math.random() * 255);
+        $(
+          "<div class='subcaixa' style='background-color: rgb(" +
+          r +
+          "," +
+          g +
+          "," +
+          b +
+          ")'></div>"
+        ).appendTo($("#caixa"));
+      }
+    });
+
+    $("#btnRemover").click(() => {
+      $("#d" + (num - 1)).remove();
+      num--;
+    });
+
+    $("#btnRemoverConteudo").click(() => {
+      $("#caixa").empty();
+    });
+  </script>
+</body>
+
+</html>

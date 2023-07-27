@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      width: 200px;
+      height: 250px;
+      padding: 10px;
+      border: 5px solid black;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">APRENDENDO SOBRE AS LARGURAS E ALTURAS DOS ELEMENTOS</h1>
+  <h1 id="subtitulo"></h1>
+
+  <div style="display: flex">
+    <div id="caixa1" class="caixa">Cursos</div>
+    <div id="info" class="caixa"></div>
+    <img src="img/css-box.png" alt="" width="550px" />
+  </div>
+
+  <h1 id="titulo">MODIFICANDO AS LARGURAS E ALTURAS DOS ELEMENTOS</h1>
+  <h1 id="subtitulo"></h1>
+
+  <button id="btn_alterar">ALTERAR</button>
+
+  <script>
+    //variaveis
+    let cx = $("#caixa1");
+
+    //avaliando as propriedades de tamanho e altura
+    $("#info").html(
+      "width: " +
+      cx.width() +
+      "<br/>" +
+      "height: " +
+      cx.height() +
+      "<br/>" +
+      "innerWidth: " +
+      cx.innerWidth() +
+      "<br/>" +
+      "innerHeight: " +
+      cx.innerHeight() +
+      "<br/>" +
+      "outerWidth: " +
+      cx.outerWidth() +
+      "<br/>" +
+      "outerHeight: " +
+      cx.outerHeight() +
+      "<br/>" +
+      "outerWidth(true): " +
+      cx.outerWidth(true) +
+      "<br/>" +
+      "outerHeight(true): " +
+      cx.outerHeight(true) +
+      "<br/>"
+    );
+
+    //modificando as tchebas
+    $("#btn_alterar").click(() => {
+      cx.width(400);
+      cx.height(450);
+      cx.innerWidth(320);
+      cx.innerHeight(370);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .pacote {
+      background-color: yellow;
+      border: 1px solid red;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇOES WRAP E UNWRAP</h1>
+  <h1 id="subtitulo"></h1>
+
+  <div class="menu">
+    <button id="bt_pacote">Empacotar / Desempacotar</button>
+    <button id="bt_pacote_tudo">Empacotar Tudo</button>
+    <button id="bt_pacote_depois">Empacotar Depois</button>
+  </div>
+  <br />
+
+  <p>Cursos de Tcheba</p>
+  <p>Cursos de Tcheba</p>
+  <p>Cursos de Tcheba</p>
+  <p>Cursos de Tcheba</p>
+  <p>Cursos de Tcheba</p>
+
+  <script>
+    //pegando td q tiver a tag 'p'
+    let elementos_p = $("p");
+
+    //add e remove a classe pacote
+    $("#bt_pacote").click(() => {
+      //verifica se o elemento pai do elemento em questao é uma div ou nao
+      if (elementos_p.parent().is("div")) {
+        //se sim, nos removemos td atribuido a ele
+        elementos_p.unwrap();
+      } else {
+        //senao, nos add uma classe
+        elementos_p.wrap('<div class="pacote"></div>');
+      }
+    });
+
+    //ele empacota elementos fora do p, engloba a div para p
+    $("#bt_pacote_tudo").click(() => {
+      elementos_p.wrapAll('<div class="pacote"></div>');
+    });
+
+    //ele empacota somente os elementos dentro de p - add div pacote dentro de p e assim sucessivamente
+    $("#bt_pacote_depois").click(() => {
+      elementos_p.wrapInner('<div class="pacote"></div>');
+    });
+  </script>
+</body>
+
+</html>

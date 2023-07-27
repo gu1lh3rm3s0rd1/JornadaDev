@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .cor {
+      color: red;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇOES REPLACEALL E REPLACEWITH</h1>
+  <h1 id="subtitulo"></h1>
+
+  <div class="menu">
+    <button id="btn_replace1">replace 1</button>
+    <button id="btn_replace2">replace 2</button>
+    <button id="btn_replace3">replace 3</button>
+    <button id="btn_replace4">replace 4</button>
+  </div>
+  <br />
+
+  <div>
+    <h1 class="cor">Cursos</h1>
+    <h1 class="cor">Curso de JQuery</h1>
+    <h1 class="cor">replaceAll</h1>
+    <h1 class="cor">replaceWith</h1>
+  </div>
+
+  <script>
+    //
+    $("#btn_replace1").click(() => {
+      $("<p>trocado</p>").replaceAll(".cor");
+    });
+
+    $("#btn_replace2").click((e) => {
+      $("<div>" + $(e.currentTarget).text() + "</div>").replaceAll(
+        e.currentTarget
+      );
+    });
+
+    $("#btn_replace3").click(() => {
+      $(".cor").replaceWith("<p>trocado</p>");
+    });
+
+    $("#btn_replace4").click((e) => {
+      $(e.currentTarget).replaceWith(
+        "<div>" + $(e.currentTarget).text() + "</div>"
+      );
+    });
+  </script>
+</body>
+
+</html>

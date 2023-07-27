@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇOES TEXT, VAL E HTML EM JQUERY</h1>
+
+  <span>------ METODO TEXT -------</span>
+  <h2 id="caixa">CURSOS</h2>
+  <br />
+
+  <span>------ METODO VAL -------</span>
+  <h2>CURSOS JQUERY</h2>
+  <input type="text" id="texto" /><br /><br />
+
+  <span>------ METODO HTML -------</span> <br /><br />
+  <div id="nome">
+    <div>
+      <input type="text" id="text" />
+    </div>
+  </div>
+
+  <script>
+    //TEXT - seleciono o texto de uma tag com o text
+    $("#caixa").click(function () {
+      alert("TEXTO: " + $(this).text());
+    });
+
+    //VAL - só funciona com elementos de valores, formularios, textos
+    //pego o value de um conteudo
+    $("#texto").click(function () {
+      alert("TEXTO: " + $(this).val());
+    });
+
+    //HTML - seleciono o valor de uma tag com o html
+    $("#nome").click(function () {
+      alert("TEXTO: " + $(this).html());
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      border: 1px solid black;
+      width: 200px;
+      background-color: blue;
+      color: white;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 180px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .caixa2 {
+      border: 1px solid black;
+      width: 200px;
+      background-color: red;
+      color: white;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 450px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO DELAY</h1>
+  <h1 id="subtitulo">DELAY GERARÁ UM TEMPO DE ESPERA NAS AÇÕES</h1>
+
+  <div id="caixa" class="caixa">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+
+  <button id="btn_aumentar">Aumentar</button>
+  <button id="btn_diminuir">Diminuir</button><br /><br /><br /><br /><br /><br /><br />
+
+  <h1 id="titulo">FUNÇÕES FADE-IN E FADE-OUT</h1>
+  <h1 id="subtitulo">OCULTA E MOSTRA CAIXA DE UMA MANEIRA DIFERENTE</h1>
+
+  <div id="caixa2" class="caixa2">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+
+  <button id="btn_mostrar">Mostrar</button>
+  <button id="btn_ocultar">Ocultar</button>
+  <button id="btn_mostrar_ocultar">Mostrar / Ocultar</button>
+
+  <script>
+    //com delay
+    $("#btn_aumentar").click(function () {
+      $("#caixa")
+        .delay(2000)
+        .animate({ width: "500px" })
+        .delay(2000)
+        .animate({ height: "500px" })
+        .delay(2000)
+        .animate({ width: "200px" })
+        .delay(2000)
+        .animate({ height: "200px" });
+    });
+
+    //sem delay
+    $("#btn_diminuir").click(function () {
+      $("#caixa")
+        .animate({ width: "500px" })
+        .animate({ height: "500px" })
+        .animate({ width: "200px" })
+        .animate({ height: "200px" });
+    });
+
+    //fadein - mostra
+    $("#btn_mostrar").click(function () {
+      $("#caixa2").fadeIn();
+    });
+
+    //fadeout - oculta
+    $("#btn_ocultar").click(function () {
+      $("#caixa2").fadeOut();
+    });
+
+    //toggle - oculta ou mostra
+    $("#btn_mostrar_ocultar").click(function () {
+      $("#caixa2").toggle();
+    });
+  </script>
+</body>
+
+</html>

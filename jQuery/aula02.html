@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #bloco {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    }
+
+    #bloco1 {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    }
+
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- EVENTOS -->
+  <h1 id="titulo">EVENTOS</h1>
+
+  <h2 id="subtitulo">FUNCAO 'ON' P/ ADD VARIOS EVENTOS</h2>
+  <h2 id="subtitulo">
+    EVENTOS SIMPLES, CLICK OU DE UM DUPLO CLICK NO QUADRADO
+  </h2>
+
+  <div id="bloco"></div>
+  <p id="texto"></p>
+
+  <h2 id="subtitulo">USANDO O METODO ON</h2>
+
+  <div id="bloco1"></div>
+  <p id="textoo"></p>
+
+  <script>
+    //EVENTOS
+    //click
+    $("#bloco").on("click", () => {
+      $("#texto").text("Você clicou no quadrado!!");
+    });
+
+    //click duplo
+    $("#bloco").on("dblclick", () => {
+      $("#texto").text("Você deu um clique duplo no quadrado!!");
+    });
+
+    //VARIOS EVENTOS
+    $("#bloco1").on({
+      click: () => {
+        $("#textoo").text("Você deu um clique no quadrado!!");
+      },
+      mouseenter: () => {
+        $("#textoo").text("Mouse está dentro do quadrado!!");
+      },
+      mouseleave: () => {
+        $("#textoo").text("Mouse saiu do quadrado!!");
+      },
+      dbclick: () =>
+        $("#textoo").text("Você deu um clique duplo no quadrado!!"),
+    });
+  </script>
+</body>
+
+</html>

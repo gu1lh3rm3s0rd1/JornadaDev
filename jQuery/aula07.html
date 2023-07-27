@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">METODOS PARENT</h1>
+  <h2 id="subtitulo">
+    OBTEM O PAI DE CADA ELEMENTO NO CONJUNTO ATUAL DE ELEMENTOS
+    CORRESPONDENTES, FILTRADA OPCIONALMENTE POR UM SELETOR
+  </h2>
+
+  <div>
+    <ul>
+      <li>
+        <h3>Cursos</h3>
+        <span>Curso de JQuery</span>
+        <p>Seletores parent</p>
+      </li>
+    </ul>
+  </div>
+  <br /><br />
+
+  <h2 id="subtitulo">LIMITANDO O PARENT DO ELEMENTO</h2>
+  <h2 id="subtitulo">
+    AQUI, TUDO Q FOR 'PAI' DE 'p' DICARA EM VERMELHO ATE CHEGAR NA DIV
+    PRINCIPAL
+  </h2>
+
+  <div>
+    <ul>
+      <li>
+        <h3>Cursos</h3>
+        <span>Curso de JQuery</span>
+        <p>Seletores parent</p>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    //mostrando os respectivos parents atraves das cores
+    //$('p').parent().css({'border':'1px solid #f00'})
+    //$('li').parent().css({'border':'1px solid #00f'})
+    //$('ul').parent().css({'border':'1px solid #0f0'})
+    //$('div').parent().css({'border':'1px solid #ff0'})
+    //$('body').parent().css({'border':'1px solid #f0f'})
+
+    //limitando o pai de um elemento \\\\ usando o css de exemplo, vamos progrmar para o programa correr ate a div do elemento
+    $("p").parentsUntil("div").css({ border: "1px solid #f00" });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .vermelho {
+      border: 1px solid black;
+      width: 200px;
+      background-color: red;
+    }
+
+    .azul {
+      border: 1px solid black;
+      width: 200px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">
+    OBTER E MODIFICAR VALORES DOS ATRIBUTOS DOS ELEMENTOS HTML
+  </h1>
+
+  <div id="caixa" style="border: 1px solid black; width: 200px">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+  <br />
+
+  <div id="caixa1" class="vermelho">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+  <br />
+
+  <div id="caixa2" style="border: 1px solid black; width: 200px">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+  <br />
+
+  <button id="btn_red">Vermelho</button>
+  <button id="btn_blue">Azul</button>
+
+  <script>
+    //ao click, seleciono e obtenho os atributos do elemento style
+    $("#caixa").click(function () {
+      alert("Atributo: " + $(this).attr("style"));
+    });
+
+    //alterar os atributos no click
+    $("#caixa1").click(function () {
+      $(this).attr("class", "azul");
+    });
+
+    //alterar os atributos no click
+    $("#btn_red").click(function () {
+      $(caixa2).attr("class", "vermelho");
+    });
+
+    //alterar os atributos no click
+    $("#btn_blue").click(function () {
+      $(caixa2).attr("class", "azul");
+    });
+  </script>
+</body>
+
+</html>

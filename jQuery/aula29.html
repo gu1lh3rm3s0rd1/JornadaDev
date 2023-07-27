@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      margin-right: 10px;
+    }
+
+    .borda {
+      border: 3px solid black;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇOES REMOVEATTR E REMOVECLASS</h1>
+  <h1 id="subtitulo"></h1>
+
+  <button id="btnPosicao">Posição</button>
+  <button id="btnRemoverAtributo">Remover Atributo</button>
+  <button id="btnRemoverClass">Remover Class</button>
+  <button id="btnAdicionarClass">Adicionar Class</button><br /><br />
+
+  <label>Topo:</label>
+  <input type="range" id="top" name="top" min="0" max="500" />
+  <label>Left:</label>
+  <input type="range" id="left" name="top" min="0" max="500" />
+
+  <div id="caixa" class="caixa borda" style="position: absolute; left: 100px; top: 200px; background-color: red"></div>
+
+  <script>
+    //remove os atributos da tag styke do elemento
+    $("#btnRemoverAtributo").click(() => {
+      $("#caixa").removeAttr("style");
+    });
+
+    //remove a classe atual do elemento em questao
+    $("#btnRemoverClass").click(() => {
+      $("#caixa").removeClass("borda");
+    });
+
+    //add uma classe ao elemento desejado
+    $("#btnAdicionarClass").click(() => {
+      $("#caixa").addClass("borda");
+    });
+  </script>
+</body>
+
+</html>

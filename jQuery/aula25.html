@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 10px 0 0 0;
+      display: flex;
+      width: 100%;
+      height: 100px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    .repositorio {
+      background-color: green;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 10px 0 0 0;
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO CLONE</h1>
+  <h1 id="subtitulo">
+    O clone irá clonar o elemento indicado e posicionar onde eu quiser de
+    acordo com a minha preferencia e programação
+  </h1>
+  <br /><br /><br />
+
+  <p>
+    <button id="btnClonar">Clonar</button>
+  </p>
+
+  <div id="caixa" class="caixa">
+    <h2>Curso de JQuery</h2>
+  </div>
+  <br />
+
+  <div id="repositorio" class="repositorio"></div>
+  <br />
+
+  <script>
+    //clone
+    $("#btnClonar").click(() => {
+      $("#caixa").clone().appendTo($("#repositorio"));
+    });
+  </script>
+</body>
+
+</html>

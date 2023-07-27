@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    p {
+      background-color: #ffa;
+    }
+
+    h3 {
+      background-color: #afa;
+    }
+
+    .borda {
+      border: 1px solid #f00;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">METODOS P/ FILTRAGEM DE ELEMENTOS - FILTER E FILTER-NOT</h1>
+  <h2 id="subtitulo"></h2>
+  <h2 id="subtitulo"></h2>
+  <br /><br />
+
+  <div>
+    <h3>Cursos de tcheba</h3>
+    <p class="borda">Cursos de tcheba</p>
+    <br />
+
+    <h3>Cursos de JQuery</h3>
+    <p>Cursos de JQuery</p>
+    <br />
+
+    <h3>http://127.0.0.1:5500/jQuery/aula10.html</h3>
+    <p class="borda">http://127.0.0.1:5500/jQuery/aula10.html</p>
+    <br />
+
+    <h3>wwww.tcheba.com</h3>
+    <p>wwww.tcheba.com</p>
+    <br />
+
+    <h3>filtrando elementos de tcheba</h3>
+    <p>filtrando elementos de tcheba</p>
+  </div>
+
+  <script>
+    //filtrara a classe do elemento desejado
+    $("p").filter(".borda").css({ color: "#f00" });
+
+    //pega os elemento q NAO tem a classe borda e aplica um filtro
+    $("p").not(".borda").css({ color: "#00f" });
+  </script>
+</body>
+
+</html>

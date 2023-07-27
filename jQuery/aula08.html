@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">METODOS CHILDREN E FIND</h1>
+  <h2 id="subtitulo">
+    CHILDREN, OBTEM OS FILHOS DE CADA ELEMENTO NO CONJUNTO ATUAL DE ELEMENTOS
+    CORRESPONDENTES, FILTRADA OPCIONALMENTE POR UM SELETOR
+  </h2>
+
+  <div>
+    <ul>
+      <li>Cursos</li>
+      <li>Cursos de JQuery</li>
+      <li>Seletores parent</li>
+    </ul>
+  </div>
+  <br /><br />
+
+  <h2 id="subtitulo">
+    FIND, OBTEM TODOS OS FILHOS DE CADA ELEMENTO NO CONJUNTO ATUAL DE
+    ELEMENTOS CORRESPONDENTES, FILTRADA OPCIONALMENTE POR UM SELETOR, COM UM
+    ESPECIFICACAO EXATA
+  </h2>
+
+  <div>
+    <ul>
+      <li>
+        Cursos
+        <p>vai tcheba</p>
+      </li>
+      <li>
+        Cursos de JQuery
+        <p>vai tcheba</p>
+      </li>
+      <li>
+        Seletores parent
+        <p>vai tcheba</p>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    //pegar todos os elementos do elemento DIV \\ pega os 'filhos' de um elemento
+    //$('div').children().css({'border':'1px solid #f00'})
+    //$('ul').children().css({'border':'1px solid #f0f'})
+
+    //pega todos os elementos que encontrar no conjunto \\ encontra todos os elementos 'p', filhos de 'li'
+    //$('li').find('p').css({'border':'1px solid #00f'})
+
+    //filtrando
+    //pego o primeiro elemento 'p'
+    $("div").find("p:first").css({ border: "1px solid #00f" });
+
+    //pega o ultimo elemento 'p'
+    $("div").find("p:last").css({ border: "1px solid #00f" });
+
+    //pega tudo q encontrar de 'p' partir de div
+    $("div").find("*").css({ border: "1px solid #00f" });
+  </script>
+</body>
+
+</html>

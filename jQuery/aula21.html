@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0px;
+      top: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇAO STOP P/ PARAR AS ANIMACOES</h1>
+  <h1 id="subtitulo">
+    FORMA CORRETA DE INTERROMPER A ANIMACAO. SAO PARAMETROS BOOLEANOS P/
+    LIMPAR E PARAR UMA ANIMAÇAO DE FORMA PRECISA
+  </h1>
+  <br /><br /><br /><br /><br /><br /><br />
+
+  <p>
+    <button id="btnAnimar">Animar</button>
+    <button id="btnProxima">Proxima</button>
+    <button id="btnParar">Parar</button>
+    <button id="btnFim">Fim</button>
+  </p>
+
+  <div id="caixa" class="caixa"></div>
+
+  <script>
+    //DE MODO RESUMIDO, O STOP PULA PRA PROXIMA ANIMACAO (SE ELA EXISITR)
+    $("#btnAnimar").click(function () {
+      $("#caixa").animate({ left: 800 }, { duration: 2000 });
+      $("#caixa").animate({ top: 500 }, { duration: 2000 });
+      $("#caixa").animate({ left: 0 }, { duration: 2000 });
+      $("#caixa").animate({ top: 200 }, { duration: 2000 });
+    });
+
+    //stop n animacao atual e ira comecar a realizar a proxima predefeinida
+    $("#btnProxima").click(function () {
+      $("#caixa").stop();
+    });
+
+    //limpa a fila se ela exisitir e pula pro fim da
+    $("#btnParar").click(function () {
+      $("#caixa").stop(true, false);
+    });
+
+    $("#btnFim").click(function () {
+      $("#caixa").stop(false, true);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .caixa {
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      width: 100%;
+      height: 100px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .item {
+      border-radius: 10px;
+      display: flex;
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+      color: black;
+      font-size: large;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cor1 {
+      background-color: red;
+    }
+
+    .cor2 {
+      background-color: green;
+    }
+
+    .cor3 {
+      background-color: blue;
+    }
+
+    .cor4 {
+      background-color: yellow;
+    }
+
+    .cor5 {
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO DETACH</h1>
+  <h1 id="subtitulo">
+    Permite remover um elemento mantendo suas características e anexá-lo
+    novamente posteriormente.
+  </h1>
+  <br /><br />
+
+  <p>
+    <button id="btnReset">Reset</button>
+    <button id="btnMudar">Mudar</button>
+  </p>
+
+  <div id="caixa1" class="caixa">
+    <div id="item1" class="item cor1">1</div>
+    <div id="item2" class="item cor2">2</div>
+    <div id="item3" class="item cor3">3</div>
+    <div id="item4" class="item cor4">4</div>
+    <div id="item5" class="item cor5">5</div>
+  </div>
+
+  <div id="caixa2" class="caixa"></div>
+
+  <script>
+    //
+    let itens = $(".item");
+    let i = 0;
+
+    //ira armazenar iten dentro da variavel / vai sumir com ele e guardar
+    $("#btnMudar").click(() => {
+      let item = $(itens[i]).detach();
+      i++;
+      //move ele pra caixa 2 onde esta direncionando item
+      $("#caixa2").append(item);
+    });
+
+    //reset
+    //ira fazer o contrario da function acima
+    //vamos zerar o indice e voltar a caixa ao normal com o detach
+    $("#btnReset").click(() => {
+      for (let i = 0; i < itens.length; i++) {
+        let item = $(itens[i]).detach();
+        $("#caixa1").append(item);
+      }
+      i = 0;
+    });
+  </script>
+</body>
+
+</html>

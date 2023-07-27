@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">METODOS SIBLINGS - NEXT E PREV</h1>
+  <h2 id="subtitulo">
+    Os Siblings sao os irmaos, sao os elementos que estao no msm nivel dentro
+    da arvore de um DOM, de um projeto
+  </h2>
+  <h2 id="subtitulo">
+    Permite pesquisar os irmãos dos elementos na árvore DOM e construir um
+    novo objeto jQuery a partir dos elementos correspondentes
+  </h2>
+  <br /><br />
+
+  <div>
+    <span>
+      <h3>Cursos</h3>
+      <p>Cursos de JQuery</p>
+      <h2>Seletores parent</h2>
+      <p>Siblings</p>
+    </span>
+  </div>
+
+  <script>
+    //apartir do h3 vamos 'pegar' os siblings/irmaos desse elemento
+    $("h3").siblings().css({ border: "1px solid red" });
+
+    //apartir do h3 vamos 'pegar' os siblings/irmaos abaixo/a direita dele
+    $("h2").next().css({ border: "1px solid blue" });
+
+    //apartir do h2 vamos 'pegar' os siblings/irmaos acima/a esquerda dele
+    $("h2").prev().css({ border: "1px solid aqua" });
+  </script>
+</body>
+
+</html>

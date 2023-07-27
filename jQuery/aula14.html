@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de JQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <style>
+    #titulo {
+      color: #1e1e1e;
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    #subtitulo {
+      color: #1e1e1e;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="titulo">FUNÇÃO HIDE E FUNÇÃO SHOW</h1>
+
+  <div id="caixa" style="border: 1px solid black; width: 200px">
+    <h3>Cursos</h3>
+    <p>Curso de JQuery</p>
+  </div>
+  <br />
+  <button id="ocultar">Ocultar</button>
+  <button id="mostrar">Mostrar</button>
+
+  <script>
+    //mostra os itens no click
+    $("#mostrar").click(function () {
+      $(caixa).show();
+    });
+
+    //oculta os itens no click
+    $("#ocultar").click(function () {
+      $(caixa).hide();
+    });
+  </script>
+</body>
+
+</html>
