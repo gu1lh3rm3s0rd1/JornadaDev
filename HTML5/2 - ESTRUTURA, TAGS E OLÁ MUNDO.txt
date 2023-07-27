@@ -1,0 +1,58 @@
+ESTRUTURA BÁSICA DE CÓDIGO DO HTML5
+
+	1. Doctype:
+	A primeira linha de um documento HTML5 deve conter a declaração do tipo de documento, conhecida como "Doctype". O Doctype para HTML5 é 
+simplesmente:
+
+		<!DOCTYPE html>
+
+	2. Elemento <html>:
+	O elemento `<html>` é o elemento raiz de todo o documento HTML. Ele engloba todo o conteúdo da página e é onde você especifica o idioma 
+padrão do documento usando o atributo `lang`.
+
+		<!DOCTYPE html>
+		<html lang="pt-br">
+		<!-- Conteúdo da página aqui -->
+		</html>
+
+	3. Elemento <head>:
+	Dentro do `<html>`, o elemento `<head>` é usado para conter metadados e outras informações sobre o documento, como título, folhas de 
+estilo CSS, scripts e mais.
+
+		<!DOCTYPE html>
+		<html lang="pt-br">
+		<head>
+  			<meta charset="UTF-8">
+  			<title>Título da Página</title>
+  			<!-- Folhas de estilo CSS e scripts são incluídos aqui -->
+		</head>
+		<body>
+  			<!-- Conteúdo da página aqui -->
+		</body>
+		</html>
+
+	4. Elemento <body>:
+	O elemento `<body>` contém todo o conteúdo visível da página, incluindo textos, imagens, links, vídeos, formulários e outros elementos.
+
+		<!DOCTYPE html>
+		<html lang="pt-br">
+		<head>
+  			<meta charset="UTF-8">
+  			<title>Título da Página</title>
+		</head>
+		<body>
+  			<h1>Este é um cabeçalho</h1>
+  			<p>Este é um parágrafo.</p>
+  			<!-- Outros elementos da página aqui -->
+		</body>
+		</html>
+
+	5. Outros elementos:
+	Além dos elementos mencionados acima, existem muitos outros elementos disponíveis no HTML5 que podem ser usados para criar e estruturar 
+o conteúdo da página. Alguns exemplos comuns incluem: 
+
+		`<header>`, `<footer>`, `<nav>`, `<article>`, `<section>`, `<img>`, `<a>`, `<ul>`, `<li>`, `<form>`, `<input>`, etc.
+
+	O HTML5 possui uma estrutura clara e semântica que permite aos desenvolvedores criar páginas web ricas e bem estruturadas. A combinação 
+adequada desses elementos é essencial para criar sites acessíveis, amigáveis aos motores de busca e compatíveis com diferentes dispositivos e 
+navegadores.

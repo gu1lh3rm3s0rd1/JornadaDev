@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+
+  <body>
+    <fieldset>
+      <form action="cadastro.php" method="get"> <!-- method:post -->
+        <legend>Tipos de Formulários - Input Types</legend>
+        <br />
+        <label for="">Nome: </label>
+        <input type="text" name="Nome" required autofocus /><br /><br />
+        <label for="">E-mail: </label>
+        <input
+          type="email"
+          name="E-mail"
+          required
+          autocomplete="off"
+          placeholder="seunome@gmail.com"
+        /><br /><br />
+        <label for="">Senha: </label>
+        <input type="password" name="Senha" maxlength="8" /><br /><br />
+        <label for="">Telefone: </label>
+        <input type="tel" name="Telefone" /><br /><br />
+        <label for="">Data de Nascimento: </label> <!-- é possivel especificar parametros para data com max e min para definir peridos -->
+        <input type="date" name="Data" /><br /><br />
+        <label for="">Hora: </label>
+        <input type="time" name="Hora" /><br /><br />
+        <label for="">Mes e Ano: </label>
+        <input type="month" name="Mes e Ano" /><br /><br />
+        <label for="">Semana: </label>
+        <input type="week" name="Semana" /><br /><br />
+        <label for="">Data e Hora: </label>
+        <input type="datetime-local" name="Data e Hora" /><br /><br />
+        <label for="">Time: </label> <br />
+        <input type="radio" name="Time" value="Palmeiras" checked />Palmeiras
+        <br />
+        <input type="radio" name="Time" value="Corinthians" />Corinthians <br />
+        <input type="radio" name="Time" value="São Paulo" />São Paulo <br />
+        <input type="radio" name="Time" value="Santos" />Santos <br />
+        <input type="radio" name="Time" value="Bragantino" />Bragantino
+        <br /><br />
+        <label for="">Cores: </label> <br />
+        <input type="checkbox" name="Cores" id="" value="Verde" checked />Verde
+        <br />
+        <input type="checkbox" name="Cores" id="" value="Azul" />Azul <br />
+        <input type="checkbox" name="Cores" id="" value="Preto" />Preto <br />
+        <input type="checkbox" name="Cores" id="" value="Vermelho" />Vermelho
+        <br /><br />
+        <label for="">Quantidade: </label>
+        <input type="number" name="Quantidade" min="0" max="100" /> <br /><br />
+        <input type="range" name="Quantidade" /> <br /><br />
+        <label for="">Quantidade com step: </label>
+        <input type="number" name="Quantidade" min="0" max="100" step="10" />
+        <br /><br />
+        <label for="">Cor: </label>
+        <input type="color" name="Cor" /><br /><br />
+        <label for="">Imagem: </label>
+        <input type="file" name="Imagem" /><br /><br />
+        <label for="">URL: </label>
+        <input type="url" name="URL" /><br /><br />
+        <label for="">Search: </label>
+        <input type="search" name="Search" /><br /><br />
+        <label for="">Mensagem: </label> <br />
+        <textarea
+          name="Mensagem"
+          id=""
+          cols="30"
+          rows="10"
+          spellcheck="false"
+        ></textarea> <!-- spellbeck - confere orotgrafia -->
+        <br /><br />
+        <button type="button">Clique-me</button> <br /><br />
+        <select name="veiculo" id="">
+          <optgroup label="Carros">
+            <option value="camaro">camaro</option>
+            <option value="ferrari">ferrari</option>
+            <option value="mercedez">mercedez</option>
+            <option value="corvette">covertte</option>
+          </optgroup>
+          <optgroup label="Motos">
+            <option value="xt">XT</option>
+            <option value="hornet">hornet</option>
+            <option value="falcon">falcon</option>
+            <option value="DT-180">DT-180</option>
+          </optgroup>
+        </select>
+        <br /><br />
+        <label for="">Escolha um Curso: </label>
+        <input type="text" name="Cursos" list="lista-curso" />
+        <datalist id="lista-curso">
+          <option value="JavaScript">JavaScript</option>
+          <option value="HTML5">HTML5</option>
+          <option value="PHP">PHP</option>
+        </datalist>
+        <br /><br />
+
+        <input type="submit" name="btn-enviar" />
+      </form>
+    </fieldset>
+
+    <!-- Outro tipo de formulario com atributos mais dinamicos e eficientes -->
+
+    <form
+      id="form-cadastro"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+      name="formulario-cadastro"
+    >
+      <label for=""> E-mail: </label> <br />
+      <input type="email" name="email" id="" required />
+      <input
+        type="submit"
+        name="cadastrar"
+        formaction="cadastrar.php"
+        formenctype="application/x-www-form-urlencoded"
+        formmethod="get"
+        value="cadastrar"
+      />
+      <input
+        type="submit"
+        name="enviar"
+        formmethod="post"
+        formaction="enviar-email.php"
+        value="enviar por email"
+        formnovalidate
+      />
+    </form>
+  </body>
+</html>

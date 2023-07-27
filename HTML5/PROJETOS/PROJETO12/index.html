@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVG´s</title>
+
+  <style>
+    svg {
+      background-color: #ccc;
+      width: 300px;
+      height: 165px;
+    }
+
+    svg rect,
+    circle,
+    ellipse,
+    polygon {
+      fill: blue;
+      stroke: red;
+      stroke-width: 3;
+    }
+
+    text, line {
+      fill: blue;
+      stroke: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Trabalhando com a Tag SVG</h1>
+
+  <svg>
+    <rect width="280" height="140" x="10" y="10" rx="20" ry="20">
+    </rect>
+  </svg>
+  <svg>
+    <circle cx="80" cy="80" r="57">
+    </circle>
+  </svg>
+  <svg>
+    <ellipse cx="150" cy="80" rx="110" ry="45">
+    </ellipse>
+  </svg>
+  <svg>
+    <text x="20" y="90">
+      Aprendendo SVG!
+    </text>
+  </svg>
+  <svg>
+    <line x1="18" y1="16" x2="287" y2="138">
+    </line>
+  </svg>
+  <svg>
+    <polygon polygon points="34, 111 125, 14 190,120">
+    </polygon>
+  </svg>
+</body>
+
+</html>

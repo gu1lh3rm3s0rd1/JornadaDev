@@ -1,0 +1,90 @@
+ELEMENTOS DE AUDIOS E VIDEOS
+
+	Permitem incorporar arquivos de mídia, como áudio e vídeo, diretamente nas páginas da web, sem a necessidade de plugins externos, como o 
+Flash. Isso torna mais fácil e acessível para os desenvolvedores fornecerem conteúdo de áudio e vídeo de forma nativa, tornando-os suportados por
+uma ampla variedade de navegadores modernos.
+
+	Elemento de Áudio `<audio>`:
+
+	O elemento `<audio>` é usado para incorporar arquivos de áudio em diferentes formatos, como MP3, Ogg ou WAV. Você pode especificar vários
+formatos de arquivo usando várias fontes `<source>`, para que o navegador possa escolher o formato mais adequado para reprodução.
+
+	Exemplo de uso do elemento de áudio:
+
+		<audio controls>
+  			<source src="audio/exemplo.mp3" type="audio/mpeg">
+  			<source src="audio/exemplo.ogg" type="audio/ogg">
+  			Seu navegador não suporta a reprodução de áudio.
+		</audio>
+
+	Neste exemplo, estamos usando o atributo `controls` para exibir controles de reprodução padrão (play, pause, volume) para o arquivo de 
+áudio. Caso o navegador não suporte o formato MP3 ou Ogg, a mensagem "Seu navegador não suporta a reprodução de áudio." será exibida.
+
+	Elemento de Vídeo `<video>`:
+
+	O elemento `<video>` é usado para incorporar arquivos de vídeo em diferentes formatos, como MP4, WebM ou Ogg. Assim como o elemento de 
+áudio, você pode fornecer várias fontes usando as tags `<source>` para garantir a compatibilidade em diferentes navegadores.
+
+	Exemplo de uso do elemento de vídeo:
+
+		<video controls width="640" height="360">
+  			<source src="video/exemplo.mp4" type="video/mp4">
+  			<source src="video/exemplo.webm" type="video/webm">
+  			Seu navegador não suporta a reprodução de vídeo.
+		</video>
+
+	Neste exemplo, o atributo `controls` é usado para mostrar os controles padrão para reproduzir o vídeo. Também é possível definir a largura
+e altura do vídeo usando os atributos `width` e `height`.
+	Além disso, o elemento de vídeo suporta outros atributos úteis, como `autoplay` (para iniciar a reprodução automaticamente), `loop` (para 
+repetir o vídeo) e `poster` (para definir uma imagem de visualização antes de iniciar a reprodução).
+	Lembre-se de que ao utilizar áudio e vídeo em suas páginas, é importante fornecer formatos de arquivo diferentes para garantir a compatibi-
+lidade com vários navegadores e dispositivos. Além disso, considere adicionar legendas e descrições de áudio para tornar o conteúdo acessível a 
+todos os usuários.
+
+
+
+LEGENDAS
+
+	É possível incorporar vídeos com legendas diretamente na marcação da página usando a funcionalidade de faixas de texto (text tracks). As 
+faixas de texto permitem adicionar legendas, transcrições ou descrições de áudio e vídeo aos elementos de mídia (como `<video>` e `<audio>`).
+	Existem diferentes formatos de legenda que podem ser usados, sendo os mais comuns o WebVTT (Web Video Text Tracks) e o formato SRT 
+(SubRip). O WebVTT é o formato recomendado para uso em navegadores modernos.
+
+	Aqui está um exemplo de como incorporar um vídeo com legendas usando o formato WebVTT:
+
+		<!DOCTYPE html>
+		<html>
+			<head>
+  				<title>Vídeo com Legendas</title>
+			</head>
+			<body>
+  				<video controls>
+    					<source src="caminho-do-video.mp4" type="video/mp4">
+    					<!-- Definindo a faixa de legenda -->
+    					<track label="Português" kind="subtitles" src="legenda-pt.vtt" srclang="pt" default>
+    					<!-- Adicione mais faixas de legenda, se necessário -->
+  				</video>
+			</body>
+		</html>
+
+	Explicação:
+
+	1. O elemento `<video>` é usado para incorporar o vídeo na página. O atributo `controls` adiciona controles de reprodução padrão (play, 
+pause, volume, etc.).
+
+	2. O elemento `<source>` é usado para especificar a fonte do vídeo, que pode ser um arquivo MP4 ou outros formatos de vídeo suportados.
+
+	3. A faixa de legenda é definida usando o elemento `<track>`. Os atributos importantes aqui são:
+   		- `label`: Especifica o rótulo da faixa de legenda que será exibido no menu de seleção de legendas, caso o navegador permita.
+   		- `kind`: Indica o tipo de faixa, sendo "subtitles" para legendas.
+   		- `src`: Especifica o caminho do arquivo WebVTT com as legendas.
+   		- `srclang`: Indica o idioma das legendas.
+
+	4. O atributo `default` na faixa de legenda indica que ela será a opção de legenda padrão quando o vídeo for reproduzido, caso o usuário 
+não selecione outra.
+
+	Certifique-se de ter um arquivo de legenda compatível com o formato WebVTT (ou outro formato suportado pelos navegadores) e que ele 
+esteja localizado no caminho especificado no atributo `src` do elemento `<track>`.
+	Ao usar legendas em vídeos, você torna seu conteúdo acessível a pessoas com deficiência auditiva ou que desejam assistir ao vídeo em 
+ambientes com o som desligado. 
+	Além disso, as legendas podem ser úteis para fornecer transcrições de áudio ou traduções em diferentes idiomas.

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabelas</title>
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 7px;
+    }
+
+    .Nome {
+      background-color: aqua;
+    }
+
+    .E-mail {
+      background-color: aquamarine;
+    }
+
+    .Telefone {
+      background-color: tomato;
+    }
+
+    .Cargo {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Trabalhando com Tabelas no HTML5</h1>
+
+  <table>
+    <caption>Cadastro de Clientes</caption>
+
+    <colgroup>
+      <col class="Nome">
+      <col class="E-mail">
+      <col class="Telefone">
+      <col class="Cargo">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>zé da manga</td>
+        <td>ze123@manga.com</td>
+        <td>16 99123-4567</td>
+        <td>Programador de Sistemas</td>
+      </tr>
+      <tr>
+        <td>zé da manga</td>
+        <td>ze123@manga.com</td>
+        <td>16 99123-4567</td>
+        <td>Desenvolvedor Web</td>
+      </tr>
+      <tr>
+        <td>zé da manga</td>
+        <td>ze123@manga.com</td>
+        <td>16 99123-4567</td>
+        <td>Cientista de Dados</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Total: 3</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+
+</html>

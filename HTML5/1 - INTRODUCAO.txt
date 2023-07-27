@@ -1,0 +1,32 @@
+INTRODUCAO AO HTML5
+
+	HTML5 (HyperText Markup Language 5) é a quinta versão do padrão HTML, a linguagem de marcação utilizada para estruturar e apresentar 
+conteúdo na World Wide Web (Internet). Lançado em 2014, o HTML5 trouxe várias melhorias significativas em relação às suas versões anteriores, 
+tornando-o mais poderoso e versátil.
+
+	Aqui estão alguns conceitos-chave e recursos importantes do HTML5:
+
+	1. Semântica: O HTML5 introduziu novas tags semânticas que descrevem melhor o conteúdo da página. Isso inclui tags como <header>, <footer>,
+<nav>, <article>, <section>, <aside> e outras, que ajudam a estruturar a página de forma mais clara e significativa.
+
+	2. Áudio e Vídeo: O HTML5 suporta elementos de áudio e vídeo nativos, permitindo que os desenvolvedores incorporem facilmente mídia em 
+suas páginas sem a necessidade de plugins adicionais, como o Flash.
+
+	3. Canvas: O elemento <canvas> fornece uma área de desenho em que é possível criar gráficos, animações e jogos utilizando JavaScript.
+
+	4. Formulários Aprimorados: O HTML5 introduziu novos tipos de campos de formulário, como <input type="email">, <input type="date">, 
+<input type="url">, entre outros. Além disso, validação de formulários pode ser feita diretamente no lado do cliente.
+
+	5. Armazenamento Local: Com a API Web Storage (localStorage e sessionStorage), é possível armazenar dados no navegador do usuário, permitindo
+que as aplicações web funcionem offline ou preservem o estado do aplicativo.
+
+	6. Geolocalização: A API de Geolocalização permite que os navegadores obtenham informações sobre a localização física do usuário.
+
+	7. WebSockets: O HTML5 introduziu suporte para WebSockets, que permite comunicação bidirecional em tempo real entre o cliente e o servidor, 
+facilitando a criação de aplicações interativas e em tempo real.
+
+	8. Responsive Web Design: Embora não seja exclusivo do HTML5, a nova versão do HTML ajudou a impulsionar o desenvolvimento de sites 
+responsivos, que se adaptam automaticamente a diferentes dispositivos e tamanhos de tela.
+
+	Essas são apenas algumas das muitas características e melhorias que o HTML5 trouxe para o mundo do desenvolvimento web. É uma tecnologia 
+essencial para criar sites modernos, interativos e compatíveis com os diferentes dispositivos utilizados pelos usuários atualmente.

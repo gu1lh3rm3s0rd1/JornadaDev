@@ -1,0 +1,63 @@
+LISTAS
+
+	Em HTML5, existem três tipos principais de listas que você pode usar para organizar e estruturar o conteúdo da sua página: listas 
+ordenadas, listas não ordenadas e listas de definição.
+
+	1. Listas Ordenadas `<ol>`:
+	A lista ordenada é usada para apresentar itens em uma sequência específica e numerá-los automaticamente. Os itens são exibidos com 
+números por padrão, mas você pode usar estilos CSS para alterar a aparência da numeração.
+
+	Exemplo de lista ordenada:
+
+		<ol>
+  			<li>Item 1</li>
+  			<li>Item 2</li>
+  			<li>Item 3</li>
+		</ol>
+
+	Resultado na página:
+		1. Item 1
+		2. Item 2
+		3. Item 3
+
+	2. Listas Não Ordenadas `<ul>`:
+	A lista não ordenada é usada para apresentar itens em uma ordem não específica e marcá-los com símbolos, geralmente pontos (•), por 
+padrão. Da mesma forma que nas listas ordenadas, é possível personalizar a aparência dos marcadores usando CSS.
+
+	Exemplo de lista não ordenada:
+
+		<ul>
+  			<li>Maçã</li>
+  			<li>Laranja</li>
+  			<li>Uva</li>
+		</ul>
+
+
+	Resultado na página:
+		• Maçã
+		• Laranja
+		• Uva
+
+	3. Listas de Definição / Descrição `<dl>`:
+	As listas de definição são usadas para representar um conjunto de termos e suas respectivas definições. Cada termo é representado pelo 
+elemento `<dt>`, enquanto suas definições são representadas pelo elemento `<dd>`.
+
+	Exemplo de lista de definição:
+
+		<dl>
+  			<dt>HTML</dt>
+  				<dd>HyperText Markup Language - Linguagem de marcação utilizada para criar páginas web.</dd>
+  			<dt>CSS</dt>
+  				<dd>Cascading Style Sheets - Linguagem de estilos utilizada para definir a apresentação do conteúdo HTML.</dd>
+		</dl>
+
+	Resultado na página:
+
+	HTML
+  	HyperText Markup Language - Linguagem de marcação utilizada para criar páginas web.
+
+	CSS
+  	Cascading Style Sheets - Linguagem de estilos utilizada para definir a apresentação do conteúdo HTML.
+
+	Essas são as principais listas que você pode usar em HTML5 para organizar o conteúdo de suas páginas de forma clara e semântica. Ao 
+utilizar listas apropriadas, você torna seu conteúdo mais acessível e amigável para os usuários e mecanismos de busca.

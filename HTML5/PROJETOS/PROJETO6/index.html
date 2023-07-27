@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos e Audios</title>
+  <style>
+    .div {
+      padding: 20px;
+      margin-bottom: 5vw;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Trabalhando com Faixas de Audios</h1>
+
+  <div class="div">
+    <audio src="audio/media.mp3" controls></audio>
+  </div>
+
+  <h1>Inserindo Videos na pagina de HTML5</h1>
+
+  <div class="div">
+    <!-- modelo padrao -->
+    <!-- <video src="caminho-do-video.mp4" controls></video> -->
+
+    <!-- incorporando video de outro ambiente -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RzClCJFpSoM" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+
+  <h3>EXTRAS - LEGENDAS</h3>
+
+  <div class="div">
+    <video controls>
+      <source src="caminho-do-video.mp4" type="video/mp4">
+      <!-- Definindo a faixa de legenda -->
+      <track label="Português" kind="subtitles" src="legenda-pt.vtt" srclang="pt" default>
+      <!-- Adicione mais faixas de legenda, se necessário -->
+  </video>
+  </div>
+
+</body>
+
+</html>

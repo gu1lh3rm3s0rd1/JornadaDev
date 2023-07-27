@@ -1,0 +1,97 @@
+TIPOS DE INPUTS EM FORMULARIOS
+
+	Os formulários são elementos essenciais que permitem aos desenvolvedores criar interações e coletar informações dos usuários em uma 
+página da web. Os formulários são fundamentais para receber dados, como textos, seleções, uploads de arquivos e muito mais. Eles são amplamente 
+utilizados em sites para fins como login, cadastro, pesquisas, envio de mensagens e outras interações com o usuário.
+
+	Aqui estão alguns conceitos importantes e elementos relacionados aos formulários em HTML5:
+
+	1. Elemento `<form>`:
+	O elemento `<form>` é usado para criar o contêiner de um formulário. Ele agrupa todos os campos e elementos relacionados ao formulário 
+em um único bloco.
+
+	Exemplo de um formulário simples:
+
+		<form action="/processar_dados" method="post">
+  			<!-- Campos e elementos do formulário aqui -->
+		</form>
+
+	2. Elementos de entrada `<input>`:
+	O elemento `<input>` é utilizado para criar vários tipos de campos de entrada no formulário. Os atributos `type` e `name` são 
+frequentemente usados para definir o tipo de campo e o nome do campo, respectivamente.
+
+	Exemplos de campos de entrada:
+
+		<input type="text" name="nome" placeholder="Digite seu nome">
+		<input type="email" name="email" placeholder="Digite seu e-mail">
+		<input type="password" name="senha" placeholder="Digite sua senha">
+		<input type="checkbox" name="aceito" id="aceito">
+		<label for="aceito">Eu aceito os termos e condições</label>
+		<input type="submit" value="Enviar">
+
+	3. Elemento `<textarea>`:
+	O elemento `<textarea>` permite que os usuários insiram texto com várias linhas, sendo útil para campos que requerem mais espaço para 
+inserção de informações, como comentários ou mensagens longas.
+
+	Exemplo de campo de texto multilinha:
+
+		<textarea name="mensagem" placeholder="Digite sua mensagem aqui"></textarea>
+
+	4. Elemento `<select>` e `<option>`:
+	O elemento `<select>` é utilizado para criar listas suspensas (drop-down) de seleção. Cada opção é representada pelo elemento `<option>`.
+	
+	Exemplo de lista suspensa de seleção:
+
+		<select name="cidade">
+  			<option value="sp">São Paulo</option>
+  			<option value="rj">Rio de Janeiro</option>
+  			<option value="bh">Belo Horizonte</option>
+		</select>
+
+	5. Elemento `<button>`:
+	O elemento `<button>` é usado para criar botões em formulários. Eles podem ser do tipo "submit", que envia o formulário, ou "reset", que 
+limpa os campos do formulário.
+
+	Exemplo de botões em um formulário:
+
+		<button type="submit">Enviar</button>
+		<button type="reset">Limpar</button>
+
+	Esses são alguns dos elementos mais comuns relacionados a formulários em HTML5. Além disso, é possível aplicar estilos CSS para 
+personalizar a aparência dos campos do formulário e melhorar a experiência do usuário. Os dados coletados por meio dos formulários podem ser 
+processados em uma página do servidor usando linguagens de programação do lado do servidor, como PHP, Python, Node.js, entre outras.
+
+
+
+VANTAGENS
+
+	Os formulários em HTML5 oferecem várias vantagens em comparação com as versões anteriores do HTML. Algumas das principais vantagens são:
+
+	1. Novos tipos de entrada: O HTML5 introduziu novos tipos de campos de entrada, como "email", "url", "date", "number", "tel" e outros. 
+Isso facilita a validação de dados do usuário e melhora a experiência do usuário, pois os navegadores modernos podem fornecer recursos específicos
+para cada tipo de entrada.
+
+	2. Validação do lado do cliente: Com HTML5, você pode usar a validação do lado do cliente sem a necessidade de scripts externos. Atributos 
+como "required", "min", "max", "pattern" e outros permitem que você especifique requisitos de entrada e regras de validação diretamente na 
+marcação do formulário.
+
+	3. Elementos de formulário semânticos: O HTML5 introduziu novos elementos de formulário semânticos, como "datalist", "output" e "progress", 
+que tornam os formulários mais expressivos e fáceis de entender.
+
+	4. Suporte para elementos de seleção avançados: Com a introdução dos elementos "datalist" e "optgroup", você pode criar listas de seleção
+personalizadas e agrupadas sem a necessidade de usar técnicas complexas.
+
+	5. Suporte para elementos de entrada múltipla: Os atributos "multiple" para os campos de entrada "file" e "email" permitem que os usuários
+selecionem vários arquivos ou endereços de email ao mesmo tempo.
+
+	6. Formulários personalizados: O HTML5 facilitou a criação de elementos de formulário personalizados por meio do uso de novos tipos de 
+entrada, atributos e estilos CSS. Isso dá aos desenvolvedores maior controle sobre a aparência e a funcionalidade dos formulários.
+
+	7. Melhor suporte para acessibilidade: Com a inclusão de novos atributos semânticos e recursos de validação, os formulários em HTML5 são 
+mais acessíveis para pessoas com deficiências visuais ou outras necessidades especiais.
+
+	8. Melhor compatibilidade com dispositivos móveis: Os formulários em HTML5 foram projetados para serem mais amigáveis aos dispositivos 
+móveis, tornando a entrada de dados mais fácil e intuitiva para os usuários em smartphones e tablets.
+
+	No geral, os formulários em HTML5 tornaram a criação e a validação de formulários na web mais fáceis e eficientes, melhorando a 
+experiência do usuário e permitindo que os desenvolvedores criem formulários mais avançados e personalizados.

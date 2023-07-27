@@ -1,0 +1,97 @@
+SEMANTICA
+
+	Semântica refere-se ao uso de elementos de marcação de forma significativa para descrever a estrutura e o conteúdo de uma página da web. 
+Esses elementos fornecem informações adicionais para os navegadores, mecanismos de busca e leitores de tela, tornando o conteúdo mais compreensível
+tanto para humanos quanto para máquinas.
+	A semântica é uma das principais melhorias do HTML5 em relação às versões anteriores do HTML, pois introduz vários novos elementos 
+semânticos que têm significados específicos associados a eles. Alguns dos elementos semânticos mais comuns em HTML5 incluem:
+
+	1. `<header>`: Representa o cabeçalho da página ou de uma seção específica da página. Geralmente contém logotipos, títulos e outros elementos
+de identificação.
+
+	2. `<nav>`: Indica a navegação da página, normalmente na forma de links de menu ou listas de navegação.
+
+	3. `<main>`: Representa o conteúdo principal da página. Deve ser usado apenas uma vez por página.
+
+	4. `<article>`: Descreve um conteúdo independente e autônomo que pode ser distribuído e reutilizado independentemente do resto do conteúdo
+da página.
+
+	5. `<section>`: Define uma seção genérica de conteúdo. Pode ser usado para agrupar um conjunto de elementos relacionados.
+
+	6. `<aside>`: Representa conteúdo relacionado ou informações complementares ao conteúdo principal da página.
+
+	7. `<footer>`: Representa o rodapé da página ou de uma seção específica da página.
+
+	8. `<figure>`: É usado para representar uma figura, como imagens, gráficos ou ilustrações, geralmente acompanhadas de uma legenda usando 
+a tag `<figcaption>`.
+
+	9. `<time>`: Representa datas ou horários, permitindo que os navegadores e leitores de tela entendam o contexto temporal do conteúdo.
+
+	10. `<blockquote>`: Indica que o conteúdo é uma citação de outro autor ou fonte.
+
+	A adoção adequada desses elementos semânticos não apenas ajuda na acessibilidade e no SEO (Search Engine Optimization), mas também melhora
+a estrutura do código e torna o conteúdo mais fácil de ser mantido e compreendido.
+
+	Exemplo de estrutura HTML5 usando elementos semânticos:
+
+		<!DOCTYPE html>
+		<html lang="pt-BR">
+		<head>
+    			<meta charset="UTF-8">
+    			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    			<title>Exemplo de Semântica HTML5</title>
+		</head>
+		<body>
+
+    			<header>
+        			<h1>Meu Site</h1>
+        			<nav>
+            				<ul>
+               				 	<li><a href="#home">Home</a></li>
+               				 	<li><a href="#sobre">Sobre</a></li>
+               				 	<li><a href="#servicos">Serviços</a></li>
+                			 	<li><a href="#contato">Contato</a></li>
+            				</ul>
+        			</nav>
+    			</header>
+
+    			<main>
+        			<section id="home">
+            				<h2>Bem-vindo ao Meu Site!</h2>
+            				<p>Este é o conteúdo da seção Home.</p>
+        			</section>
+
+        			<section id="sobre">
+            				<h2>Sobre Nós</h2>
+            				<p>Este é o conteúdo da seção Sobre.</p>
+       				</section>
+
+        			<section id="servicos">
+            				<h2>Nossos Serviços</h2>
+            				<article>
+                				<h3>Serviço 1</h3>
+                				<p>Descrição do Serviço 1.</p>
+            				</article>
+            				<article>
+                				<h3>Serviço 2</h3>
+                				<p>Descrição do Serviço 2.</p>
+            				</article>
+        			</section>
+    			</main>
+
+    			<aside>
+        			<h2>Informações Adicionais</h2>
+        			<p>Este é o conteúdo da seção de informações adicionais.</p>
+    			</aside>
+
+    			<footer>
+        			<p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+    			</footer>
+
+		</body>
+		</html>
+
+	É importante ressaltar que a semântica em HTML5 não se limita apenas a esses elementos. Existem muitos outros elementos e atributos 
+semânticos que podem ser usados para dar significado ao conteúdo da página. Ao escrever código HTML, é recomendado sempre usar os elementos 
+semânticos apropriados para a estrutura do conteúdo, garantindo uma melhor experiência para os usuários e uma maior compreensão para os mecanismos
+de busca.

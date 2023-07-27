@@ -1,0 +1,51 @@
+SVG
+
+	SVG (Scalable Vector Graphics) é um formato de imagem baseado em XML (Extensible Markup Language) que permite a criação de gráficos 
+vetoriais escaláveis. Ao contrário das imagens bitmap (como JPG, PNG ou GIF), as imagens SVG são criadas usando elementos e atributos XML para 
+definir formas, curvas, cores e outros elementos gráficos. Isso torna as imagens SVG independentes de resolução e ideais para exibição em vários 
+dispositivos e tamanhos de tela.
+
+	Aqui estão algumas características importantes do SVG em HTML5:
+
+	1. **Escalabilidade**: Uma das principais vantagens do SVG é a capacidade de redimensionar as imagens sem perda de qualidade. Isso ocorre
+ porque as imagens são criadas a partir de descrições matemáticas de formas, em vez de pixels, como em imagens rasterizadas.
+
+	2. **Gráficos Vetoriais**: O SVG suporta uma variedade de elementos gráficos, como linhas, polígonos, retângulos, círculos, elipses e caminhos 
+(definidos por pontos de controle).
+
+	3. **Animação**: Com o uso de CSS e JavaScript, é possível animar elementos SVG, permitindo criar animações interativas e dinâmicas diretamente 
+no navegador.
+
+	4. **Interatividade**: As imagens SVG podem ser tornadas interativas usando eventos e scripts JavaScript. Você pode adicionar interatividade, 
+como respostas a cliques, toques ou passagens do mouse, para tornar suas ilustrações mais envolventes.
+
+	5. **Texto**: O SVG também suporta texto, permitindo que você adicione texto formatado às suas ilustrações vetoriais.
+
+	6. **Estilização**: É possível aplicar estilos CSS às imagens SVG, permitindo que você defina cores, preenchimentos, traços e outros 
+atributos visuais diretamente no código HTML ou em um arquivo CSS separado.
+
+	7. **Compatibilidade**: O SVG é amplamente suportado por navegadores modernos, tornando-o uma escolha confiável para criar gráficos e ícones 
+escaláveis para a web.
+
+	8. **Acessibilidade**: As imagens SVG podem ser facilmente acessíveis, tornando-as uma opção popular para criar elementos gráficos em 
+interfaces de usuário acessíveis.
+
+	9. **Integração com HTML**: As imagens SVG podem ser facilmente incorporadas em documentos HTML usando a tag `<svg>`. Além disso, elas 
+também podem ser referenciadas em um arquivo externo e incluídas usando a tag `<img>`.
+
+	Exemplo simples de uso do SVG em HTML5:
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+    			<title>Exemplo de SVG em HTML5</title>
+		</head>
+		<body>
+    			<svg width="100" height="100">
+        			<circle cx="50" cy="50" r="40" fill="blue" />
+    			</svg>
+		</body>
+		</html>
+
+	Neste exemplo, um círculo azul é criado usando SVG. O `width` e `height` definem as dimensões da imagem, e o elemento `<circle>` é usado 
+para criar o círculo com centro em (50,50) e raio de 40 unidades, preenchido com a cor azul.

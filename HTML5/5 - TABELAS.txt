@@ -1,0 +1,60 @@
+TABELAS 
+
+	As tabelas são usadas para organizar dados em formato tabular, ou seja, em linhas e colunas. Elas são especialmente úteis para exibir 
+informações estruturadas de forma organizada, como listas comparativas, dados financeiros, horários, entre outros. As tabelas são compostas por 
+diversos elementos, que permitem definir cabeçalhos, células de dados, estilos e outras propriedades. Aqui estão os principais elementos e 
+atributos relacionados a tabelas em HTML5:
+
+	1. Elemento `<table>`:
+	O elemento `<table>` é usado para criar a estrutura básica da tabela e envolve todos os outros elementos da tabela.
+
+	2. Elemento `<tr>` (table row):
+	O elemento `<tr>` define uma linha da tabela e contém células de dados ou cabeçalhos.
+
+	3. Elemento `<th>` (table header cell):
+	O elemento `<th>` é usado para criar células de cabeçalho da tabela. Ele deve ser colocado dentro de um elemento `<tr>` dentro da seção 
+`<thead>` ou `<tbody>`. Geralmente, as células de cabeçalho são exibidas em negrito por padrão.
+
+	4. Elemento `<td>` (table data cell):
+	O elemento `<td>` é usado para criar células de dados da tabela. Ele também deve ser colocado dentro de um elemento `<tr>` dentro da 
+seção `<tbody>`.
+
+	5. Elemento `<thead>`, `<tbody>`, `<tfoot>`:
+	Esses elementos são usados para agrupar o cabeçalho, o corpo e o rodapé da tabela, respectivamente. O cabeçalho da tabela normalmente 
+contém células de cabeçalho (<th>), o corpo contém células de dados (<td>), e o rodapé pode ser usado para exibir informações adicionais.
+
+	6. Atributo `colspan` e `rowspan`:
+	O atributo `colspan` é usado para mesclar células horizontalmente, ou seja, expandir uma célula para abranger várias colunas. O atributo 
+`rowspan` é usado para mesclar células verticalmente, ou seja, expandir uma célula para abranger várias linhas.
+
+	Exemplo básico de uma tabela em HTML5:
+
+		<table>
+  			<thead>
+    				<tr>
+      					<th>Nome</th>
+      					<th>Idade</th>
+    				</tr>
+  			</thead>
+  			<tbody>
+    				<tr>
+      					<td>João</td>
+      					<td>30</td>
+    				</tr>
+    				<tr>
+      					<td>Maria</td>
+      					<td>25</td>
+    				</tr>
+  			</tbody>
+		</table>
+
+		Resultado na página:
+
+		| Nome  | Idade |
+		|-------|-------|
+		| João  | 30    |
+		| Maria | 25    |
+
+	As tabelas em HTML5 permitem criar layouts organizados de informações tabulares e são amplamente utilizadas para exibir dados de forma 
+legível e estruturada. No entanto, é importante usá-las com moderação e preferir outras técnicas de layout, como flexbox e grid, para disposição 
+de elementos não tabulares na maioria dos casos.

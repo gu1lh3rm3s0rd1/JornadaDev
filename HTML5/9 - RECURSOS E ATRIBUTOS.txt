@@ -1,0 +1,237 @@
+MARK E CONTENTEDITABLE
+
+	Os atributos `contenteditable` e `mark` são usados para adicionar recursos interativos e de edição de conteúdo a elementos específicos em
+uma página web.
+
+	1. **Atributo `contenteditable`**:
+	O atributo `contenteditable` é usado para tornar um elemento HTML editável, permitindo que os usuários modifiquem seu conteúdo diretamen-
+te na página. Esse atributo pode ser aplicado a praticamente qualquer elemento, como parágrafos (`<p>`), divs (`<div>`), títulos (`<h1>`, `<h2>`,
+etc.), listas (`<ul>`, `<ol>`, `<li>`), entre outros.
+
+	Exemplo de uso:
+
+		<div contenteditable="true">
+    			<p>Este é um conteúdo editável. Tente modificar este texto.</p>
+		</div>
+
+	Ao definir o valor `true` para o atributo `contenteditable`, o conteúdo dentro do elemento se torna editável. Os usuários podem clicar no
+texto e começar a editar o conteúdo. Isso é útil para criar áreas de edição de texto em páginas web, como editores de texto simplificados.
+
+	2. **Elemento `<mark>`**:
+	O elemento `<mark>` é um elemento de marcação semântica introduzido pelo HTML5. Ele é usado para destacar ou marcar partes específicas do 
+texto dentro de um elemento. Quando usado em conjunto com CSS, o texto destacado pelo elemento `<mark>` geralmente é exibido com uma cor de fundo
+diferente para chamar a atenção do leitor.
+	
+	Exemplo de uso:
+
+		<p>
+    			O evento mais importante do ano será realizado em <mark>25 de julho</mark> na cidade de São Paulo.
+		</p>
+
+	No exemplo acima, a data "25 de julho" será destacada em um fundo diferente, dependendo do estilo CSS aplicado.
+	É importante observar que, embora o elemento `<mark>` permita destacar e marcar partes do texto, ele não possui recursos de edição embuti-
+dos como o atributo `contenteditable`. Sua finalidade é fornecer destaque visual apenas para referências ou partes importantes do conteúdo.
+
+
+
+TABINDEX E ACCESSKEY
+
+	Os atributos `tabindex` e `accesskey` são usados para melhorar a acessibilidade e a usabilidade de páginas da web, permitindo que os 
+usuários naveguem e interajam com o conteúdo de maneira mais eficiente. Vamos entender cada um deles:
+
+	1. **`tabindex`**:
+	O atributo `tabindex` é utilizado para definir a ordem de tabulação dos elementos em uma página. Quando um usuário navega pela página 
+usando a tecla Tab, os elementos com o atributo `tabindex` definido serão percorridos em ordem numérica crescente. Dessa forma, é possível controlar
+a sequência em que os elementos recebem foco ao navegar pelo teclado.
+	Atributo `tabindex` é definido usando um valor numérico, e os elementos com valores menores têm prioridade na ordem de tabulação. Além 
+disso, é possível atribuir valores negativos a elementos que não devem ser alcançados pela navegação por teclado, mas ainda podem receber foco 
+programaticamente via JavaScript.
+
+	Exemplo:
+
+		<input type="text" tabindex="1">
+		<input type="checkbox" tabindex="2">
+		<button type="submit" tabindex="3">Enviar</button>
+
+	No exemplo acima, ao pressionar a tecla Tab, a ordem de foco será: `<input type="text>` -> `<input type="checkbox>` -> `<button type="submit>`.
+
+	2. **`accesskey`**:
+	O atributo `accesskey` é utilizado para atribuir atalhos de teclado a elementos específicos na página. Quando o usuário pressiona a combi-
+nação de teclas designada como atalho, o elemento associado recebe o foco, permitindo uma navegação rápida e direta.
+	O valor do atributo `accesskey` deve ser uma letra ou número, e é geralmente acompanhado por uma tecla modificadora (geralmente Alt ou 
+Ctrl) para formar a combinação de atalho. É importante considerar que a combinação de teclas pode variar dependendo do navegador e do sistema 
+operacional utilizado.
+
+	Exemplo:
+
+		<a href="#" accesskey="H">Home</a>
+		<button type="button" accesskey="S">Salvar</button>
+
+	No exemplo acima, o atalho Alt+H (ou Ctrl+H, dependendo do navegador/sistema) levará o usuário ao link "Home", enquanto Alt+S (ou Ctrl+S)
+acionará o botão "Salvar".
+	É importante usar esses atributos com responsabilidade e fornecer uma experiência de usuário consistente e acessível. Além disso, 
+lembre-se de que a acessibilidade na web é uma prática importante para garantir que todos os usuários, incluindo aqueles com deficiências ou que 
+usam tecnologias assistivas, possam acessar e interagir com o conteúdo de forma eficaz.
+
+
+
+DETAILS
+
+	A tag `<details>` é utilizada para criar um elemento de detalhes que pode ser expandido ou contraído pelo usuário para mostrar ou ocultar
+informações adicionais. É frequentemente usado em combinação com a tag `<summary>` para fornecer um título ou rótulo para o elemento de detalhes.
+	
+	Aqui está a estrutura básica de como usar a tag `<details>`:
+
+		<details>
+  			<summary>Texto do Título</summary>
+  			<!-- Conteúdo adicional que será mostrado ou ocultado -->
+  			<p>Informações adicionais aqui.</p>
+		</details>
+
+	Quando a página é carregada, o conteúdo dentro da tag `<details>` é ocultado por padrão, e apenas o texto do título fornecido pela tag 
+`<summary>` é visível. Quando o usuário clica no título, o elemento de detalhes é expandido e o conteúdo adicional é exibido. Se o usuário clicar
+novamente no título, o elemento de detalhes é contraído e o conteúdo fica oculto novamente.
+	A tag `<details>` é particularmente útil quando você deseja fornecer informações adicionais ou opções extras em um formato compacto e 
+interativo, economizando espaço na página. Por exemplo, pode ser usado para mostrar detalhes adicionais sobre um produto em uma loja online, para
+criar uma lista de perguntas frequentes em um formato de acordeão, ou para oferecer opções adicionais em um formulário.
+	
+	Aqui está um exemplo mais completo:
+
+		<details>
+  			<summary>Detalhes do Produto</summary>
+  			<p><strong>Nome:</strong> Smartphone XYZ</p>
+  			<p><strong>Preço:</strong> R$ 999,00</p>
+  			<p><strong>Descrição:</strong> Um smartphone avançado com muitos recursos incríveis.</p>
+		</details>
+
+	Ao visualizar esse código em um navegador, você verá apenas o texto "Detalhes do Produto" como o título clicável. Quando você clica no 
+título, os detalhes do produto, como nome, preço e descrição, serão expandidos abaixo dele. Se você clicar novamente, os detalhes serão ocultados.
+
+
+
+OBJECT
+
+	A tag `<object>` é um elemento que permite incorporar objetos externos, como mídia, aplicativos ou outros tipos de conteúdo, em uma 
+página da web. Essa tag é versátil e pode ser usada para incorporar uma variedade de conteúdos diferentes.
+
+	Aqui estão algumas das principais aplicações e atributos relacionados à tag `<object>`:
+
+	1. **Incorporação de Mídia**: A tag `<object>` pode ser usada para incorporar conteúdo de mídia, como arquivos de áudio ou vídeo. Ela 
+permite especificar um link para o arquivo a ser reproduzido e também pode fornecer alternativas usando outras tags, como `<param>` ou `<embed>`.
+
+	2. **Incorporação de Aplicativos**: É possível incorporar aplicativos externos na página usando a tag `<object>`. Isso inclui coisas como
+applets Java (embora essa prática esteja em desuso devido a preocupações com segurança), entre outros tipos de conteúdo interativo.
+
+	3. **Plugins**: Historicamente, a tag `<object>` foi frequentemente usada para incorporar plugins de navegadores, como o Adobe Flash Player. 
+No entanto, com o declínio do uso de plugins de terceiros devido a problemas de segurança e compatibilidade, essa abordagem está menos comum atualmente.
+
+	4. **Fallback**: Uma das principais vantagens da tag `<object>` é sua capacidade de fornecer conteúdo alternativo (fallback) para navegadores
+que não suportam o objeto incorporado. Isso é geralmente feito usando a tag `<param>` dentro do elemento `<object>`. Os navegadores que não conseguem
+exibir o objeto incorporado procurarão o conteúdo fornecido pelas tags `<param>` e `<embed>` dentro da tag `<object>`.
+
+	Aqui está um exemplo básico de como a tag `<object>` pode ser usada para incorporar um vídeo em uma página HTML:
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+  			<title>Exemplo de uso da tag object</title>
+		</head>
+		<body>
+  			<object data="video.mp4" type="video/mp4">
+    				<param name="src" value="video.mp4">
+    				Seu navegador não suporta a tag de vídeo.
+  			</object>
+		</body>
+		</html>
+
+	Neste exemplo, o arquivo de vídeo "video.mp4" é incorporado na página usando a tag `<object>`. Se o navegador do usuário suportar a repro-
+dução de vídeos no formato MP4, ele será reproduzido. Caso contrário, o navegador exibirá o texto "Seu navegador não suporta a tag de vídeo." 
+como fallback.
+	É importante mencionar que, nos dias de hoje, com o avanço do HTML5 e o suporte nativo para áudio e vídeo através das tags `<audio>` e 
+`<video>`, a tag `<object>` é usada com menos frequência para esse propósito específico. Ela ainda pode ser útil para incorporar outros tipos de 
+conteúdo, mas é importante considerar outras opções mais modernas e amplamente suportadas em primeiro lugar.
+
+
+
+HGROUP, METERS E PROGRESS
+
+	As tags `<hgroup>`, `<meter>`, e `<progress>` são recursos adicionais que foram introduzidos para fornecer mais semântica e funcionalidades
+específicas. Vamos entender o propósito e uso de cada uma delas:
+
+	1. **<hgroup>**:
+	A tag `<hgroup>` é usada para agrupar elementos de cabeçalho (`<h1>` a `<h6>`) em uma única unidade semântica. Isso é útil quando você 
+tem títulos relacionados que desejam ser apresentados juntos. 
+	
+	Por exemplo:
+	
+		<hgroup>
+  			<h1>Título Principal</h1>
+  			<h2>Subtítulo</h2>
+		</hgroup>
+
+	O `<hgroup>` pode ser útil para ajudar os mecanismos de busca a entender a hierarquia dos títulos e também pode ser usado por leitores de
+tela para fornecer informações contextuais.
+	No entanto, é importante notar que o uso do `<hgroup>` foi considerado controverso, e a especificação HTML5 recomendou seu desuso em 
+favor de usar estruturas semânticas, como `<header>` e `<section>`, para melhorar a organização do conteúdo.
+
+	2. **<meter>**:
+	A tag `<meter>` é usada para representar medições escalar dentro de um intervalo conhecido. É comumente usado para indicar a progressão 
+ou quantidade de um valor em relação a um valor máximo e mínimo definido. A tag `<meter>` possui dois atributos principais: `value` (valor atual)
+e `min` e `max` (valor mínimo e máximo, respectivamente).
+
+		<meter value="70" min="0" max="100">70%</meter>
+
+	O exemplo acima representa um medidor com um valor atual de 70% em um intervalo de 0 a 100. O navegador pode apresentar visualmente o 
+medidor como uma barra de progresso ou com outros estilos apropriados para indicar a medição.
+
+	3. **<progress>**:
+	A tag `<progress>` também é usada para criar uma barra de progresso, mas é mais adequada para indicar o andamento de uma tarefa em andamento,
+como o carregamento de um arquivo ou o progresso de um download.
+
+		<progress value="50" max="100"></progress>
+
+	No exemplo acima, temos uma barra de progresso que mostra 50% de conclusão de uma tarefa em andamento, com um valor máximo de 100.
+	Enquanto `<meter>` é mais apropriado para medições específicas, `<progress>` é mais indicado para indicar o andamento de uma tarefa. Ambas
+as tags podem ser estilizadas com CSS para se adequar ao design da sua página.
+	Lembre-se de que, embora o HTML5 tenha introduzido esses recursos, nem todos os navegadores oferecem suporte a eles, e, portanto, é sempre
+uma boa prática fornecer uma experiência de fallback adequada para os usuários que utilizam navegadores mais antigos ou não compatíveis com essas
+funcionalidades.
+
+
+
+FIGURE E FIGCAPTION
+
+	As tags `<figure>` e `<figcaption>` são usadas para criar legendas para elementos de conteúdo, como imagens, gráficos ou ilustrações. Elas
+fornecem uma maneira semântica de associar uma descrição a um elemento visual, tornando o conteúdo mais acessível e compreensível para os usuários,
+incluindo leitores de tela e motores de busca.
+
+	Aqui está uma explicação sobre cada uma dessas tags:
+
+	1. **`<figure>`**:
+	A tag `<figure>` é usada para envolver um elemento de conteúdo, geralmente uma imagem, mas também pode ser usada com outros tipos de mídia,
+como áudio ou vídeo. Ela representa um conteúdo independente que pode ser referenciado, compartilhado ou destacado como um único item. Isso é útil
+em cenários como galerias de imagens ou quando o conteúdo visual precisa ser apresentado de forma separada.
+
+	Exemplo de uso do elemento `<figure>` com uma imagem:
+
+		<figure>
+  			<img src="caminho-da-imagem.jpg" alt="Descrição da imagem">
+		</figure>
+
+	2. **`<figcaption>`**:
+	A tag `<figcaption>` é usada dentro da tag `<figure>` para fornecer a legenda ou descrição associada ao conteúdo visual envolvido pela 
+tag `<figure>`. Essa legenda aparece diretamente abaixo ou acima do elemento visual e geralmente descreve o que está acontecendo na imagem ou 
+fornece informações adicionais relevantes.
+
+	Exemplo de uso da tag `<figcaption>` para criar uma legenda:
+
+		<figure>
+  			<img src="caminho-da-imagem.jpg" alt="Descrição da imagem">
+  			<figcaption>Legenda da imagem</figcaption>
+		</figure>
+
+	É importante observar que o elemento `<figcaption>` deve ser usado dentro da tag `<figure>`, caso contrário, não terá o mesmo significado
+semântico. O navegador e outras ferramentas de acessibilidade podem aproveitar essas tags para fornecer informações adicionais aos usuários, 
+tornando o conteúdo mais acessível e informativo.
+	Com a utilização adequada das tags `<figure>` e `<figcaption>`, você pode melhorar a experiência do usuário, facilitando o entendimento 
+do conteúdo visual apresentado em seu site ou aplicativo da web.

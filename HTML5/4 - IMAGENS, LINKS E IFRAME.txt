@@ -1,0 +1,156 @@
+IMAGENS
+
+	Em HTML5, as imagens são inseridas nas páginas da web usando o elemento `<img>`. Esse elemento permite que você exiba imagens em vários 
+formatos, como JPEG, PNG, GIF e outros. As imagens são elementos importantes para melhorar a aparência e o conteúdo visual das páginas, 
+tornando-as mais atraentes e informativas.
+
+	Aqui está uma visão geral de como utilizar o elemento `<img>`:
+
+	Sintaxe básica do elemento `<img>`:
+
+		<img src="caminho/da/imagem.jpg" alt="Texto alternativo" width="largura" height="altura">
+
+	Explicação dos principais atributos:
+
+	1. `src`: Obrigatório. Especifica o caminho ou URL da imagem a ser exibida. Pode ser um caminho local ou uma URL completa para uma 
+imagem hospedada na web.
+
+	2. `alt`: Obrigatório. Fornece um texto alternativo para a imagem. Essa descrição é exibida caso a imagem não possa ser carregada ou 
+para usuários com deficiência visual que utilizam leitores de tela.
+
+	3. `width` e `height`: Opcional. Esses atributos permitem definir a largura e a altura da imagem em pixels. É recomendado definir esses 
+valores para evitar que a página "pule" enquanto as imagens são carregadas.
+
+	Exemplo de uso do elemento `<img>`:
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+  			<title>Exemplo de Imagem</title>
+		</head>
+		<body>
+  			<img src="caminho/da/imagem.jpg" alt="Uma bela paisagem" width="400" height="300">
+		</body>
+		</html>
+
+	Além disso, é possível utilizar o elemento `<figure>` em conjunto com `<img>` para criar uma figura com uma legenda explicativa. Para 
+isso, você envolve o elemento `<img>` com `<figure>` e pode adicionar a legenda usando o elemento `<figcaption>`.
+
+	Exemplo de uso de `<figure>` e `<figcaption>`:
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+  			<title>Exemplo de Imagem com Legenda</title>
+		</head>
+		<body>
+  			<figure>
+    				<img src="caminho/da/imagem.jpg" alt="Uma bela paisagem" width="400" height="300">
+    				<figcaption>Esta é uma bela paisagem natural.</figcaption>
+  			</figure>
+		</body>
+		</html>
+
+	Lembre-se de sempre utilizar o atributo `alt` em suas imagens, pois isso é essencial para a acessibilidade da sua página e para melhorar 
+a experiência do usuário, especialmente para aqueles com deficiências visuais. Além disso, é importante otimizar as imagens para a web, mantendo 
+um equilíbrio entre qualidade e tamanho do arquivo para garantir um carregamento rápido da página.
+
+
+
+IFRAME
+
+	Em HTML5, o elemento `<iframe>` é usado para incorporar um documento ou página da web dentro de outra página. O nome "iframe" significa 
+"Inline Frame" (Quadro Interno), e ele permite que você exiba conteúdo de outras fontes ou URLs em uma janela separada dentro da página principal.
+	O uso mais comum do elemento `<iframe>` é a incorporação de conteúdo de outras páginas, como vídeos do YouTube, mapas do Google Maps, 
+widgets de redes sociais, entre outros. Isso oferece uma maneira conveniente de adicionar funcionalidades externas ao seu site sem a necessidade 
+de copiar todo o conteúdo.
+
+	Aqui está um exemplo básico de como usar o elemento `<iframe>`:
+
+	<!DOCTYPE html>
+	<html lang="pt-br">
+	<head>
+  		<meta charset="UTF-8">
+  		<title>Página com iFrame</title>
+	</head>
+	<body>
+  		<h1>Página com iFrame</h1>
+  	<!-- Inserindo um iFrame que exibe o conteúdo de uma página externa -->
+  		<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+	</body>
+	</html>
+
+	Neste exemplo, estamos incorporando um vídeo do YouTube usando o atributo `src` do elemento `<iframe>`. O valor desse atributo é a URL 
+do vídeo que desejamos incorporar. Também definimos a largura e a altura do iframe usando os atributos `width` e `height`, respectivamente. O 
+atributo `frameborder` é definido como "0" para remover a borda ao redor do iframe, e o atributo `allowfullscreen` permite que o vídeo seja 
+reproduzido em tela cheia quando o usuário clicar no botão de tela cheia.
+	Lembre-se de que, ao incorporar conteúdo de outras fontes em seu site usando o `<iframe>`, é importante garantir que as páginas externas 
+sejam confiáveis e seguras, pois o conteúdo será carregado diretamente na sua página. O uso responsável do elemento `<iframe>` é fundamental 
+para evitar problemas de segurança e garantir uma boa experiência do usuário.
+
+
+
+LINKS
+
+	Os links são elementos fundamentais para criar a navegação entre diferentes páginas ou recursos da web. Eles permitem que os usuários 
+cliquem em um texto, imagem ou área específica da página para acessar outro documento, página da web, arquivo, endereço de e-mail, ou mesmo para 
+navegar para um local específico na mesma página (âncoras).
+
+	Aqui estão algumas informações importantes sobre links em HTML5:
+
+	1. Elemento `<a>`:
+	O elemento principal usado para criar links em HTML5 é o `<a>` (anchor). Ele é utilizado com o atributo `href`, que especifica o destino 
+do link, ou seja, o endereço para o qual o usuário será direcionado ao clicar no link.
+
+	Exemplo de link para um site externo:
+
+		<a href="https://www.exemplo.com">Visitar Exemplo.com</a>
+
+	2. Links relativos e absolutos:
+	O atributo `href` pode conter um URL absoluto, como no exemplo acima, ou um URL relativo, que é uma forma de indicar o destino do link 
+em relação ao local atual da página. Links relativos são úteis quando você deseja criar links internos em seu próprio site.
+
+	Exemplo de link interno (relativo):
+
+		<a href="/pagina-interna.html">Ir para página interna</a>
+
+	3. Âncoras:
+	Você também pode usar links para criar âncoras dentro da mesma página. As âncoras permitem que os usuários naveguem para seções específicas
+da página.
+
+	Exemplo de link com âncora:
+
+		<a href="#secao-sobre">Ir para a seção Sobre</a>
+		<!-- ... -->
+		<h2 id="secao-sobre">Sobre Nós</h2>
+		<p>Informações sobre nossa empresa...</p>
+
+	4. Outros tipos de links:
+	Além de links para sites, você pode criar links para enviar e-mails usando o atributo `mailto`, e também links para downloads de arquivos
+usando o atributo `download`.
+
+	Exemplo de link para enviar um e-mail:
+
+		<a href="mailto:contato@exemplo.com">Enviar e-mail</a>
+
+	Exemplo de link para download de arquivo:
+
+		<a href="arquivo.pdf" download>Baixar arquivo PDF</a>
+
+	5. Estilização:
+	Os links podem ser estilizados com CSS para alterar a aparência do texto do link, cor, sublinhado e comportamento quando o usuário passa 
+o mouse sobre o link ou o visita.
+
+	Exemplo de estilização de link:
+
+		a {
+  			color: #007bff; /* cor do link */
+  			text-decoration: none; /* remover sublinhado padrão */
+		}
+
+		a:hover {
+  			text-decoration: underline; /* adicionar sublinhado quando o mouse passa sobre o link */
+		}
+
+	Os links desempenham um papel crucial na criação de uma experiência de usuário interativa e facilitam a navegação na web. Utilize-os de 
+forma adequada e clara para direcionar os usuários para o conteúdo relevante em seu site.

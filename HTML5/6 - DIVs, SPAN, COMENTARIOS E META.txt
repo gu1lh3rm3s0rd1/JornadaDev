@@ -1,0 +1,167 @@
+DIV
+
+	Em HTML5, a `<div>` é uma das tags mais fundamentais e versáteis para criar layouts e estruturar o conteúdo de uma página. A palavra 
+"div" é uma abreviação de "divisão" (division, em inglês), o que sugere o propósito principal dessa tag: dividir ou agrupar elementos relacionados.
+	
+	Aqui estão algumas informações importantes sobre a tag `<div>` em HTML5:
+
+	1. Agrupamento e Divisão de Conteúdo:
+	A `<div>` é uma tag de contêiner que não possui significado semântico específico. É usada para agrupar e dividir partes do conteúdo em 
+blocos. Por si só, a tag `<div>` não implica nenhum estilo ou comportamento especial. É através do uso de classes, IDs ou estilos CSS que você 
+pode atribuir funcionalidades e aparências diferentes às diferentes divisões de conteúdo.
+
+	2. Estilo e Layout:
+	A tag `<div>` é uma ferramenta crucial para a criação de layouts em HTML5 e CSS. É comum criar um layout usando várias `<div>` para 
+dividir a página em cabeçalho, corpo, barra lateral, rodapé e outras seções. Essas divisões podem ser estilizadas e posicionadas usando CSS, 
+permitindo que os desenvolvedores criem designs personalizados e responsivos.
+
+	3. Classes e IDs:
+	Para estilizar e manipular as `<div>` com mais precisão, é comum atribuir classes ou IDs a elas. As classes e IDs são utilizadas como 
+seletores CSS, permitindo que você aplique estilos específicos a cada elemento. Classes podem ser reutilizadas em vários elementos, enquanto IDs 
+devem ser únicos em uma página.
+
+	Exemplo de uso de `<div>` com classes:
+
+		<div class="header">
+  		<!-- Conteúdo do cabeçalho aqui -->
+		</div>
+
+		<div class="main-content">
+  		<!-- Conteúdo principal aqui -->
+		</div>
+
+		<div class="sidebar">
+  		<!-- Barra lateral aqui -->
+		</div>
+
+		<div class="footer">
+  		<!-- Rodapé aqui -->
+		</div>
+
+	4. Aninhamento de Divs:
+	Você também pode aninhar várias `<div>` dentro de outras, permitindo criar estruturas de conteúdo mais complexas e hierárquicas. Isso é 
+útil para dividir áreas menores dentro de seções maiores.
+
+	Exemplo de aninhamento de `<div>`:
+
+	<div class="container">
+  		<div class="header">
+    		<!-- Conteúdo do cabeçalho aqui -->
+  		</div>
+  		<div class="main-content">
+    		<!-- Conteúdo principal aqui -->
+  		</div>
+	</div>
+
+	Em resumo, a tag `<div>` é uma ferramenta fundamental para criar layouts e organizar o conteúdo em uma página web. É altamente flexível 
+e não possui significado semântico próprio, permitindo que os desenvolvedores utilizem-na de forma criativa para alcançar os designs desejados. 
+Ao combinar a tag `<div>` com CSS, você pode criar páginas web visualmente atraentes e bem estruturadas.
+
+
+
+SPAN
+
+	O elemento `<span>` é uma tag genérica que é utilizada para agrupar e estilizar um trecho específico de texto ou conteúdo dentro de um 
+documento HTML. Diferentemente de elementos como `<div>`, que são blocos de construção de layout e ocupam toda a largura disponível, o `<span>` 
+é um elemento de linha e ocupa apenas o espaço necessário para o seu conteúdo.
+	O elemento `<span>` não possui nenhum significado semântico próprio e não afeta a estrutura do documento. Sua principal função é permitir
+a aplicação de estilos CSS ou a interação com scripts JavaScript em partes específicas do texto. Ele é especialmente útil quando você deseja 
+estilizar ou manipular um pedaço pequeno de texto dentro de um parágrafo ou de outros elementos de bloco.
+
+	Exemplo de uso do `<span>`:
+
+		<p>Este é um texto de exemplo com um <span style="color: blue; font-weight: bold;">trecho estilizado</span> usando o elemento span.</p>
+
+	Neste exemplo, o texto "trecho estilizado" será exibido em azul e em negrito, pois utilizamos o atributo `style` para aplicar estilos 
+diretamente no elemento `<span>`. No entanto, é mais recomendado utilizar classes ou IDs e definir os estilos em um arquivo CSS externo para 
+manter o código mais organizado e facilitar a manutenção.
+
+	Exemplo com classes CSS:
+
+		<style>
+  			.texto-azul-negrito {
+    				color: blue;
+    				font-weight: bold;
+  			}
+		</style>
+
+		<p>Este é um texto de exemplo com um <span class="texto-azul-negrito">trecho estilizado</span> usando classes CSS.</p>
+
+	Através do uso do elemento `<span>` e estilos CSS, é possível criar efeitos visuais em partes específicas do texto ou destacar informações
+importantes de maneira precisa e flexível. Além disso, o `<span>` também é comumente usado em conjunto com scripts JavaScript para manipular o 
+conteúdo em tempo de execução, oferecendo mais dinamismo às páginas web.
+
+
+
+COMENTARIO
+
+	Comentários em HTML5 são trechos de texto que são ignorados pelo navegador e não são exibidos na página, sendo usados exclusivamente 
+para fins de documentação, explicação ou anotações para os desenvolvedores. Eles são uma maneira de adicionar notas ou lembretes no código HTML 
+sem afetar a renderização da página no navegador.
+
+	Os comentários são úteis para:
+
+	1. Documentação: Explicar a finalidade de uma seção específica do código, suas funcionalidades ou detalhes importantes.
+
+	2. Debugging: Identificar ou deixar comentários temporários para fins de depuração ou solução de problemas no código.
+
+	3. Remoção Temporária: Comentar trechos de código que não deseja que sejam executados temporariamente sem ter que excluí-los.
+
+	Em HTML5, os comentários são adicionados usando a seguinte sintaxe:
+
+		<!-- Este é um comentário em HTML5 -->
+
+	Os comentários em HTML5 podem ser colocados em qualquer lugar dentro do código, exceto dentro de tags de script ou estilo, pois isso pode
+causar problemas de compatibilidade com alguns navegadores. Eles podem ser de uma única linha ou de várias linhas:
+
+	Comentário de uma linha:
+
+		<!-- Este é um comentário de uma linha -->
+
+	É importante lembrar que os comentários são destinados apenas aos desenvolvedores e não devem ser usados para explicar ou documentar 
+elementos que os usuários verão em suas páginas. Eles não são exibidos no navegador e, portanto, não são visíveis para os visitantes do site.
+
+
+
+META
+
+	As tags `<meta>` são utilizadas para fornecer metadados e informações adicionais sobre o documento HTML. Essas informações não são 
+exibidas diretamente na página, mas são importantes para os navegadores, mecanismos de busca e outros serviços que interagem com o conteúdo.
+
+	As metatags são colocadas dentro da seção `<head>` do documento HTML e têm o seguinte formato geral:
+
+		<head>
+  			<meta atributo="valor" />
+		</head>
+
+	Aqui estão algumas das metatags mais comuns em HTML5:
+
+	1. `<meta charset="UTF-8">`:
+	Essa metatag define o conjunto de caracteres utilizado no documento, sendo "UTF-8" a codificação mais amplamente utilizada e que suporta 
+caracteres especiais de diferentes idiomas.
+
+	2. `<meta name="viewport" content="valor">`:
+	A metatag "viewport" é especialmente importante para tornar o site responsivo em dispositivos móveis. Ela controla como o conteúdo é 
+dimensionado e exibido na tela do dispositivo.
+
+	Exemplo de viewport para tornar a página responsiva:
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	3. `<meta name="keywords" content="palavra-chave1, palavra-chave2, ...">`:
+	Essa metatag costumava ser usada para fornecer palavras-chave que eram relevantes para o conteúdo da página. No entanto, atualmente, os 
+motores de busca dão menos importância a essa tag e usam algoritmos mais avançados para determinar a relevância do conteúdo.
+
+	4. `<meta name="description" content="Descrição da página">`:
+	Essa metatag é usada para fornecer uma breve descrição do conteúdo da página. Alguns motores de busca exibem essa descrição nos resultados 
+de pesquisa.
+
+	5. `<meta name="author" content="Nome do Autor">`:
+	Essa metatag permite especificar o nome do autor da página.
+
+	6. `<meta http-equiv="refresh" content="tempo; URL=redirecionamento.html">`:
+	Essa metatag é usada para redirecionar a página para outra URL após um determinado período de tempo.
+
+	Essas são apenas algumas das metatags mais comuns usadas em HTML5. Há várias outras metatags disponíveis, mas a relevância e uso delas 
+podem variar de acordo com as necessidades específicas do projeto. As metatags são essenciais para melhorar a indexação e o desempenho do seu 
+site nos mecanismos de busca e para garantir uma melhor experiência do usuário, especialmente em dispositivos móveis.

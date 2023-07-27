@@ -1,0 +1,211 @@
+SCRIPT
+
+	O elemento `<script>` é usado para incorporar e executar código de script, normalmente escrito em JavaScript, na página da web. O código 
+dentro das tags `<script>` é interpretado e executado pelo navegador do usuário quando a página é carregada ou durante a interação do usuário. 
+	O elemento `<script>` é um dos recursos mais importantes do HTML5, pois permite a criação de páginas web interativas e dinâmicas.
+
+	Aqui estão algumas informações essenciais sobre o uso de scripts em HTML5:
+
+	1. **Incorporação de Script**: Para incluir um script na página, você pode usar a seguinte sintaxe:
+
+		<script src="caminho_para_o_arquivo.js"></script>
+
+	O atributo `src` é usado para especificar o caminho para o arquivo JavaScript externo que contém o código a ser executado. Você também pode
+escrever o código diretamente entre as tags `<script>`.
+
+	2. **Localização do Script**: O elemento `<script>` é colocado geralmente no cabeçalho (`<head>`) ou antes do fechamento do corpo (`</body>`) 
+da página. Colocá-lo no cabeçalho atrasa a renderização da página até que o script seja carregado e executado, enquanto colocá-lo no corpo permite que 
+a página seja exibida primeiro e, em seguida, carrega o script posteriormente.
+
+	3. **Atributo `async` e `defer`**: Para melhorar o desempenho e evitar bloquear a renderização da página, você pode usar os atributos 
+`async` ou `defer` no elemento `<script>`. 
+
+	Por exemplo:
+
+		<script src="caminho_para_o_arquivo.js" async></script>
+
+	O atributo `async` indica ao navegador que ele pode continuar carregando a página enquanto o script é baixado em segundo plano e, quando 
+terminar de baixar, o script será executado.
+
+		<script src="caminho_para_o_arquivo.js" defer></script>
+
+	O atributo `defer`, semelhante ao `async`, também permite que a página seja carregada enquanto o script é baixado em segundo plano. A 
+diferença é que o script só será executado após o carregamento completo da página.
+
+	4. **Conteúdo do Script**: O código JavaScript pode ser incluído diretamente entre as tags `<script>`:
+
+		<script>
+  			// Seu código JavaScript aqui
+		</script>
+
+	5. **Eventos**: Scripts JavaScript são frequentemente usados para manipular eventos que ocorrem na página, como cliques de botões, envio 
+de formulários, carregamento de página, etc. Isso permite a criação de interações dinâmicas com o usuário.
+
+	6. **Manipulação do DOM**: O JavaScript dentro do elemento `<script>` pode ser usado para interagir com o DOM (Document Object Model), 
+permitindo alterar o conteúdo da página, adicionar ou remover elementos, modificar estilos e muito mais.
+
+	7. **Segurança**: É importante lembrar que, como os scripts são executados no contexto do navegador do usuário, é fundamental tomar medidas
+de segurança para evitar vulnerabilidades, como injeção de código malicioso (XSS - Cross-Site Scripting).
+
+	Em resumo, o elemento `<script>` é essencial para adicionar interatividade, dinamismo e funcionalidades avançadas às páginas da web em 
+HTML5 por meio da linguagem de programação JavaScript.
+
+
+
+TAG LINK
+
+	O elemento `<a>` é usado para criar links, também conhecidos como âncoras, que permitem aos usuários navegar entre diferentes 
+páginas da web, recursos, documentos ou qualquer outro conteúdo disponível na internet. A tag `<a>` é uma das tags mais importantes do HTML, e 
+seu atributo principal é o `href`, que define o destino do link.
+
+	Aqui está a sintaxe básica para criar um link em HTML:
+
+		<a href="URL_do_destino">Texto_do_link</a>
+
+	- **href**: Este atributo especifica o destino do link. Pode ser uma URL para outra página da web, o caminho para um arquivo, um endereço
+de e-mail ou até mesmo um identificador em uma mesma página (âncora interna).
+
+	- **Texto_do_link**: Este é o texto visível do link que aparecerá na página. Quando um usuário clica no texto do link, ele será redirecionado 
+para o destino especificado no atributo `href`.
+
+	Exemplo de link para outra página da web:
+
+		<a href="https://www.exemplo.com">Visite o Site de Exemplo</a>
+
+	Exemplo de link para um arquivo local (por exemplo, um PDF):
+
+		<a href="arquivo.pdf">Baixe o PDF</a>
+
+	Exemplo de link para um endereço de e-mail:
+
+		<a href="mailto:exemplo@email.com">Enviar e-mail</a>
+
+	Exemplo de âncora interna em uma mesma página (direcionando para um elemento com o `id` "secao2"):
+
+		<a href="#secao2">Ir para a Seção 2</a>
+		<h2 id="secao2">Seção 2</h2>
+
+	Além do atributo `href`, o elemento `<a>` também pode conter outros atributos, como `target`, que define como o link será aberto (por 
+exemplo, em uma nova janela ou na mesma janela) e outros atributos para acessibilidade, como `title`, que fornece informações adicionais quando 
+o usuário passa o mouse sobre o link.
+	Os links são fundamentais para a navegação na web e permitem que os usuários acessem facilmente diferentes recursos e informações.
+
+
+
+MAP
+
+	O elemento `<map>` é usado em conjunto com a tag `<area>` para criar imagens clicáveis (imagem mapeada) na página da web. Essas 
+imagens mapeadas são divididas em áreas clicáveis que podem ser vinculadas a URLs diferentes ou realizar ações específicas quando clicadas em 
+partes específicas da imagem.
+
+	Aqui está uma explicação detalhada de como usar o elemento `<map>`:
+
+	1. **Elemento `<map>`**: O elemento `<map>` é usado para definir uma imagem mapeada na página. Ele contém uma coleção de tags `<area>`, 
+cada uma representando uma área específica da imagem que será clicável.
+
+   		<map name="nome-do-mapa">
+     		<!-- Áreas clicáveis definidas usando <area> -->
+   		</map>
+
+	2. **Elemento `<area>`**: O elemento `<area>` é usado dentro do elemento `<map>` para definir as áreas clicáveis da imagem. Cada `<area>`
+especifica uma forma (retângulo, círculo ou polígono) e as coordenadas que definem essa forma.
+
+   	- Área retangular:
+
+     		<area shape="rect" coords="x1,y1,x2,y2" href="URL" alt="Texto alternativo">
+
+   	- Área circular:
+
+     		<area shape="circle" coords="x,y,raio" href="URL" alt="Texto alternativo">
+
+   	- Área poligonal:
+
+     		<area shape="poly" coords="x1,y1,x2,y2,x3,y3,..." href="URL" alt="Texto alternativo">
+
+   	Onde `coords` são as coordenadas dos pontos que definem a forma e `href` é a URL para a qual o usuário será redirecionado quando clicar 
+nessa área.
+
+	3. **Vinculando a imagem ao mapa**: Para conectar a imagem ao mapa, é necessário atribuir o atributo `usemap` à tag `<img>` da imagem com
+o valor igual ao nome do mapa definido no elemento `<map>`.
+
+   		<img src="imagem.jpg" usemap="#nome-do-mapa" alt="Texto alternativo da imagem">
+
+	Dessa forma, quando o usuário clicar em uma área definida no mapa, ele será redirecionado para a URL especificada no atributo `href` da 
+tag `<area>` correspondente.
+	O uso de imagens mapeadas pode ser útil quando você precisa dividir uma imagem complexa em várias áreas clicáveis, como em mapas interativos, 
+gráficos com informações detalhadas ou jogos com base em imagem. No entanto, é importante garantir que o uso de imagens mapeadas seja acessível, 
+fornecendo texto alternativo adequado para as áreas clicáveis para que os usuários com deficiências visuais também possam entender o conteúdo da 
+imagem.
+
+
+
+TIME E DATETIME
+
+	Em HTML5, existem dois tipos de elementos que são relevantes para manipulação de datas e horários: `<time>` e `<input type="datetime-local">`.
+
+	1. **<time>**:
+	O elemento `<time>` é uma tag semântica introduzida no HTML5 para representar uma data e/ou hora significativa em um documento. É especialmente 
+útil quando se deseja fornecer informações sobre datas e horários que possam ser interpretadas por máquinas e compreendidas por humanos. 
+	O elemento `<time>` pode conter um atributo `datetime` que especifica a data e a hora em um formato padrão (geralmente o formato ISO 8601)
+para a interpretação por máquinas.
+
+	Exemplo de uso:
+
+		<p>A Conferência será realizada em <time datetime="2023-09-15 09:30">15 de setembro de 2023 às 09:30</time>.</p>
+
+	2. **<input type="datetime-local">**:
+	O elemento `<input>` com o atributo `type="datetime-local"` é um tipo de entrada específico do HTML5 que permite que os usuários insiram 
+um valor de data e hora em um formato local específico, ou seja, no formato da data e hora do sistema do usuário. Ele fornece um controle nativo 
+de data e hora em navegadores modernos, permitindo que os usuários selecionem facilmente um valor de data e hora.
+
+	Exemplo de uso:
+
+		<label for="meeting-time">Selecione a data e hora da reunião:</label>
+		<input type="datetime-local" id="meeting-time" name="meeting-time">
+
+	Nota importante: Ainda que o HTML5 forneça esses recursos para trabalhar com datas e horas, é essencial lembrar que a validação e manipulação
+de datas e horários precisam ser implementadas também no lado do servidor, uma vez que os dados enviados pelo cliente podem ser manipulados ou 
+serem provenientes de fusos horários diferentes. O JavaScript também pode ser usado para aprimorar a manipulação de datas e horários do lado do 
+cliente, mas a validação do lado do servidor é crucial para garantir a integridade e segurança dos dados.
+
+
+
+MENU E MENUITEM
+
+	O elemento `<menu>` e o elemento `<menuitem>` são usados para criar menus e itens de menu, respectivamente. Eles foram introduzidos para 
+fornecer uma forma mais semântica e acessível de criar menus na web.
+
+	1. **Elemento `<menu>`**:
+	O elemento `<menu>` é usado para definir um menu de opções ou comandos em um documento HTML. Ele é destinado a agrupar itens de menu, 
+fornecendo uma estrutura organizada para as opções disponíveis. Geralmente, é utilizado em conjunto com o atributo `type` para especificar o tipo
+de menu que está sendo definido.
+
+	Exemplo de uso do elemento `<menu>`:
+
+		<menu type="toolbar">
+  			<menuitem label="Início" onclick="window.location.href='inicio.html'"></menuitem>
+  			<menuitem label="Perfil" onclick="window.location.href='perfil.html'"></menuitem>
+  			<menuitem label="Configurações" onclick="window.location.href='config.html'"></menuitem>
+		</menu>
+
+	No exemplo acima, usamos o atributo `type` com o valor "toolbar" para indicar que estamos criando um menu de barra de ferramentas. Os 
+itens de menu são definidos usando o elemento `<menuitem>`, com o atributo `label` especificando o rótulo do item e o atributo `onclick` definindo
+a ação a ser executada quando o item do menu é clicado.
+
+	2. **Elemento `<menuitem>`**:
+	O elemento `<menuitem>` é usado para representar um item de menu em um menu definido pelo elemento `<menu>`. Ele pode conter um rótulo, 
+um comando ou uma referência a um link.
+
+	Exemplo de uso do elemento `<menuitem>`:
+
+		<menu>
+  			<menuitem label="Home" onclick="window.location.href='index.html'"></menuitem>
+  			<menuitem label="About" onclick="window.location.href='about.html'"></menuitem>
+  			<menuitem label="Contact" onclick="window.location.href='contact.html'"></menuitem>
+		</menu>
+
+	Neste exemplo, criamos um menu simples com três itens de menu ("Home", "About" e "Contact"). Cada item do menu é definido usando o elemento
+`<menuitem>`, com o atributo `label` especificando o rótulo do item e o atributo `onclick` definindo a ação a ser executada quando o item do menu
+é clicado.
+	É importante observar que o suporte aos elementos `<menu>` e `<menuitem>` ainda não é amplamente adotado em todos os navegadores. Portanto,
+é recomendável fornecer uma alternativa acessível e compatível com versões anteriores caso você esteja implementando menus em suas páginas da web.
