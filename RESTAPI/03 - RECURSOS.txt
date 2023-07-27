@@ -1,0 +1,45 @@
+RECURSOS
+	São representaçoes das coisas que existem no mundo real. REST trata do meio, da maneira, que se faz a transeferencia do estado de um recurso.
+
+
+
+ESTADO DE UM RECURSO
+	É o conjunto de atributos cujos valores representam o estado do recurso. A proposta do REST API é permitir as transferencias, ou seja, as mudanças
+de estado dos recursos.
+EX: https://jornadadodev.com.br/cursos/back-end/rest-api/recursos
+   /         BASE PATH        /             RECURSOS            /
+
+
+
+URLS´s BEM DEFINIDAS
+	SUBSTANTIVOS - Use substantivos, não verbos (GET/clientes não/ListarClientes)
+	USE PLURAIS - Todos os clientes : /clientes ------- Cliente Específico: /clientes/007
+	VERSIONE CONTRATOS NA URL: GET/v1/pagamentos
+	ESTRUTURAS: ordens que contem produto: GET/ordens/123456/produtos/1
+	CASE CONSISTENTE: Escolha camelCase, PascalCase, kebab-case ou snake-case para os atributos e parametros.
+	TENHA UM DOMINIO: https://api.site.com
+
+
+
+VERBOS
+	VÊEM do HTTP e indicam ao servidor qual açao (CRUD) deve ser aplicada um determinado recurso representado por uma URL.
+	Os verbos http sao classificados como seguros e idempotentes
+
+VERBOS SEGUROS
+	Podem ser seguros, quando não provocam mudança de estado no servidor.
+VERBOS IDEMPOTENTES
+	Podem ser idempotentes quando 'n' requisiçoes iguais provocam o mesmo resultado no estado do recurso.
+	
+	POST: inseguro, nao idempotentee nao usa cache. Solicita a criaçao de uma nova instancia de um recurso.
+	GET: seguro, indempotente e pode usar cache. Solicita a representaçao de uma ou mais instancias do recurso.
+	PUT: inseguro, idempotente e nao usa cache. Modifica completamente a instancia de um recurso, fazendo substituiçao. Caso a instancia nao exista, ele cria.
+	PATCH: inseguro, idempotente e nao usa cache. Modifica parcialmente um recurso.
+	DELETE: inseguro, idempotente e nao usa cache. Apaga uma ou mais instancias do recurso.
+
+
+
+CENARIOS NAO CRUD
+	Em alguns casos sem caracteristicas de CRUD, os recursos representarão uma açao e usa-se POST e GET conforme caracteristica de segurança e idempotencia.
+EX: POST: /email/123/enviar
+    GET: /somar?a=18&b=77
+

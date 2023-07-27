@@ -1,0 +1,11 @@
+O que é REST API ? 
+	É um estado de recursos e é implementado seguindo um estilo arquitetural baseado no protocolo HTTP. De forma genérica, a API é uma interface pra troca 
+de dados entre sistemas. Tem um contrato muito bem definido entre provedor eo consumidor.
+
+	HTTP (Hyper Text Transfer Protocol), é um protocolo de web que é composto de método, endereço, parâmetros de entrada, mensagens de request, mensagens
+de response, headers de controle e um body com mensagem de response.
+
+	Hoje mais de 90% das API´s rodam em protocolo HTTP. API´s permitem tirar a lógica de negócios dos canais de vendas tornando-os mais ágeis para absorver
+as mudanças que o mercado impõe.
+
+	Elas permitem reaproveitar o poder de uma infraestrutura web ja existente/presente nas empresas graças ao protocolo web do HTTP.

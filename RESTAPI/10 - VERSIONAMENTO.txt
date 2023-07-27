@@ -1,0 +1,41 @@
+VERSIONAMENTO
+	O versionamento é comum durante a construção de sistemas e pode ser necessário criar várias versões diferentes. Muitas vezes, a 
+primeira versão não é suficiente em relação ao sistema e sua maturidade.
+	É normal criar novas versões quando ocorre a quebra de contrato, que pode acontecer quando um atributo é removido da resposta que o 
+cliente espera receber ou quando são adicionados novos atributos obrigatórios.
+	Mais de uma versão de API pode existir ao mesmo tempo, visando manter compatibilidade com os clientes antigos.
+
+
+
+QUEBRA DE CONTRATO
+	Acontece quando uma alteração na estrutura da API GERA erro no cliente caso ele se mantenha chamando a API da mesma forma, tais como:
+	- Remoção de atributos de repsosta.
+	- Adição de atributos, headers, querys parameters, obrigatorios na requisição.
+	- Remoção de recursos (URLs).
+	- Alteração de atributos, headers, query, parameters, URLs, etc, obrigatórios ou não.
+
+
+ALTERAÇÃO DE CONTRATO
+	Acontece quando uma alteração na estrutura da API NÃO GERA erro no cliente caso ele se mantenha chamando a API da mesma forma, 
+tais como:
+	- Adição de atributos de resposta.
+	- Adição de atributos, headers, query, parameters, etc, não obrigatórios na requisição.
+	- Adição de recursos (URLs).
+	- Quando se tem um documento da especificação da API altera alguma descrição ou exemplo.
+
+
+SEMANTIC VERSÃO
+	Ao alterar o documento do contrato da API, é interessante adotar o versionamento semantico para controlar o artefato.
+	EX: versao 2.3.1
+
+	2 - major. incremento ao fazer ajustes que alteram tecnicamente o contrato e causam erro no cliente que já usa.
+	3 - minor. incrementa ao fazer ajustes que alteram tecnicamente o contrato sem causar erro no cliente que já usa.
+	1 - patch. incrementa ao fazer ajustes que nao alterem tecnicamente o contrato.
+
+		https://api.com/vendas/v2
+
+
+ESTRATÉGIA DE MIGRAÇÃO
+	1 - Todos os clientes na v1
+	2 - A v1 faz proxy para a implementação da v2. Os clientes são solicitados para migrar para a v2.
+	3 - Todos os clientes migraram para a v2. A v1 é desligada.

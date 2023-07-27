@@ -1,0 +1,40 @@
+CODIGOS DE RETORNO
+	Indicam o sucesso ou insucesso de uma operação. Esses códigos são usados em navegadores, aplicações, roteadores e outros dispositivos para comunicação. 
+Existem convenções e grupos de códigos diferentes, como o grupo GICOSE, que é uma faixa de códigos centrais.
+	VÊem do HTTP e indicam o sucesso ou insucesso no processamento da requisiçao enviada ao servidor.
+
+CODIGO DE PRIMERIA CENTENA - 1xx ou da familia dos 100
+	São de informação. Tem pouco ou nenhum uso com REST.
+
+CODIGO DE SEGUNDA CENTENA - 2xx ou familia 200
+	Elas representam o sucesso de uma opração.
+	O mais generico é o 200 - OK. Requisiçao processada com sucesso.
+	201 - Created. Uma nova instancia foi criada.
+	202 - Accepted. O recurso será aualizado / criado de forma assíncrona.
+	204 - No Content. A requisiçao foi processada com sucesso e não há body na resposta.
+	206 - Partial Content. O servidor encontrou uma grande qtd de registros entao a API devolveu o conteudo de forma paginada, por exemplo, 100 registros
+por vez, ou, 100 registros por pagina.
+
+CODIGO DE TERCEIRA CENTENA - 3xx ou familia 300
+	São usadas para redirecionamento.
+	301 - Moved Permanently. O recurso foi definitivamente movido para uma outra URL definida no header.
+	303 - See Other. O recurso foi definitivamente movido para uma outra URL definida no header.
+	307 - Temporary Redirect. Redirecionamento de uma apgina para outro endereço, porem que é com carater temporario. Provavelmente por conta de alguma
+manutençao no sistema.
+
+CODIGO DE QUARTA CENTENA - 4xx ou familia 400
+	Significa que o cliente cometeu um erro.
+	400 - Bad Request. Servidor n consegue entender a requisiçao, pois existe algum parametro invalido ou falta dele.
+	401 - Unauthorized. Credenciais invalidas.
+	403 - Forbidden. Credenciais validas, mas sem acesso no recurso.
+	404 - Not Found. Servidor nao encontrou o recurso solicitado pleo cliente.
+	410 - Gone. Recurso (URL) nao existe mais e esta condiçao é permanente.
+	422 - Unprocessable Entity - Requisiçao está correta mas existem erros ao nivel de negocio que impedem o processamento da requisiçao.
+
+CODIGO DE QUINTA CENTENA - 5xx ou familia 500
+	Significa que foi um erro do servidor, ele nao foi capaz de processar aquilo. Por segurança informa-se ao cliente apenas uma mensagem de erro, as 
+informaçoes mais detalhadas sao armazenadas num arquivo de log.
+	500 - Iternal Server Error. Erro mais generico para informar que o servidor encontrou um cenario inseperado de erro que nao soube processar a 
+requisiçao.
+	503 - Service Unavailable. Servidor nao responde porque esta fora do ar, em manutençao ou sobrecarregado. Problema temporario.
+	504 - Gateway Timeout. Servidor, enqunato atuando como gateway ou proxy,nao conseguiu responder em tempo real.

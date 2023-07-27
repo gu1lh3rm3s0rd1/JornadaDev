@@ -1,0 +1,39 @@
+MODELAGEM
+	É o processo de entender a demanda de negócio e transformá-la em recursos e expostos via URL respeitando os padrões arquiteturais 
+e regras do REST.
+	A modelagem pode facilitar o desenvolvimento e evolução dos sistemas, mas é necessário ficar atento às mudanças e manter a 
+consistência. Representar o negócio de forma coerente é essencial para que todos os envolvidos consigam entender o desenho do sistema.
+
+TIPOS DE ABORDAGEM 
+	KISS (Keep It Simple, Stupid) 
+	-Modele suas API´s pensando nos seus clientes, não nos seus dados.
+	-Evite entregar mais de uma forma de fazer a mesma coisa.
+	-Foque nos casos principais primeiro, lide com as exceções depois.
+	-Mantenha padrões.
+
+	NIVEIS DE GRANULARIDADE 
+	- Ela é a "extensão até a qual uma entidade grande é subdividida. Por exemplo, um quintal dividido em centímetros possui 
+granularidade mais fina que um quintal dividido em metros.
+	-Busque no máximo 2 niveis no aninhamento de atributos.
+	
+	Domain Driven Design (DDD)
+	O DDD fornece um conjunto de recursos, padrões e práticas que ajudam a documentar e modelar software. Entender o negócio sobre o qual o
+software trata é essencial para se criar boas API´s
+
+	LINGUAGEM UBÍQUA
+	É o uso da linguagem falada que seja de conhecimento comum entre todos os envolvidos com um conceito de negócio: o jargão.
+	Um conceito de negócio deve ter um único nome e seu significado deve ser claro para todos.
+
+	DOMAIN MODEL
+	É uma representação de conceitos do mundo real que são pertinentes ao um ou mais domínios a serem trabalhados em um sotfware. Estes conceitos
+incluem as entidades, serviços e as realizações entre eles.
+			E = SUBS + ID 
+			SERVIÇOS = VERBOS
+
+	BOUNDED CONTEXT
+	São fronteiras que separam conceitos que tem alguma relação entre si. O significado desta fronteira deve ser claro para todo o time. Um boun-
+ded context pode inspirar divisões para softwares diferentes, contratos de API´s, componentes, etc..
+
+
+PASSO-PASSO 
+		LISTAR REQUISITOS -> IDENTIFICAR ENTIDADES -> IDENTIFICAR SERVIÇOS -> FAZER DOMAIN MODEL -> CONVERTER DOMAIN EM REST

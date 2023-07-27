@@ -1,0 +1,27 @@
+FLUXO DE REQUISIÇAO
+	Analogia com o envio e recebimento de uma carta, onde a primeira parte se refere ao pedido de requisição enviado pelo cliente ao servidor, 
+contendo informações principais como o endereço da requisição e algumas complementares.
+	Durante o processo de requisição, há a criação de recursos e consultas e que, ao finalizar o processo de resposta ao cliente, é enviada uma mensagem 
+de retorno contendo a representação do estado objeto e o header.
+
+	Request ---------> Processamento ---------> Response (Resposta)
+
+
+
+REQUISIÇOES ASSINCRONAS
+	Algumas mudanças de estado dos recursos podem não ser processadas imediatamente. Para isso, um fluxo para acompanhar o processamento se faz necessario.
+	O protocolo simples permite que as requisições e respostas de processamentos ocorram de forma assíncrona. Para lidar com processamentos mais longos, 
+é possível adotar o uso de hashi e fazer chamadas síncronas. Por exemplo, ao criar um pintinho, o processo de chocagem pode levar um tempo. Durante o processo 
+é possível fazer uma chamada de ovinhos para checar o andamento e receber informações de status.
+	Quando o processo estiver concluído, é retornado um código 303 com a localização do recurso criado, permitindo que sejam feitas consultas de andamento.
+Outra forma de lidar com processamentos assíncronos é fazer callbacks, que permitem que o servidor informe quando o processamento estiver concluído, sem 
+sobrecarregar o cliente com requisições constantes.
+
+	1 - requisiçao para um recurso que demora para ser processado
+	2 - resposta indicando o encaminhamento para um novo recurso
+	3 - consultas ao novo recurso para verificar o andamento
+	4 - tentativas de verificaçao
+	5 - consulta ao novo recurso criado (pode fazer um GET ao novo recurso criado)
+
+	Esse fluxo se chama PULLING, de forma generica eu peço a formaçao de um recurso, entao encaminhamos para um recurso de processamento onde ocorrera as 
+tentaivas de verficaçao de conclusao, apos concluir eu sou redirecionado para um instancia onde o recurso solicitado inicialmente estará disponivel, estará criado.

@@ -1,0 +1,13 @@
+HATEOAS (Hypermedia as the Engine of Application State)
+	A ideia por trás do REST é que as transações tenham um aspecto de interface web, com botões e links que levam a outras telas.
+	HATEOAS significa que, quando você chama uma API, você recebe uma lista de links indicando o que mais pode fazer a partir daquele ponto.
+
+
+
+EXEMPLO: Um professor discute um exemplo de criação de uma consulta médica. Ele mostra como fazer um POST para criar uma consulta e como a resposta 
+pode incluir uma lista de links indicando outras ações que podem ser realizadas, como cancelar ou alterar a consulta.
+	Por fim, o professor discute os níveis de maturidade na implementação do REST, desde o uso básico de XML ou JSON até a adoção de controles 
+de hipermedia como o HATEOAS. Ele menciona que o HATEOAS não é amplamente adotado, provavelmente porque muitas aplicações não estão preparadas 
+ou projetadas para reagir de acordo com o tipo de link que é fornecido na resposta.
+	Ele conclui a aula mencionando que o HATEOAS traz uma série de benefícios, como a possibilidade de mudar o servidor através de uma implementação 
+baseada em HATEOAS.

@@ -1,0 +1,29 @@
+PRINCIPIO CLIENTE / SERVIDOR 
+	O cliente preocupa-se com User Experience, Interface e multiplos dispositivos.
+	O servidor preocupa-se com performance, autenticação, escala, cache, armazenamento e segurança. Ele é desacoplado do cliente e não compratilha nenhum codigo.
+no mesmo processo. Podem evlouir em paralelo, ou seja, essas mudanças que acontecem , nao interferem no processo um do outro.
+
+
+
+INTERFACE UNIFORME
+	Essa interface, pe um contrato onde nele vao estar presentes e definidos todos os recursos utilizados, a apresentaçao desses recursos(json, xml, etc..),
+a mensagem auto-descritiva (headers) e o hypermedia, que sao os dados agindo na entrega de um produto e ja indicar o que pode ser feito com esse conjunto.
+
+
+
+STATELESSNESS
+	Não se armazena estado, sessão, nenhum dado sobre uma requisiçao que já aconteceu.
+	Cada requisição vinda do cliente é independente da anterior. O cliente envia na requisiçao toda a informaçao que o servidor necessita para processar 
+a requisiçao.
+
+
+
+CACHING
+	Compensa a perda de performance do Statelessness, diminui a quantidade de requisiçoes e reduz trafego na rede. é controlado via headers cache-control,
+expires, last-modified e Etag.
+
+
+
+SIST. CAMADAS
+	Cada camada so tem acesso na proxima. Podem ser adicionadas, removidas ou modificadas conforme a necessidade.	
+	São pontos para desacoplar as diversas tecnologias que eu posso ter em um ambiente.

@@ -1,0 +1,29 @@
+QUERY STRINGS
+	Presentes na URL, é um conjunto de 'chave=valor' que inicia o caractere '?' e são separados por '&'. Normalmente indicarão filtros.
+	Existem padrões de filtro repetidos no mercado, então é interessante adotar algum padrão ao definir atributos. É possível padronizar intervalos 
+de pesquisa e definir a ordem dos resultados. 
+	Também é importante considerar a paginação para lidar com grandes quantidades de dados.
+	É recomendável definir quais atributos são necessários na resposta para que a aplicação possa consumir menos dados e ser mais eficiente.
+
+
+
+GET
+	Em um metodo GET, é possivel filtrar as instancias a serem retornadas usando seus atributos.
+	EX: GET / usuarios?signo=leao&signo=peixes	
+
+	Quando se pesquisa intervalos, pode-se utilizar um 'from' 'to'.
+	EX: GET / clientes?fromIdade=21&toIdade=32
+
+	Ordenaçãp pode ser feita com uma estrutura de sort.
+	EX: sort=[{atributo}:{asc|desc}]
+
+	Para pesquisas em qualquer atributo, é possivel usar a 'forma Google' de pesquisar.
+	EX: GET / carros/GRU/carros?q=onix
+
+	Alguns recursos que retornam uma qtd maior de instancias podem ter resultados paginados
+	GET / clientes?page=2&limit=50 --- paginaçao
+
+	Para limitar a quantidade de registros, pode-se utilizar o 'top'.
+	GET / ofertas?top=10
+
+	E se um determinado conjunto de atributos é sempre requisitado, pode-se definir 'views'.

@@ -1,0 +1,14 @@
+OPEN ID CONNECT E OAUTH 2.0
+	OpenID Connect aborda a camada de identificação de usuários e como autorizar acesso sem a necessidade de informar login e senha 
+diversas vezes. É comum entrar em sistemas que solicitam login do Google, Facebook ou Microsoft para ter acesso as informações.
+	Essas credenciais são repassadas para a aplicação e o sistema intermediário é responsável por buscar as informações necessárias. 
+	A segurança no ambiente corporativo é garantida através do security token service e cliente secret.
+	O OAuth 2.0 é um padrão para autorizar acessos sem ficar trafegando senhas.
+
+OPEN ID CONNECT
+	Permite que o sistema A acesse o sistema B em nome do cliente sem que o sistema A tenha acesso as credenciais do cliente. A requisição
+do acesso gera um tokem e este token pode ser revogado por vontade do cliente diretamente no sistema B.
+
+OAuth 2.0
+	Caso um sistema nao conheça as credenciais do Sistema Cliente da API, ele confia no Security Token Service para validar o token.
+Em caso de token inválido para uma determinada REST, os sistemas retornam um HTTP 401 ou 403.

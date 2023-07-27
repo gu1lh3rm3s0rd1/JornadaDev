@@ -1,0 +1,8 @@
+CONTRATO
+	As URLS e os parametros de entrada e saída de API podem ser documentadas em linguagens própias pra isso. Esta documentação é chamada
+de contrato.
+	Ele pode ajudar a sanar dúvidas antes mesmo de iniciar o código. Além de garantir uma base sólida para o trabalho, o contrato também 
+pode ser utilizado para documentar a estrutura do projeto de forma simples e amigável para qualquer pessoa.
+	Existem diversas ferramentas visuais disponíveis para estruturar e documentar o sistema, além de permitir a automação de testes e 
+configurações. No vídeo, também foi mencionado o uso de uma notação específica, conhecida como Specific Attention Version Three (SAV3), 
+ou notação Suélia, para auxiliar na organização do contrato.
