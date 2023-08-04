@@ -1,0 +1,65 @@
+#exemplo {
+  border-style: dashed;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo1 {
+  border-style: dotted;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo2 {
+  border-style: double;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo3 {
+  border-style: groove;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo4 {
+  border-style: hidden;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo5 {
+  border-style: inherit;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo6 {
+  border-style: initial;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo7 {
+  border-style: inset;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo8 {
+  border-style: outset;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo9 {
+  border-style: ridge;
+  border-width: 2px;
+  border-color: red;
+}
+
+#exemplo9 {
+  border-style: none;
+  border-width: 2px;
+  border-color: red;
+}

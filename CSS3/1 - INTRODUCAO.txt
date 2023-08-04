@@ -1,0 +1,32 @@
+INTRODUÇÃO AO CSS E SUA SINTAXE
+
+	CSS3, abreviação para Cascading Style Sheets 3, é a mais recente evolução da linguagem de estilo utilizada na web para definir a apresentação
+e o layout de documentos HTML e XML. Enquanto o HTML é responsável pela estrutura e o conteúdo de uma página, o CSS entra em cena para dar vida a essa 
+estrutura, permitindo que os desenvolvedores definam a aparência visual do conteúdo, como cores, fontes, tamanhos, espaçamentos e posicionamento dos elementos.
+	Lançado como uma atualização do CSS2, o CSS3 trouxe consigo uma série de novas funcionalidades, recursos e melhorias que ampliaram 
+consideravelmente as possibilidades de design e tornaram a experiência do usuário mais rica e interativa.
+	A sintaxe do CSS3 é relativamente simples e consiste em um conjunto de regras que conectam seletivamente os elementos HTML aos estilos que 
+desejamos aplicar. As regras de estilo são definidas em blocos, contendo seletores e propriedades. 
+	Os seletores identificam os elementos HTML que desejamos estilizar, enquanto as propriedades especificam como esses elementos devem ser apresentados.
+
+	Aqui está um exemplo básico da sintaxe do CSS3:
+
+		seletor {
+  			propriedade: valor;
+  			propriedade: valor;
+  			/* Mais propriedades e valores podem ser adicionados conforme necessário */
+		}
+
+	Por exemplo, para definir o estilo de todos os parágrafos (elemento HTML <p>), poderíamos usar o seguinte código CSS:
+
+		p {
+  			color: blue;
+  			font-size: 16px;
+  			margin-bottom: 10px;
+		}
+
+	Nesse caso, estamos selecionando todos os elementos `<p>` da página e aplicando um estilo que define a cor do texto como azul, o tamanho da 
+fonte como 16 pixels e adicionando uma margem inferior de 10 pixels.
+
+	Essa é apenas uma pequena amostra da poderosa sintaxe do CSS3. À medida que você se aprofunda no assunto, descobrirá uma variedade de seletores, 
+propriedades, valores e técnicas avançadas que permitirão a criação de designs incríveis e responsivos para suas páginas web.

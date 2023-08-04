@@ -1,0 +1,36 @@
+#base {
+  background-color: green;
+  width: 500px;
+  height: 500px;
+}
+
+#esquerda {
+  background-color: red;
+  width: 250px;
+  height: 250px;
+  float: left;
+}
+
+#direita {
+  background-color: blue;
+  width: 250px;
+  height: 250px;
+  float: right;
+}
+
+#conteudo {
+  width: 600px;
+  height: 600px;
+  background-color: red;
+  /* faz com que o elemento se posicione com a div pai e nao se relacionando com o navegador */
+  position: relative;
+}
+
+#texto {
+  width: 500px;
+  background-color: green;
+  /* permite posicionar o elemento em qualquer lugar */
+  position: absolute;
+  top: 20px;
+  bottom: 250px;
+}

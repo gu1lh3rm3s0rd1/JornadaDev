@@ -1,0 +1,8 @@
+body {
+  background-color: aqua;
+  /* linkar o caminho de uma imagem baixada do navegador */
+  /* background-image: url(); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 300px 500px;
+}

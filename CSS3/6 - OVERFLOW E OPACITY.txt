@@ -1,0 +1,41 @@
+PRPRIEDADES CSS - OVERFLOW E OPACITY
+
+	"overflow" e a propriedade "opacity" no CSS3:
+
+	1. Overflow:
+	A propriedade "overflow" em CSS3 controla o comportamento do conteúdo que excede as dimensões do elemento pai. Quando o conteúdo dentro de um elemento é maior do que o espaço disponível para ele, ocorre um "overflow" (transbordamento). Essa propriedade determina como esse conteúdo excedente é tratado.
+
+	Existem quatro valores principais para a propriedade "overflow":
+
+		- `visible`: Esse é o valor padrão. O conteúdo que transborda o elemento pai é exibido além dos limites do próprio elemento, podendo sobrepor outros elementos adjacentes.
+
+		- `hidden`: Qualquer conteúdo que transborde o elemento pai será cortado e não será exibido.
+
+		- `scroll`: O conteúdo que excede as dimensões do elemento pai será cortado, mas uma barra de rolagem será exibida para permitir que os usuários rolem e vejam o conteúdo oculto.
+
+		- `auto`: Semelhante a `scroll`, mas a barra de rolagem é exibida somente se necessário, ou seja, se o conteúdo realmente transbordar.
+
+	Exemplo:
+	
+		.container {
+ 			width: 200px;
+  			height: 100px;
+  			overflow: hidden; /* Pode ser 'visible', 'hidden', 'scroll' ou 'auto' */
+		}
+
+	2. Opacity:
+	A propriedade "opacity" em CSS3 controla a transparência de um elemento e de seu conteúdo. Essa propriedade aceita valores entre 0 (total-
+mente transparente) e 1 (totalmente opaco). Valores intermediários como 0.5 representam graus de transparência, onde 0.5 significa que o elemento
+é semitransparente, permitindo que os elementos abaixo dele sejam parcialmente visíveis.
+
+	Exemplo:
+
+		.transparencia {
+  			opacity: 0.7; /* Valor entre 0 e 1 */
+		}
+
+	Lembre-se de que a transparência também afeta os elementos filhos do elemento ao qual a propriedade "opacity" foi aplicada, ou seja, todos
+os conteúdos dentro do elemento também serão afetados pela mesma transparência.
+	É importante observar que a propriedade "opacity" afeta a opacidade de todo o elemento, incluindo o texto e as imagens. Se você desejar 
+aplicar transparência somente ao plano de fundo de um elemento e não afetar o conteúdo, pode-se usar outras técnicas, como utilizar cores RGBA 
+ou definir imagens com transparência em formato PNG.

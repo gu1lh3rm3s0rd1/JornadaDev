@@ -1,0 +1,59 @@
+PROPRIEDADES CSS - FLOAT, POSITION E TRANSITION
+
+	Conceitos de float, position e transition em CSS3:
+
+	1. **Float**:
+	O `float` é uma propriedade CSS que controla o posicionamento de um elemento ao longo do eixo horizontal. Quando um elemento é definido 
+como `float`, ele é retirado do fluxo normal do documento e colocado à esquerda ou à direita de seu contêiner, permitindo que outros elementos 
+fluam ao redor dele.
+
+	Principais valores:
+
+		- `left`: O elemento flutua à esquerda.
+		- `right`: O elemento flutua à direita.
+		- `none`: O elemento não flutua e permanece no fluxo normal.
+		- `inherit`: O elemento herda o valor de `float` do seu elemento pai.
+
+	É importante mencionar que, quando elementos são retirados do fluxo normal, podem ocorrer problemas de layout e posicionamento, especial-
+mente se não forem tratados corretamente.
+
+	2. **Position**:
+	A propriedade `position` em CSS3 permite controlar o posicionamento de um elemento em relação ao seu contêiner ou à janela do navegador. 
+Existem quatro principais valores para a propriedade `position`:
+
+		- `static`: É o valor padrão, onde o elemento segue o fluxo normal do documento. Nenhum posicionamento especial é aplicado.
+		- `relative`: O elemento é posicionado em relação à sua posição normal. Ao usar os deslocamentos `top`, `right`, `bottom` e 
+`left`, você pode movê-lo em relação à sua posição original.
+		- `absolute`: O elemento é posicionado em relação ao ancestral mais próximo que tenha uma posição diferente de `static`. Se não 
+houver um ancestral com uma posição diferente, o elemento será posicionado em relação ao corpo do documento.
+		- `fixed`: O elemento é posicionado em relação à janela de visualização do navegador e permanece fixo mesmo durante a rolagem.
+
+	3. **Transition**:
+	A propriedade `transition` em CSS3 permite suavizar as mudanças de estilo de um elemento, tornando a transição mais suave e agradável aos
+olhos do usuário. Com o `transition`, você pode definir as mudanças de propriedades CSS que devem ser animadas ao longo de um período de tempo 
+específico.
+
+	A propriedade `transition` tem quatro valores, definidos nesta ordem:
+
+		- `transition-property`: Especifica qual propriedade ou propriedades CSS devem ser animadas (por exemplo, `width`, `height`, 
+`color`, etc.).
+		- `transition-duration`: Define o tempo que a transição deve levar para ser concluída (por exemplo, `1s`, `500ms`, etc.).
+		- `transition-timing-function`: Define a curva de velocidade da transição (por exemplo, `ease`, `linear`, `ease-in`, `ease-out`,
+`ease-in-out`, etc.).
+		- `transition-delay`: Define um atraso antes que a transição seja ativada (por exemplo, `0s`, `1s`, etc.).
+
+	Exemplo de uso:
+
+		/* Quando o mouse estiver sobre o elemento, sua cor de fundo mudará suavemente em 1 segundo */
+			.element {
+  				background-color: blue;
+  				transition-property: background-color;
+  				transition-duration: 1s;
+  				transition-timing-function: ease;
+			}
+
+			.element:hover {
+  				background-color: red;
+			}
+
+	Assim, a propriedade `transition` é usada para criar animações simples em propriedades CSS específicas.

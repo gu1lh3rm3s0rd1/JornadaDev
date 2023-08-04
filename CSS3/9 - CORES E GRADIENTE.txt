@@ -1,0 +1,64 @@
+PROPRIEDADES CSS - CORES E GRADIENTS
+
+	Em CSS3, as cores e gradientes são recursos importantes para estilizar elementos HTML e criar uma aparência visual atraente para páginas 
+da web. Vou explicar brevemente sobre cores e gradientes no contexto de CSS3:
+
+CORES EM CSS3
+
+	CSS3 permite que você especifique cores de várias maneiras, incluindo palavras-chave, valores RGB, valores hexadecimais e HSL (Hue, 
+Saturation, Lightness). 
+	
+	Aqui estão alguns exemplos:
+
+	1. Palavras-chave: Existem várias palavras-chave pré-definidas que representam cores comuns, como "red", "blue", "green", "yellow", "black", 
+"white", entre outras.
+
+	2. Valores RGB: Você pode usar o formato RGB (Red, Green, Blue) para definir uma cor, onde cada valor varia de 0 a 255. 
+	
+	Por exemplo: 
+		
+		`rgb(255, 0, 0)` representa vermelho.
+
+	3. Valores hexadecimais: Outra maneira popular de definir cores em CSS é usando valores hexadecimais de 6 dígitos, como `#FF0000` para 
+vermelho.
+
+	4. Valores HSL: O formato HSL permite definir a cor por matiz (hue), saturação (saturation) e luminosidade (lightness). 
+	
+	Por exemplo: 
+		
+		`hsl(0, 100%, 50%)` representa vermelho.
+
+
+
+GRADIENTS EM CSS3
+
+	Os gradientes permitem que você crie transições suaves entre duas ou mais cores em um elemento. Existem dois tipos principais de gradientes
+em CSS3: gradientes lineares e gradientes radiais.
+
+	1. Gradientes Lineares:
+   	Exemplo de sintaxe:
+
+   		background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+   	O "direction" especifica a direção do gradiente (por exemplo, "to right" para horizontal, "to bottom" para vertical). "color-stop" são os
+pontos onde ocorrem transições de cor, você pode definir quantos forem necessários.
+
+	2. Gradientes Radiais:
+   	Exemplo de sintaxe:
+
+   		background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+
+   	"shape" define a forma do gradiente, como "circle" ou "ellipse". "size" especifica o tamanho do gradiente. "position" define a posição do
+centro do gradiente. "start-color" e "last-color" são as cores que definem o gradiente.
+	Os gradientes são flexíveis e podem ser aplicados a diversos elementos, como fundos de elementos HTML ou propriedades de texto.
+
+	Exemplo de uso em CSS:
+
+		/* Gradiente linear */
+		background-image: linear-gradient(to right, red, yellow);
+
+		/* Gradiente radial */
+		background-image: radial-gradient(circle, red, yellow);
+
+	Essas são algumas das principais informações sobre cores e gradientes em CSS3. É importante experimentar e explorar esses recursos para 
+obter o efeito visual desejado em suas páginas web.

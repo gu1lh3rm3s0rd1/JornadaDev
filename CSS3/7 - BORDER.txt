@@ -1,0 +1,38 @@
+PROPRIEDADES CSS - BORDERS
+
+	Em CSS3, o termo "border" refere-se a uma propriedade que permite adicionar uma borda em torno de um elemento HTML, como uma caixa de texto, 
+uma imagem ou qualquer outro elemento do documento. A borda pode ser usada para melhorar a aparência e a legibilidade do conteúdo e também para 
+criar efeitos visuais interessantes.
+
+	As principais propriedades relacionadas à borda em CSS3 são:
+
+	1. `border-style`: Essa propriedade define o estilo da borda. Alguns dos valores comuns são:
+   		- `solid`: Uma linha sólida.
+   		- `dashed`: Uma linha tracejada.
+   		- `dotted`: Uma linha pontilhada.
+   		- `double`: Duas linhas paralelas.
+   		- `none`: Nenhuma borda é exibida.
+   		- `hidden`: Similar a "none", mas ainda ocupa espaço.
+
+	2. `border-width`: Define a espessura da borda. Pode ser especificada em pixels (px), em unidades relativas (por exemplo, em, rem) ou por
+palavras-chave como "thin", "medium" e "thick".
+
+	3. `border-color`: Define a cor da borda. Pode ser especificada por um nome de cor, um código hexadecimal ou uma função `rgb()`.
+
+	4. `border-radius`: Essa propriedade define o raio do arco usado para arredondar os cantos da borda. Ela permite criar bordas com cantos 
+arredondados.
+
+	Exemplo de utilização:
+
+
+		/* Exemplo de aplicação de borda a um elemento */
+			.box {
+  				width: 200px;
+  				height: 100px;
+  				border: 2px solid #333;
+ 				border-radius: 10px;
+			}
+
+	Neste exemplo, a classe `.box` define uma caixa com uma borda sólida de 2 pixels na cor #333 e cantos arredondados com raio de 10 pixels.
+	Essas propriedades de borda podem ser combinadas e personalizadas de diversas maneiras para criar estilos únicos para elementos HTML, 
+adequando-se ao design e layout desejado.

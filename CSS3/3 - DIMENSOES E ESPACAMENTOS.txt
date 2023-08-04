@@ -1,0 +1,36 @@
+PRPRIEDADES CSS 
+
+	Em CSS3, as dimensões e espaçamentos são definidos para posicionar e dimensionar elementos em uma página da web. Existem várias unidades 
+de medida disponíveis em CSS3 que podem ser usadas para especificar dimensões, tamanhos e espaçamentos de elementos.
+
+	Aqui estão algumas das principais unidades de medida utilizadas em CSS3:
+
+	1. Pixels (px): O pixel é uma unidade de medida fixa e é comumente usada para especificar tamanhos de elementos. Um pixel representa um 
+único ponto na tela do dispositivo.
+
+	2. Porcentagem (%): A unidade de porcentagem permite definir dimensões e espaçamentos relativos ao elemento pai ou a outra propriedade 
+relacionada. Por exemplo, se um elemento tem largura definida em 50%, ele ocupará metade da largura do seu elemento pai.
+
+	3. Em (em): A unidade "em" é relativa ao tamanho da fonte do elemento pai. Se a fonte do elemento pai tiver 16 pixels (por exemplo), 
+então 1em é igual a 16 pixels.
+
+	4. Rem (rem): A unidade "rem" (root em) é semelhante à unidade "em", mas ela é relativa ao tamanho da fonte do elemento raiz (normalmente
+o elemento html). Isso torna mais fácil manter proporções consistentes em toda a página.
+
+	5. Viewport Units (vw, vh, vmin, vmax): As unidades de viewport são relativas ao tamanho da janela de visualização (o tamanho da tela do 
+dispositivo). "vw" representa 1% da largura da janela de visualização, "vh" representa 1% da altura da janela de visualização, "vmin" é o menor 
+valor entre "vw" e "vh", e "vmax" é o maior valor entre "vw" e "vh".
+
+	6. Unidades absolutas (cm, mm, in, pt, pc): Essas unidades são consideradas absolutas porque têm uma medida física fixa, dependendo do 
+meio de saída (por exemplo, a tela ou a impressora). No entanto, seu uso é menos comum em design responsivo para web.
+
+	Além disso, em CSS3, existem várias propriedades que podem ser usadas para controlar dimensões e espaçamentos, como:
+
+		- width: define a largura do elemento.
+		- height: define a altura do elemento.
+		- margin: define o espaçamento fora do elemento.
+		- padding: define o espaçamento dentro do elemento.
+		- border: define o estilo da borda do elemento.
+
+	Essas são algumas das informações básicas sobre dimensões e espaçamentos em CSS3. Utilizar as unidades de medida corretas e entender como
+as propriedades afetam o layout dos elementos é fundamental para criar páginas da web bem estruturadas e responsivas.

@@ -1,0 +1,56 @@
+SELETORES CSS
+
+	Linguagem de estilo CSS (Cascading Style Sheets) usada para definir a apresentação e o layout de páginas da web. Seletores e agrupamento 
+são conceitos fundamentais do CSS que permitem selecionar elementos HTML específicos e aplicar estilos a eles.
+
+	**Seletores CSS:**
+	Os seletores são padrões que identificam quais elementos HTML devem ser estilizados. Com os seletores, você pode direcionar elementos 
+específicos ou grupos de elementos para aplicar regras de estilo. 
+
+	Abaixo estão alguns exemplos de seletores CSS:
+
+	1. **Seletor de tipo:**
+   	Seleciona elementos com base no nome da tag. Por exemplo, para selecionar todos os parágrafos em uma página, você pode usar o seletor de 
+tipo `p`.
+
+   		p {
+    	 		/* Estilos aplicados a todos os parágrafos */
+   		}
+
+	2. **Seletor de classe:**
+   	Seleciona elementos que possuem um atributo de classe específico. As classes são identificadores reutilizáveis que você pode atribuir a 
+elementos HTML.
+
+   		.minha-classe {
+     			/* Estilos aplicados a elementos com a classe "minha-classe" */
+   		}
+
+	3. **Seletor de ID:**
+   	Seleciona um único elemento com base no valor do atributo `id`. O ID deve ser único na página.
+
+   		#meu-id {
+     			/* Estilos aplicados a um elemento com o ID "meu-id" */
+   		}
+
+	4. **Seletor descendente:**
+   		Seleciona um elemento que é um descendente de outro elemento específico.
+
+   		#meu-id p {
+     			/* Estilos aplicados a todos os parágrafos dentro do elemento com o ID "meu-id" */
+   		}
+
+	**Agrupamento de seletores:**
+	O agrupamento de seletores é uma técnica que permite aplicar as mesmas regras de estilo a vários seletores. Isso ajuda a simplificar o código CSS 
+e economizar repetição. Para agrupar seletores, você pode separá-los com vírgulas. 
+	
+	Veja um exemplo de agrupamento:
+
+		h1, h2, h3 {
+  			/* Estilos aplicados a todos os elementos h1, h2 e h3 */
+		}
+
+	Neste exemplo, as mesmas regras de estilo serão aplicadas a todos os elementos `h1`, `h2` e `h3` na página.
+
+	Além dos conceitos mencionados, o CSS3 também trouxe muitas outras funcionalidades, como animações, transições, sombras, bordas arredondadas, 
+efeitos de gradiente, flexbox, grid e muito mais. Ele continua sendo uma linguagem importante para o desenvolvimento web e é amplamente utilizado para controlar 
+a aparência e o layout dos elementos HTML em páginas da web modernas.

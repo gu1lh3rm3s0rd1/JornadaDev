@@ -1,0 +1,41 @@
+PRPRIEDADES CSS - MARGIN E PADDING
+
+	As propriedades "margin" e "padding" são utilizadas para controlar o espaçamento entre os elementos HTML, mas têm propósitos diferentes:
+
+	1. Margin (margem):
+	A propriedade "margin" é usada para definir o espaço entre o elemento selecionado e os elementos vizinhos ao seu redor. Ela cria uma área
+transparente ao redor do elemento. A margem não tem cor de fundo nem é renderizada, ela simplesmente define o espaço entre os elementos. A margem
+pode ser definida de diferentes formas:
+
+		- Margem única: `margin: valor;` (Exemplo: `margin: 10px;`)
+		- Margem separada: `margin: cima direita baixo esquerda;` (Exemplo: `margin: 10px 20px 10px 20px;`)
+
+	2. Padding (preenchimento):
+	A propriedade "padding" é usada para definir o espaço entre o conteúdo do elemento selecionado e sua borda. Ele cria uma área preenchida 
+ao redor do conteúdo. O padding também não tem cor de fundo, mas afeta o posicionamento do conteúdo dentro do elemento. A propriedade padding 
+também pode ser definida de diferentes formas:
+
+		- Padding único: `padding: valor;` (Exemplo: `padding: 10px;`)
+		- Padding separado: `padding: cima direita baixo esquerda;` (Exemplo: `padding: 10px 20px 10px 20px;`)
+
+	É importante notar que as margens afetam o espaçamento entre elementos adjacentes, enquanto o preenchimento (padding) afeta o espaçamento
+entre o conteúdo e a borda do próprio elemento.
+
+	Além disso, as propriedades "margin" e "padding" também podem aceitar valores em diferentes unidades, como pixels (px), porcentagem (%), 
+ems (em), entre outros.
+
+	Exemplo de uso em CSS:
+
+		/* Definindo margem e padding para um elemento */
+			.exemplo {
+  				margin: 10px;      /* Margem de 10 pixels em todas as direções */
+  				padding: 20px;     /* Preenchimento de 20 pixels em todas as direções */
+			}
+
+		/* Definindo margem e padding separadamente */
+			.exemplo2 {
+  				margin: 10px 20px;  /* Margem de 10 pixels nas direções superior e inferior, 20 pixels nas direções direita e esquerda */
+  				padding: 5px 15px;  /* Preenchimento de 5 pixels nas direções superior e inferior, 15 pixels nas direções direita e esquerda */
+			}
+
+	Estas propriedades são fundamentais no design responsivo e no posicionamento de elementos em páginas web.

@@ -1,0 +1,75 @@
+PROPRIEDADES CSS - FONTS
+
+	Em CSS3, as "fonts" referem-se ao estilo tipográfico aplicado ao texto em uma página da web. A especificação CSS3 fornece recursos avançados 
+para controlar a aparência do texto, permitindo aos desenvolvedores web uma maior flexibilidade na seleção e exibição de fontes.
+
+	A seguir, vou destacar alguns conceitos importantes relacionados às "fonts" em CSS3:
+
+	1. **Font-Family (Família de Fontes)**:
+   	A propriedade `font-family` permite especificar uma lista de fontes a serem usadas para renderizar o texto em uma página da web. Essa 
+lista geralmente consiste em nomes de fontes separados por vírgulas. Caso a primeira fonte não esteja disponível, o navegador tentará utilizar a 
+próxima na lista e assim por diante. É importante incluir uma fonte genérica no final da lista para garantir que o navegador escolha uma fonte 
+apropriada caso nenhuma das fontes específicas seja encontrada.
+
+   	Exemplo:
+
+   		p {
+     			font-family: "Helvetica Neue", Arial, sans-serif;
+   		}
+
+	2. **Font-Size (Tamanho da Fonte)**:
+   	A propriedade `font-size` é usada para definir o tamanho do texto. Pode ser especificada em várias unidades, como pixels (`px`), ,
+em (`em`), porcentagem (`%`), entre outras.
+
+   	Exemplo:
+
+   		p {
+     			font-size: 16px;
+   		}
+
+	3. **Font-Weight (Peso da Fonte)**:
+   	A propriedade `font-weight` determina a espessura da fonte, que pode ser definida com valores numéricos, como 400, 700, etc., ou palavras-chave 
+como "normal" e "bold".
+
+   	Exemplo:
+
+   		p {
+     			font-weight: bold;
+   		}
+
+	4. **Font-Style (Estilo da Fonte)**:
+   	A propriedade `font-style` permite definir o estilo da fonte, como "normal" para o estilo padrão, "italic" para itálico ou "oblique" para
+uma versão inclinada da fonte.
+
+   	Exemplo:
+   		p {
+     			font-style: italic;
+   		}
+
+	5. **Font-Variant (Variante da Fonte)**:
+   	A propriedade `font-variant` pode ser usada para definir se o texto deve ser exibido em maiúsculas (uppercase) ou minúsculas (lowercase).
+
+   	Exemplo:
+
+   		p {
+     			font-variant: small-caps;
+   		}
+
+	6. **@font-face**:
+   	A regra `@font-face` é uma das mais poderosas em CSS3. Ela permite aos desenvolvedores incorporar fontes personalizadas no site, em vez de depender apenas das fontes instaladas no computador do usuário. Isso é especialmente útil quando se deseja manter a consistência tipográfica em diferentes sistemas operacionais e dispositivos.
+
+   	Exemplo:
+
+   		@font-face {
+     			font-family: "MinhaFontePersonalizada";
+     			src: url("minha-fonte.woff2") format("woff2"),
+          		url("minha-fonte.woff") format("woff");
+   		}
+
+   		p {
+     			font-family: "MinhaFontePersonalizada", sans-serif;
+   		}
+
+	Essas são apenas algumas das principais propriedades relacionadas a fontes em CSS3. Existem outras propriedades e recursos disponíveis 
+para manipular a aparência tipográfica, como `line-height`, `text-decoration`, `letter-spacing`, entre outras. A escolha e combinação dessas 
+propriedades dependem das necessidades de design do seu projeto.

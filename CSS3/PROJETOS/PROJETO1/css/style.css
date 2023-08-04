@@ -1,0 +1,50 @@
+/* seletor universal */
+* {
+  margin: 0;
+  padding: 0;
+  color: red;
+}
+
+/* seletor tag */
+h1 {
+  color: blue;
+  font-size: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  color: green;
+  font-size: 20px;
+}
+
+/* seletor atributo */
+input[type="text"] {
+  width: 200px;
+  background-color: #ccc;
+  height: 40px;
+  border: none;
+}
+
+input[type="email"] {
+  width: 200px;
+  background-color: #ccc;
+  height: 40px;
+  border: none;
+}
+
+input[type="submit"] {
+  width: 50px;
+  background-color: #2aa834;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* agrupamento */
+h1,
+h2,
+p {
+  text-align: center;
+  color: blue;
+}

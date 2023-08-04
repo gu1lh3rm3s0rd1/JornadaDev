@@ -1,0 +1,18 @@
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* 
+@font-face {
+  font-family: nome da font;
+  src: url da font
+}
+*/
+
+.body {
+  font-family: "Tangerine", serif;
+  font-size: 48px;
+}

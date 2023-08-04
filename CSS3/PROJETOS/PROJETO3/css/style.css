@@ -1,0 +1,31 @@
+. {
+  box-sizing: border-box;
+}
+
+.conteudo {
+  background-color: red;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 10px 10px 5px green;
+}
+
+#conteudo {
+  background-color: red;
+  width: 300px;
+  height: 110px;
+  overflow: auto;
+}
+
+#conteudo p {
+  opacity: 0.7;
+}
+
+.bloco {
+  width: 300px;
+  background-color: green;
+  height: 150px;
+  border-radius: 20px 50px 100px 10px;
+  border-bottom-left-radius: 25px;
+}
+
+

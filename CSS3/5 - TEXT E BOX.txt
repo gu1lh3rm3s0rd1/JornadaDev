@@ -1,0 +1,74 @@
+PRPRIEDADES CSS - TEXT E BOX
+
+	Em CSS3, o elemento "text" não é uma entidade específica. No entanto, o CSS3 é a terceira versão da linguagem de folhas de estilo em 
+cascata (Cascading Style Sheets), que é utilizada para definir a apresentação e o layout de um documento HTML ou XML. No contexto de CSS3, você 
+pode aplicar estilos a elementos de texto específicos ou configurar propriedades relacionadas à exibição e manipulação do texto.
+
+	Aqui estão algumas das principais propriedades do CSS3 que são frequentemente usadas para estilizar e manipular texto:
+
+		1. `font-family`: Define o tipo de fonte a ser usada para o texto.
+		2. `font-size`: Especifica o tamanho da fonte do texto.
+		3. `font-weight`: Define a espessura da fonte, como negrito ou normal.
+		4. `font-style`: Permite definir a inclinação da fonte, como itálico ou normal.
+		5. `text-align`: Alinha o texto horizontalmente, como "left", "center", "right" ou "justify".
+		6. `text-decoration`: Aplica decorações ao texto, como sublinhado, tachado ou nenhum.
+		7. `text-transform`: Altera a capitalização do texto, como maiúsculas, minúsculas ou capitalize.
+		8. `color`: Define a cor do texto.
+		9. `line-height`: Define a altura da linha, o espaço entre linhas de texto.
+		10. `letter-spacing`: Especifica o espaçamento entre caracteres.
+		11. `word-spacing`: Define o espaçamento entre palavras.
+
+	Essas são apenas algumas das muitas propriedades CSS3 disponíveis para estilizar texto. Você pode usar essas propriedades individualmente
+ou combiná-las para criar estilos mais complexos. Além disso, com a introdução do CSS3, novas funcionalidades como sombras de texto, fontes 
+personalizadas (usando `@font-face`), estilos de seleção de texto, entre outros, também foram adicionadas para aumentar as opções de design de 
+texto.
+	Lembre-se de que a compatibilidade das propriedades CSS pode variar entre navegadores, portanto, é importante verificar a compatibilidade
+com os navegadores que você pretende suportar. Você pode usar os chamados "prefixos de fornecedor" para garantir que determinados estilos sejam 
+aplicados corretamente em diferentes navegadores.
+
+
+
+BOX-SIZING E BOX-SHADOW
+
+	Em CSS3, `box-sizing` e `box-shadow` são duas propriedades importantes que afetam o modelo de caixa (box model) de elementos HTML e permitem
+criar sombras ao redor de elementos, respectivamente.
+
+	1. `box-sizing`:
+	A propriedade `box-sizing` determina como o tamanho total de um elemento é calculado, levando em consideração as dimensões do conteúdo, 
+preenchimento (padding) e bordas. 
+
+	Existem dois valores principais para a propriedade:
+
+		- `content-box` (valor padrão): Nesse modo, o tamanho total do elemento é calculado incluindo apenas o conteúdo. Qualquer preenchimento 
+(padding) ou bordas adicionais serão acrescentados ao tamanho especificado, aumentando o tamanho total do elemento.
+
+		- `border-box`: Nesse modo, o tamanho total do elemento é calculado incluindo o conteúdo, preenchimento (padding) e bordas. Assim,
+qualquer preenchimento ou bordas adicionais não aumentarão o tamanho total do elemento, mas reduzirão o espaço disponível para o conteúdo.
+
+	Exemplo:
+
+		.box {
+  			box-sizing: border-box;
+  			width: 200px;
+  			padding: 20px;
+  			border: 1px solid black;
+		}
+
+	2. `box-shadow`:
+	A propriedade `box-shadow` permite adicionar sombras ao redor de um elemento. Ela aceita valores para o deslocamento horizontal (x), 
+deslocamento vertical (y), o desfoque (blur), a propagação (spread) e a cor da sombra. É possível adicionar múltiplas sombras separando-as por 
+vírgulas.
+
+	Exemplo:
+
+		.box {
+  			width: 200px;
+  			height: 200px;
+  			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+
+	Nesse exemplo, a sombra será posicionada 2 pixels à direita do elemento (deslocamento horizontal de 2px), 2 pixels abaixo do elemento 
+(deslocamento vertical de 2px) e terá um desfoque de 4 pixels. A cor da sombra é especificada como um valor RGBA, onde "rgba(0, 0, 0, 0.5)" 
+representa uma sombra preta com uma opacidade de 50%.
+	Essas propriedades são muito úteis em design e layout de páginas web, permitindo controlar o tamanho dos elementos de forma mais previsível 
+e adicionar efeitos visuais interessantes com sombras.
