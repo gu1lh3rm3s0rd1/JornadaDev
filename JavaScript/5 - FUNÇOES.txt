@@ -1,0 +1,60 @@
+FUNÇÕES
+
+	As funções são blocos de código reutilizáveis que executam uma tarefa específica. Elas são uma parte fundamental da linguagem e são usadas para dividir
+o código em partes menores e mais gerenciáveis, além de promover a reutilização e a modularidade do código.
+
+	Aqui estão os principais conceitos sobre funções em JavaScript:
+
+	1. **Declaração de Função:**
+   	Você pode declarar uma função usando a seguinte sintaxe:
+   
+   		function nomeDaFuncao(parametro1, parametro2) {
+       			// Corpo da função
+   		}
+
+	2. **Expressões de Função:**
+   	Além das declarações de função, você também pode usar expressões de função (funções anônimas) para criar funções. A sintaxe se parece com isso:
+   
+   		const nomeDaFuncao = function(parametro1, parametro2) {
+       			// Corpo da função
+   		};
+
+	3. **Chamando Funções:**
+   	Para executar o código dentro de uma função, você precisa chamá-la, passando os argumentos necessários (se houver) entre parênteses:
+   
+   		nomeDaFuncao(argumento1, argumento2);
+
+	4. **Retorno de Valores:**
+   	Uma função pode retornar um valor usando a palavra-chave `return`. Isso permite que você obtenha um resultado da função para usar em outros lugares 
+do seu código:
+   
+   		function soma(a, b) {
+       			return a + b;
+   		}
+   
+   		const resultado = soma(3, 5); // resultado será 8
+
+	5. **Escopo:**
+   	Variáveis declaradas dentro de uma função têm escopo local, o que significa que elas só podem ser acessadas dentro dessa função. Variáveis definidas
+fora da função têm escopo global e podem ser acessadas de qualquer lugar do código.
+
+	6. **Parâmetros e Argumentos:**
+   	Parâmetros são os nomes dados às variáveis que uma função espera receber. Argumentos são os valores reais passados para esses parâmetros quando a 
+função é chamada.
+
+	7. **Funções com Arrow (Seta):**
+   	A partir do ECMAScript 6 (ES6), você pode usar a sintaxe de função de seta (arrow functions) para criar funções mais concisas. Elas têm um comportamento 
+ligeiramente diferente em relação ao escopo e ao `this`.
+
+   		const quadrado = (x) => x * x;
+
+	8. **Funções de Callback:**
+   	Funções de callback são funções passadas como argumentos para outras funções. Elas são amplamente usadas em JavaScript para lidar com operações 
+assíncronas e eventos.
+
+	9. **Funções como Objetos de Primeira Classe:**
+   	Em JavaScript, as funções são objetos de primeira classe, o que significa que você pode atribuí-las a variáveis, passá-las como argumentos e 
+retorná-las de outras funções.
+
+	Esses são apenas os conceitos básicos sobre funções em JavaScript. Elas desempenham um papel crucial no desenvolvimento de aplicativos e scripts mais 
+organizados e reutilizáveis.

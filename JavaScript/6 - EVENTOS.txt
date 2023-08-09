@@ -1,0 +1,58 @@
+EVENTOS
+
+	Eventos são ações ou ocorrências que acontecem no navegador ou no ambiente de execução do JavaScript, como cliques de mouse, pressionamentos de teclas,
+carregamento de páginas, etc. Eles são usados para interagir com o usuário e criar comportamentos dinâmicos nas páginas da web. 
+
+	Aqui estão os conceitos básicos sobre eventos em JavaScript:
+
+	### 1. Adicionar um Manipulador de Eventos:
+
+	Para capturar e lidar com um evento, você precisa adicionar um "manipulador de eventos" (também chamado de "listener") ao elemento HTML relevante. 
+Você pode fazer isso usando os métodos `addEventListener()` ou atribuindo diretamente uma função ao atributo de evento do elemento.
+
+		// Usando addEventListener
+		const button = document.querySelector('#meuBotao');
+
+		button.addEventListener('click', function() {
+  			console.log('Botão clicado!');
+		});
+
+		// Atribuindo uma função diretamente
+		const link = document.querySelector('#meuLink');
+
+		link.onclick = function() {
+  			console.log('Link clicado!');
+		};
+
+	### 2. Tipos Comuns de Eventos:
+
+	Existem muitos tipos diferentes de eventos que você pode capturar e lidar em JavaScript. Alguns dos tipos mais comuns incluem:
+
+		- `click`: Ocorre quando um elemento é clicado.
+		- `mouseover` e `mouseout`: Ocorrem quando o ponteiro do mouse entra ou sai de um elemento.
+		- `keydown`, `keyup` e `keypress`: Ocorrem quando uma tecla é pressionada, solta ou mantida pressionada.
+		- `submit`: Ocorre quando um formulário é enviado.
+		- `load`: Ocorre quando uma página ou recurso é carregado.
+		- `resize`: Ocorre quando a janela do navegador é redimensionada.
+		- `change`: Ocorre quando o valor de um elemento de input muda (como um `<input>` ou `<select>`).
+
+	### 3. Event Object (Objeto de Evento):
+
+	Quando um evento ocorre, um objeto de evento é criado e passado para o manipulador de eventos. Este objeto contém informações sobre o evento, como o
+tipo do evento, o elemento alvo, coordenadas do mouse, teclas pressionadas, etc. Você pode acessar essas informações dentro da função do manipulador de eventos.
+
+		button.addEventListener('click', function(event) {
+  			console.log('Botão clicado!');
+  			console.log('Tipo do evento:', event.type);
+  			console.log('Elemento alvo:', event.target);
+		});
+
+	### 4. Removendo Event Listeners:
+
+	Se você não precisar mais que um manipulador de eventos responda a um evento, é uma boa prática removê-lo para evitar vazamentos de memória. Isso 
+pode ser feito usando o método `removeEventListener()`.
+
+		button.removeEventListener('click', minhaFuncao);
+
+	Estes são apenas os conceitos básicos sobre eventos em JavaScript. Eles podem se tornar muito mais complexos à medida que você trabalha com eventos 
+mais avançados, como eventos de arrastar e soltar, eventos de toque em dispositivos móveis e muito mais.

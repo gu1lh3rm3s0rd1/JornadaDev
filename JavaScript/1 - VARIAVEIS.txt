@@ -1,0 +1,57 @@
+VARIAVEIS E OS TIPOS DE DADOS DAS VARIAVEIS
+
+	Claro, vou te explicar sobre variáveis e os tipos de dados em JavaScript.
+
+	Variáveis em JavaScript:
+
+	Uma variável em JavaScript é um espaço na memória onde você pode armazenar dados. Você precisa declarar uma variável antes de usá-la. Isso envolve o
+uso da palavra-chave `var`, `let` ou `const`, seguida pelo nome da variável.
+	
+	Aqui estão as diferenças entre essas palavras-chave:
+
+		- `var`: Era a forma antiga de declarar variáveis em JavaScript. Ela tem escopo de função, o que pode levar a problemas de escopo em alguns casos.
+		- `let`: Introduzido no ECMAScript 6 (ES6), tem um escopo de bloco, o que significa que a variável só existe dentro do bloco onde foi declarada.
+		- `const`: Também introduzido no ES6, é usado para declarar constantes. Assim como o `let`, possui escopo de bloco, mas não pode ser reatribuído 
+após a inicialização.
+
+	Tipos de Dados em JavaScript:
+
+	JavaScript possui vários tipos de dados, que podem ser categorizados em dois grupos principais: tipos primitivos e objetos.
+
+	### Tipos Primitivos:
+
+	1. **Número (`Number`)**: Representa valores numéricos, incluindo inteiros e números de ponto flutuante.2. **String**: Representa sequências de caracteres, como texto.
+	3. **Booleano (`Boolean`)**: Representa valores verdadeiro (`true`) ou falso (`false`).
+	4. **Nulo (`null`)**: Representa a ausência intencional de qualquer valor ou objeto.
+	5. **Indefinido (`undefined`)**: Representa uma variável que foi declarada, mas não recebeu um valor.
+	6. **Símbolo (`Symbol`)**: Introduzido no ES6, representa um valor único e imutável usado principalmente como chave de propriedades de objeto.
+	7. **BigInt**: Introduzido no ES11, lida com números inteiros maiores do que o limite suportado pelo tipo `Number`.
+
+	### Tipos de Referência (Objetos):
+
+	1. **Objeto (`Object`)**: Uma coleção de pares chave-valor, onde as chaves são strings (ou símbolos) e os valores podem ser de qualquer tipo.
+	2. **Array**: Uma coleção ordenada de valores, acessados por índices numéricos.
+	3. **Função (`Function`)**: Um bloco de código reutilizável que pode ser chamado por seu nome.
+	4. **Data (`Date`)**: Usado para trabalhar com datas e horários.
+	5. **RegExp (`Regular Expression`)**: Usado para manipular expressões regulares, que são padrões de busca de texto.
+	6. **Map e Set**: Introduzidos no ES6, são estruturas de dados para armazenar coleções de valores únicos ou pares chave-valor, respectivamente.
+
+	Exemplo de declaração de variáveis e uso de tipos de dados em JavaScript:
+
+		let nome = "João";
+		const idade = 25;
+		let altura = 1.75;
+		let ativo = true;
+		let listaDeNumeros = [1, 2, 3, 4, 5];
+		let pessoa = {
+  			nome: "Maria",
+  			idade: 30,
+  			altura: 1.65
+		};
+
+		console.log(nome);
+		console.log(idade);
+		console.log(listaDeNumeros[0]);
+		console.log(pessoa.nome);
+
+	Introdução aos conceitos de variáveis e tipos de dados em JavaScript.

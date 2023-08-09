@@ -1,0 +1,161 @@
+OPERADORES ARITIMETICOS
+
+	Os operadores aritméticos são utilizados para realizar operações matemáticas em valores numéricos. Aqui estão os principais operadores aritméticos 
+em JavaScript:
+
+	1. **Adição (+):** Este operador é utilizado para somar dois valores.
+
+		let soma = 5 + 3; // Resultado: 8
+
+	2. **Subtração (-):** Este operador é utilizado para subtrair o segundo valor do primeiro.
+
+		let diferenca = 10 - 4; // Resultado: 6
+
+	3. **Multiplicação (*):** Este operador é utilizado para multiplicar dois valores.
+
+		let produto = 6 * 7; // Resultado: 42
+
+	4. **Divisão (/):** Este operador é utilizado para dividir o primeiro valor pelo segundo.
+
+		let quociente = 15 / 3; // Resultado: 5
+
+	5. **Módulo (%):** Este operador é utilizado para calcular o resto da divisão do primeiro valor pelo segundo.
+
+		let resto = 10 % 3; // Resultado: 1 (resto da divisão de 10 por 3)
+
+	6. **Incremento (++):** Este operador é utilizado para aumentar o valor de uma variável em 1.
+
+		let contador = 5;
+		contador++; // Agora contador é 6
+
+	7. **Decremento (--):** Este operador é utilizado para diminuir o valor de uma variável em 1.
+
+		let contador = 8;
+		contador--; // Agora contador é 7
+
+	Lembre-se de que os operadores aritméticos seguem a ordem padrão de precedência da matemática, mas você pode usar parênteses para controlar a ordem 
+de avaliação.
+
+		let resultado = (10 + 2) * 3; // Resultado: 36 (12 * 3)
+
+	Além desses operadores, também existem operadores de atribuição combinados, como `+=`, `-=`, `*=`, `/=` e `%=`. Esses operadores realizam uma operação 
+aritmética e atribuem o resultado à variável.
+
+		let numero = 10;
+		numero += 5; // Equivale a: numero = numero + 5; Resultado: 15
+
+	Essas são as noções básicas sobre operadores aritméticos em JavaScript. Eles são fundamentais para realizar cálculos e manipulações numéricas em seus
+programas.
+
+
+OPERADORES DE COMPARAÇAO
+
+	Os operadores de comparação são usados para comparar dois valores e retornar um valor booleano (verdadeiro ou falso) que indica se a comparação é 
+verdadeira ou falsa. 
+
+	Aqui estão os principais operadores de comparação em JavaScript:
+
+	1. **Igual (==)**: Verifica se dois valores são iguais, mas não compara os tipos de dados. Por exemplo:
+   
+   		5 == 5; // true
+   		'10' == 10; // true
+
+	2. **Estritamente Igual (===)**: Verifica se dois valores são iguais e também compara os tipos de dados. É mais recomendado, pois evita comparações inesperadas.
+   
+   		5 === 5; // true
+   		'10' === 10; // false
+
+	3. **Diferente (!=)**: Verifica se dois valores são diferentes, sem considerar os tipos de dados.
+   
+   		5 != 10; // true
+   		'hello' != 'world'; // true
+
+	4. **Estritamente Diferente (!==)**: Verifica se dois valores são diferentes, levando em conta os tipos de dados.
+   
+   		5 !== 10; // true
+   		'5' !== 5; // true
+
+	5. **Maior que (>) e Maior ou igual (>=)**: Verificam se o valor da esquerda é maior ou maior/igual ao valor da direita.
+   
+   		10 > 5; // true
+   		10 >= 10; // true
+
+	6. **Menor que (<) e Menor ou igual (<=)**: Verificam se o valor da esquerda é menor ou menor/igual ao valor da direita.
+   
+   		5 < 10; // true
+   		10 <= 10; // true
+
+	Lembre-se de que as comparações podem ser feitas não apenas com números, mas também com strings, variáveis, expressões e outros tipos de dados em JavaScript.
+
+	Além desses operadores de comparação, você também pode combinar comparações usando os operadores lógicos `&&` (E) e `||` (OU), para criar expressões mais complexas.
+
+	Exemplo com operadores lógicos:
+
+		var age = 25;
+		var isStudent = true;
+
+		if (age > 18 && isStudent) {
+    			console.log("É maior de idade e estudante.");
+		} else {
+    			console.log("Não é maior de idade e/ou não é estudante.");
+		}
+
+
+OPERADORES LOGICOS
+
+	Operadores lógicos são usados para avaliar expressões condicionais e tomar decisões com base em condições. JavaScript possui três operadores lógicos 
+principais: AND (&&), OR (||) e NOT (!). Vou explicar cada um deles:
+
+	1. Operador AND (&&):
+	O operador AND retorna `true` se ambas as expressões que ele conecta forem verdadeiras. Caso contrário, retorna `false`.
+
+	Exemplo:
+
+		const a = true;
+		const b = false;
+
+		console.log(a && b); // Saída: false
+
+	2. Operador OR (||):
+	O operador OR retorna `true` se pelo menos uma das expressões que ele conecta for verdadeira. Retorna `false` apenas se ambas as expressões forem falsas.
+
+	Exemplo:
+
+		const x = true;
+		const y = false;
+
+		console.log(x || y); // Saída: true
+
+	3. Operador NOT (!):
+	O operador NOT inverte o valor de verdadeiro para falso e vice-versa. Ele é usado para negar uma expressão.
+
+	Exemplo:
+		const z = true;
+
+		console.log(!z); // Saída: false
+
+	Além disso, você também pode combinar esses operadores para criar expressões lógicas mais complexas.
+
+	Exemplo:
+
+		const p = true;
+		const q = false;
+		const r = true;
+
+		console.log((p && q) || r); // Saída: true
+
+	Lembre-se de que as expressões condicionais podem ser usadas em estruturas de controle, como `if`, `else if` e `while`, para tomar decisões com base 
+nas condições especificadas.
+
+	Exemplo:
+
+		const age = 18;
+
+		if (age >= 18 && age <= 65) {
+    			console.log("Você está na idade de trabalho.");
+		} else {
+    			console.log("Você não está na idade de trabalho.");
+		}
+
+	Esses operadores lógicos são ferramentas poderosas para criar lógica condicional em seus programas JavaScript. Certifique-se de entender como eles 
+funcionam para criar códigos eficientes e eficazes.

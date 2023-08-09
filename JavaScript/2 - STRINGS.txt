@@ -1,0 +1,56 @@
+STRINGS
+
+	Uma string é uma sequência de caracteres, como texto, que pode incluir letras, números, símbolos e espaços. Em JavaScript, as strings são usadas para
+manipular e armazenar texto. Aqui estão algumas informações importantes sobre strings em JavaScript:
+
+	1. **Criação de Strings:**
+   	Você pode criar uma string usando aspas simples (' '), aspas duplas (" ") ou crases (``). 
+
+	Exemplos:
+   
+   		let str1 = 'Isso é uma string usando aspas simples.';
+   		let str2 = "Isso é uma string usando aspas duplas.";
+   		let str3 = `Isso é uma string usando crases (template literals).`;
+
+	2. **Concatenação:**
+   	Você pode combinar ou concatenar strings usando o operador de adição (+):
+   
+   		let firstName = "João";
+   		let lastName = "Silva";
+   		let fullName = firstName + " " + lastName; // Resultado: "João Silva"
+
+	3. **Comprimento da String:**
+   	Para descobrir o número de caracteres em uma string, você pode usar a propriedade `length`:
+   
+   		let myString = "Olá, mundo!";
+   		let length = myString.length; // Resultado: 12
+
+	4. **Acessando Caracteres:**
+   	Você pode acessar caracteres individuais de uma string usando a notação de colchetes []:
+   
+   		let myString = "JavaScript";
+   		let firstChar = myString[0]; // Resultado: "J"
+   		let thirdChar = myString[2]; // Resultado: "v"
+
+	5. **Métodos de String:**
+   	JavaScript fornece diversos métodos para manipulação de strings, como `toUpperCase()`, `toLowerCase()`, `charAt()`, `indexOf()`, `slice()`, `substring()`, 
+`replace()`, entre outros. 
+
+	Aqui estão alguns exemplos:
+
+   		let myString = "Hello, world!";
+   
+   		console.log(myString.toUpperCase()); // Saída: "HELLO, WORLD!"
+   		console.log(myString.indexOf("world")); // Saída: 7
+   		console.log(myString.slice(0, 5)); // Saída: "Hello"
+   		console.log(myString.replace("Hello", "Hi")); // Saída: "Hi, world!"
+
+	6. **Template Literals:**
+   	As template literals, criadas usando crases (``), permitem que você insira expressões dentro de strings usando `${expressao}`:
+
+   		let name = "Maria";
+   		let greeting = `Olá, ${name}!`;
+   		// Resultado: "Olá, Maria!"
+
+	Essas são apenas algumas das funcionalidades básicas para trabalhar com strings em JavaScript. Há muito mais para explorar na manipulação de strings,
+então não hesite em consultar a documentação oficial do JavaScript para mais detalhes e métodos disponíveis.

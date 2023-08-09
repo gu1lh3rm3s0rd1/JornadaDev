@@ -1,0 +1,20 @@
+JAVASCRIPT
+
+INTRODUCAO 
+
+	JavaScript é uma linguagem de programação amplamente utilizada para o desenvolvimento de aplicativos web interativos e dinâmicos. Criada por Brendan
+Eich em 1995, inicialmente tinha a finalidade de tornar as páginas da web mais dinâmicas, permitindo a manipulação de elementos e interações do usuário no 
+navegador. No entanto, ao longo dos anos, o JavaScript evoluiu e expandiu suas capacidades, tornando-se uma linguagem versátil, capaz de ser executada não 
+apenas em navegadores, mas também em servidores e outros ambientes de desenvolvimento.
+	Uma das características fundamentais do JavaScript é a sua capacidade de ser interpretado e executado diretamente pelos navegadores, sem a necessidade
+de compilação prévia. Isso permite que os desenvolvedores adicionem interatividade às páginas web, respondendo a eventos do usuário, modificando o conteúdo 
+da página em tempo real e fazendo solicitações assíncronas ao servidor, tudo isso sem recarregar a página.
+	Com o advento do Node.js, que é um ambiente de execução JavaScript do lado do servidor, o alcance do JavaScript foi expandido para incluir também a 
+construção de aplicativos de backend. Isso significa que os desenvolvedores podem usar a mesma linguagem em ambos os lados, front-end e back-end, simplificando 
+o desenvolvimento e permitindo uma maior coesão entre as partes de um aplicativo.
+	Ao longo dos anos, a comunidade de desenvolvedores JavaScript criou uma grande quantidade de bibliotecas e frameworks, como jQuery, React, Angular e 
+Vue.js, que simplificam tarefas específicas e facilitam a criação de aplicações mais complexas e bem estruturadas.
+	No entanto, com a crescente complexidade das aplicações web modernas, o JavaScript também apresentou alguns desafios, como a necessidade de gerenciar
+assincronismo de maneira eficaz, lidar com questões de desempenho e segurança, e manter um código organizado e de fácil manutenção.
+	Em resumo, o JavaScript desempenha um papel crucial no desenvolvimento web, proporcionando interatividade, dinamismo e uma experiência mais rica para
+os usuários. Sua versatilidade e onipresença o tornaram uma habilidade essencial para desenvolvedores que desejam criar aplicações web modernas e eficientes.
