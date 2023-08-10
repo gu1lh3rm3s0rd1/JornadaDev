@@ -1,0 +1,92 @@
+FORMULARIOS
+
+	O Bootstrap 5 oferece uma série de componentes e classes que facilitam a criação e estilização de formulários de maneira eficiente. Aqui estão os principais 
+pontos relacionados aos formulários no Bootstrap 5:
+
+	1. **Estrutura Básica:**
+   	O Bootstrap 5 fornece classes para criar a estrutura básica de formulários. O elemento `<form>` é envolto por uma classe `form` para iniciar um formulário. ]
+Dentro do formulário, você pode usar `<div>`s com classes como `mb-3` para criar espaçamento entre os campos.
+
+	2. **Campos de Entrada:**
+  	Os campos de entrada, como textos, senhas e campos de email, podem ser estilizados usando classes como `form-control`. Essas classes aplicam estilos 
+de largura total aos campos.
+
+	3. **Grupos de Entrada:**
+   	Os grupos de entrada permitem agrupar rótulos, campos e elementos auxiliares (como mensagens de validação) juntos. Use a classe `form-group` para 
+criar um grupo de entrada.
+
+	4. **Rótulos e Colunas:**
+   	Os rótulos podem ser associados aos campos usando a classe `form-label`. Você também pode usar as classes de grid para organizar rótulos e campos 
+em colunas.
+
+	5. **Áreas de Texto:**
+   	Para áreas de texto maiores, use a classe `form-control` em um elemento `<textarea>`. Você pode ajustar a altura com base nas classes de altura do 
+Bootstrap, como `h-100`.
+
+	6. **Checkbox e Radio:**
+   	O Bootstrap 5 oferece estilos elegantes para campos de seleção, como checkboxes e radio buttons. Use as classes `form-check` e `form-check-input` 
+para estilizar esses elementos.
+
+	7. **Selects Personalizados:**
+   	Os selects (caixas de seleção) podem ser personalizados com a classe `form-select`, proporcionando um visual mais consistente e moderno.
+
+	8. **Validação:**
+   	O Bootstrap 5 possui classes para estilizar mensagens de validação e realçar campos inválidos. Use as classes `was-validated`, `invalid-feedback` e 
+`valid-feedback` para personalizar as mensagens.
+
+	9. **Tamanhos e Estilos:**
+   	Você pode ajustar o tamanho dos campos e botões usando classes como `form-control-lg` (grande) ou `form-control-sm` (pequeno). Além disso, o Bootstrap 
+oferece estilos de estado, como `is-valid` e `is-invalid`, para destacar o sucesso ou erro na validação.
+
+	10. **Botoes de Ação:**
+    	Adicione botões de envio ou redefinição ao formulário usando a classe `btn` e as classes contextuais do Bootstrap para estilizar os botões.
+
+	11. **Personalização:**
+    	O Bootstrap 5 permite a personalização de cores, estilos e layout dos elementos de formulário por meio das variáveis de CSS e das classes de utilitário.
+
+	Lembrando que o Bootstrap 5 é altamente customizável, e você pode combinar esses componentes com suas próprias classes e estilos para criar formulários 
+que atendam às necessidades específicas do seu projeto. Certifique-se de consultar a documentação oficial do Bootstrap 5 para obter detalhes completos sobre
+os componentes de formulário e suas classes correspondentes.
+
+	Exemplo:
+
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+  			<meta charset="UTF-8">
+  			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  			<title>Formulário de Contato</title>
+		</head>
+		<body>
+	  		<div class="container mt-5">
+    				<h1>Formulário de Contato</h1>
+    				<form class="needs-validation" novalidate>
+      					<div class="mb-3">
+        					<label for="nome" class="form-label">Nome</label>
+        					<input type="text" class="form-control" id="nome" required>
+        					<div class="invalid-feedback">Por favor, insira seu nome.</div>
+      					</div>
+      					<div class="mb-3">
+        					<label for="email" class="form-label">Email</label>
+        					<input type="email" class="form-control" id="email" required>
+        					<div class="invalid-feedback">Por favor, insira um email válido.</div>
+      					</div>
+      					<div class="mb-3">
+        					<label for="mensagem" class="form-label">Mensagem</label>
+        					<textarea class="form-control" id="mensagem" rows="4" required></textarea>
+        					<div class="invalid-feedback">Por favor, insira uma mensagem.</div>
+      					</div>
+      					<button type="submit" class="btn btn-primary">Enviar</button>
+    				</form>
+  			</div>
+
+  			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		</body>
+		</html>
+
+	Neste exemplo, estamos utilizando as classes do Bootstrap 5 para criar um formulário de contato com campos de entrada de texto, email e uma área de 
+mensagem. Também estamos aplicando a validação do Bootstrap para destacar campos obrigatórios e fornecer mensagens de erro personalizadas.
+	Lembre-se de que, para utilizar o Bootstrap, você deve incluir os links corretos para os arquivos de estilo e script, como fizemos nos exemplos acima. 
+Certifique-se de consultar a documentação oficial do Bootstrap 5 para obter mais informações sobre como personalizar e estilizar seus formulários de acordo 
+com suas necessidades específicas.

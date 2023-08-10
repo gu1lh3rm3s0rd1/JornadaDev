@@ -1,0 +1,62 @@
+MENSAGENS FLUTUANTES
+
+	Mensagens flutuantes, também conhecidas como "toasts", são pequenas caixas de notificação que aparecem temporariamente na parte superior ou inferior
+da página para exibir informações importantes para os usuários. No Bootstrap 5, as mensagens flutuantes podem ser facilmente implementadas usando as classes
+e componentes fornecidos pela biblioteca.
+
+	Aqui estão os passos básicos para criar mensagens flutuantes usando o Bootstrap 5:
+
+	1. **Inclua as bibliotecas do Bootstrap:**
+   	Certifique-se de incluir os arquivos CSS e JavaScript do Bootstrap em seu projeto. Você pode fazer isso adicionando as seguintes linhas ao `<head>` 
+do seu HTML:
+
+   		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+   		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+	2. **Estruture o HTML:**
+   	Crie a estrutura HTML onde você deseja exibir as mensagens flutuantes. Isso geralmente envolve a criação de um elemento para conter as mensagens. 
+
+	Por exemplo:
+
+   		<div class="toast-container position-fixed bottom-0 end-0 p-3">
+     			<!-- Mensagens flutuantes serão inseridas aqui -->
+   		</div>
+
+	3. **Crie os elementos das mensagens flutuantes:**
+   	Dentro do container que você criou, adicione elementos para cada mensagem flutuante. Você pode usar a classe `toast` para isso. 
+
+	Por exemplo:
+
+   		<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+     			<div class="toast-header">
+       				<!-- Cabeçalho da mensagem flutuante -->
+     			</div>
+     			<div class="toast-body">
+       				<!-- Conteúdo da mensagem flutuante -->
+     			</div>
+   		</div>
+
+	4. **Ative as mensagens flutuantes com JavaScript:**
+   	Para tornar as mensagens flutuantes interativas, você precisa adicionar um pouco de JavaScript para ativá-las. Geralmente, isso envolve a criação de
+uma instância de `bootstrap.Toast` para cada mensagem flutuante e, em seguida, chamando o método `.show()` quando necessário. 
+
+	Por exemplo:
+
+   		const toastEl = document.querySelector(".toast");
+   		const toast = new bootstrap.Toast(toastEl);
+   		toast.show();
+
+   	Você também pode usar os atributos `data-bs-toggle` e `data-bs-target` para ativar as mensagens flutuantes por meio de interações do usuário. 
+
+	Por exemplo:
+
+   		<button type="button" class="btn btn-primary" data-bs-toggle="toast" data-bs-target=".toast">Mostrar mensagem</button>
+
+	5. **Personalize as mensagens flutuantes:**
+   	O Bootstrap oferece várias classes de estilização que você pode usar para personalizar o visual das mensagens flutuantes, como `bg-primary`, `bg-success`, 
+`bg-warning`, `bg-danger`, etc. Você também pode ajustar a posição, duração e outros aspectos das mensagens flutuantes por meio das opções do Bootstrap.
+
+	Lembre-se de consultar a documentação oficial do Bootstrap 5 para obter detalhes específicos sobre as classes, componentes e opções relacionadas às 
+mensagens flutuantes (toasts): 
+
+	https://getbootstrap.com/docs/5.3/components/toasts/

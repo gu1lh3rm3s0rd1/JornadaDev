@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visibilidade</title>
+
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+  <style>
+    div.border {
+      height: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Conhcendo os recursos de visibilidade do bootstrap para Web</h1>
+  <hr>
+
+  <div class="container">
+    <div class="p-5 bg-danger"></div>
+    <hr>
+    <div class="p-4 col-3 d-block m-3 bg-primary"></div>
+    <div class="p-4 col-3 d-block m-3 bg-success"></div>
+    <div class="p-4 col-3 d-block m-3 bg-warning"></div>
+    <hr>
+    <div class="p-4 col-3 d-inline m-3 bg-primary"></div>
+    <div class="p-4 col-3 d-inline m-3 bg-success"></div>
+    <div class="p-4 col-3 d-inline m-3 bg-warning"></div>
+    <hr>
+    <div class="p-4 col-3 d-inline-block m-3 bg-primary"></div>
+    <div class="p-4 col-3 d-inline-block m-3 bg-success"></div>
+    <div class="p-4 col-3 d-inline-block m-3 bg-warning"></div>
+  </div>
+  <hr>
+
+  <h3>Casos de impressao da pagina</h3>
+  <hr>
+
+  <header class="p-3 text-bg-dark d-print-none">
+    <div class="container">
+      <h1 class="display">Cabeçalho</h1>
+    </div>
+  </header>
+  <article class="container my-3">
+    <h1 class="mb-4">Titulo do Artigo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit reprehenderit ex odio. Iure nihil veniam
+      necessitatibus porro molestias nisi?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores magni odit perferendis cum nostrum magnam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo incidunt, odio asperiores assumenda beatae
+      quas consequuntur illum amet. Reprehenderit maxime nihil quidem perspiciatis temporibus. Laudantium magnam quo
+      consequuntur ipsa!</p>
+    <p class="d-none d-print-block">Fonte: meu site</p>
+  </article>
+  <hr>
+
+  <div class="container">
+    <div class="p-4 col-3 m-3 bg-primary"></div>
+    div invisivel porem seu espaço permanece no fluxo de dados
+    <div class="p-4 col-3 m-3 bg-success invisible"></div>
+    div removida do fluxo de dados e seu espaço é liberado para ser preenchido por outro elemento se necessario
+    <div class="p-4 col-3 m-3 bg-warning d-none"></div>
+  </div>
+  <hr>
+
+  <h3>Overflows</h3>
+  <hr>
+
+  <div class="container bg-info mt-3">
+    <div class="row">
+      <div class="border p-2 col-3 overflow-auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint temporibus labore nemo, deserunt delectus dolor
+        placeat tempore accusantium consequuntur, at praesentium dignissimos! Deleniti eaque alias necessitatibus cum
+        repellendus vitae error!
+      </div>
+      <div class="border p-2 col-3 overflow-hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis neque fugiat repellendus molestiae rem
+        consectetur voluptatibus aut, dolorem ex veniam laborum quas iusto non voluptas aspernatur eligendi quaerat
+        temporibus consequatur!
+      </div>
+      <div class="border p-2 col-3 overflow-scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni cum
+        pariatur iure
+        officia voluptatem obcaecati vitae, ex reiciendis ad officiis culpa commodi ea iusto eos at, optio praesentium
+        quia enim.
+      </div>
+      <div class="border p-2 col-3 overflow-visible">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+        in dolorem iusto
+        esse! Deserunt illo omnis et earum autem dolorum, error inventore, magnam nobis libero doloribus mollitia in,
+        atque commodi!
+      </div>
+    </div>
+  </div>
+
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

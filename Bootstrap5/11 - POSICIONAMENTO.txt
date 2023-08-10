@@ -1,0 +1,35 @@
+CONFIGURAÇAO DE POSICIONAMENTO
+
+	O sistema de posicionamento é fundamental para criar layouts responsivos e bem organizados. O sistema de grid e as classes de posicionamento do Bootstrap 
+facilitam a disposição e alinhamento de elementos na página. Vamos explorar alguns conceitos-chave relacionados à configuração de posicionamento em Bootstrap 5:
+
+	1. **Grid System**: O sistema de grid é a base do layout responsivo no Bootstrap. Ele divide a página em uma grade de 12 colunas, permitindo que você
+organize e posicione elementos de forma flexível. Você pode usar as classes `col` seguidas de um número de 1 a 12 para definir a largura das colunas em diferentes 
+tamanhos de tela. Por exemplo, `col-md-6` significa que a coluna ocupará metade da largura disponível em telas médias e maiores.
+
+	2. **Classes de Alinhamento**: O Bootstrap oferece classes para alinhar elementos horizontal e verticalmente. As classes de alinhamento horizontal 
+incluem `text-start`, `text-center`, `text-end`, enquanto as classes de alinhamento vertical incluem `align-baseline`, `align-top`, `align-middle`, `align-bottom` 
+e `align-text-bottom`.
+
+	3. **Classes de Posicionamento**: As classes de posicionamento, como `position-relative` e `position-absolute`, permitem controlar o posicionamento 
+de elementos dentro de seus contêineres. A classe `position-relative` cria um contexto de posicionamento relativo para os elementos filhos, enquanto `position-absolute` 
+posiciona um elemento em relação ao seu ancestral mais próximo com posicionamento relativo.
+
+	4. **Deslocamento de Colunas**: Às vezes, pode ser útil adicionar espaço entre colunas ou criar margens laterais. Use classes como `ms-` (margin start) 
+e `me-` (margin end) para adicionar espaçamento lateral.
+
+	5. **Alinhamento de Colunas**: Você pode alinhar as colunas horizontalmente usando classes como `justify-content-start`, `justify-content-center` e 
+`justify-content-end` no contêiner de colunas. Isso ajuda a controlar o alinhamento dos itens dentro das colunas.
+
+	6. **Ordenação de Colunas**: O Bootstrap permite reorganizar a ordem das colunas em diferentes tamanhos de tela usando classes como `order-first` e 
+`order-last`. Além disso, a classe `order-{breakpoint}-{value}` permite especificar a ordem em diferentes breakpoints.
+
+	7. **Overflow e Scroll**: Para controlar o comportamento de overflow em elementos, você pode usar classes como `overflow-auto` e `overflow-hidden`. 
+Isso é útil quando o conteúdo é maior do que o espaço disponível.
+
+	8. **Espaçamento Interno (Padding)**: O Bootstrap 5 oferece classes para adicionar espaçamento interno aos elementos. As classes `p-` (padding), 
+`pt-` (padding top), `pb-` (padding bottom), `pl-` (padding left) e `pr-` (padding right) podem ser combinadas com valores de 0 a 5 para controlar o espaçamento.
+
+	Lembre-se de que o Bootstrap 5 é altamente personalizável, portanto, você pode criar combinações de classes para atender às suas necessidades específicas 
+de layout e posicionamento. O uso adequado dessas classes e conceitos garantirá que seus elementos sejam dispostos e alinhados de forma coesa e responsiva 
+em todas as telas.

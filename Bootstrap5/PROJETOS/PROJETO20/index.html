@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botoes, Agrupamentos e Menus</title>
+  <!-- CDN -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script> -->
+
+  <!-- CDN ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1>Trabalhando com a Classes do Bootstrap para usar Botoes e Menus</h1>
+  <hr>
+
+  <div class="container py-5">
+    <h3>Agrupamento de Botões</h3>
+    <hr>
+    <!-- <h3>Relembrando algumas coisas simples</h3>
+    <hr>
+    <button class="btn btn-primary">Botão 1</button>
+    <button class="btn btn-success" data-bs-toggle="button">Botão Marcável</button> -->
+
+    <div class="btn-group mb-3">
+      <button class="btn btn-primary">Botão 1</button>
+      <button class="btn btn-success">Botão 2</button>
+      <button class="btn btn-warning">Botão 3</button>
+    </div>
+    <div class="btn-group">
+      <input type="radio" name="grupo" id="btn1" class="btn-check">
+      <label for="btn1" class="btn btn-outline-primary">Botão de Checagem 1</label>
+      <input type="radio" name="grupo" id="btn2" class="btn-check">
+      <label for="btn2" class="btn btn-outline-primary">Botão de Checagem 2</label>
+      <input type="radio" name="grupo" id="btn3" class="btn-check">
+      <label for="btn3" class="btn btn-outline-primary">Botão de Checagem 3</label>
+    </div>
+    <hr>
+
+    <h3>Barra de Ferramentas com os Botões</h3>
+    <hr>
+
+    <div class="btn-toolbar">
+      <div class="btn-group me-2">
+        <button class="btn btn-primary">
+          <i class="bi-folder2-open"></i>
+        </button>
+        <button class="btn btn-primary">
+          <i class="bi-save"></i>
+        </button>
+        <button class="btn btn-primary">
+          <i class="bi-paperclip"></i>
+        </button>
+        <button class="btn btn-primary">
+          <i class="bi-image"></i>
+        </button>
+      </div>
+      <div class="btn-group me-2">
+        <button class="btn btn-primary">
+          <i class="bi-type-italic"></i>
+        </button>
+        <button class="btn btn-primary">
+          <i class="bi-type-bold"></i>
+        </button>
+        <button class="btn btn-primary">
+          <i class="bi-type-underline"></i>
+        </button>
+        <button class="btn btn-primary">
+          <i class="bi-type-strikethrough"></i>
+        </button>
+      </div>
+      <div class="btn-group me-2">
+        <button class="btn btn-primary">
+          <i class="bi-question"></i>
+        </button>
+        <button class="btn btn-primary">
+          <i class="bi-door-closed"></i>
+        </button>
+      </div>
+      <div class="input-group">
+        <input type="search" name="" id="" class="form-control">
+        <button class="btn btn-primary"><i class="bi-search"></i></button>
+      </div>
+    </div>
+    <hr>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Submenus</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+        <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+        <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CDN -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script> -->
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards</title>
+
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1>Trabalhano com as classes do Bootstrap 5 usando Cards</h1>
+  <hr>
+
+  <div class="container py-5">
+    <h3>Renderizaçao padrão de um elemento Card</h3>
+    <hr>
+
+    <div class="card col-4">
+      <!-- <img src="https://picsum.photos/400/400" alt="" class="card-img-top"> -->
+      <!-- <h4 class="card-header">Cabeçalho</h4> -->
+      <div class="card-body">
+        <h5 class="card-title">Título do Card</h5>
+        <h6 class="card-subtitle">Subititulo do Card</h6>
+        <p class="card-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, quas vitae, porro dolorem esse ullam in qui ex
+          veniam corrupti aliquid quia? Quia, possimus dolorum.
+        </p>
+        <a href="#" class="card-link">Link 1</a>
+        <a href="#" class="card-link">Link 2</a>
+        <a href="#" class="card-link">Link 3</a>
+      </div>
+      <!-- <h4 class="card-footer">Rodapé</h4> -->
+    </div>
+
+  </div>
+  <hr>
+
+  <div class="container">
+    <h3>Alguns estilos para trabalhar com cards</h3>
+    <hr>
+  </div>
+  <div class="container py-5 d-flex">
+    <div class="card col-4 me-5">
+      <img src="https://picsum.photos/400/400?ramdom=5" alt="" class="card-img-top">
+      <h4 class="card-header">Cabeçalho</h4>
+      <div class="card-body">
+        <h5 class="card-title">Título do Card</h5>
+        <h6 class="card-subtitle">Subtítulo do Card</h6>
+        <p class="card-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, quas vitae, porro dolorem esse ullam in qui ex
+          veniam corrupti aliquid quia? Quia, possimus dolorum.
+        </p>
+        <a href="#" class="card-link">Link 1</a>
+        <a href="#" class="card-link">Link 2</a>
+        <a href="#" class="card-link">Link 3</a>
+      </div>
+      <h4 class="card-footer">Rodapé</h4>
+    </div>
+
+    <div class="card col-8">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="https://picsum.photos/400/400?ramdom=4" alt="" class="img-fluid rounded-start w-100">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title">Título do Card</h5>
+            <h6 class="card-subtitle">Subtítulo do Card</h6>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, quas vitae, porro dolorem esse ullam in
+              qui ex
+              veniam corrupti aliquid quia? Quia, possimus dolorum.
+            </p>
+            <a href="#" class="card-link">Link 1</a>
+            <a href="#" class="card-link">Link 2</a>
+            <a href="#" class="card-link">Link 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <hr>
+
+  <div class="container py-5">
+    <h3>Layouts para varios cards na mesma página</h3>
+    <hr>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/400?ramdom=1" alt="" class="card-img-top">
+          <h4 class="card-header">Cabeçalho</h4>
+          <div class="card-body">
+            <h5 class="card-title">Título do Card</h5>
+            <h6 class="card-subtitle">Subtítulo do Card</h6>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, quas vitae, porro dolorem esse ullam in
+              qui ex
+              veniam corrupti aliquid quia? Quia, possimus dolorum.
+            </p>
+            <a href="#" class="card-link">Link 1</a>
+            <a href="#" class="card-link">Link 2</a>
+            <a href="#" class="card-link">Link 3</a>
+          </div>
+          <h4 class="card-footer">Rodapé</h4>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/400?ramdom=2" alt="" class="card-img-top">
+          <h4 class="card-header">Cabeçalho</h4>
+          <div class="card-body">
+            <h5 class="card-title">Título do Card</h5>
+            <h6 class="card-subtitle">Subtítulo do Card</h6>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, quas vitae, porro dolorem esse ullam in
+              qui ex
+              veniam corrupti aliquid quia? Quia, possimus dolorum.
+            </p>
+            <a href="#" class="card-link">Link 1</a>
+            <a href="#" class="card-link">Link 2</a>
+            <a href="#" class="card-link">Link 3</a>
+          </div>
+          <h4 class="card-footer">Rodapé</h4>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/400/400?ramdom=3" alt="" class="card-img-top">
+          <h4 class="card-header">Cabeçalho</h4>
+          <div class="card-body">
+            <h5 class="card-title">Título do Card</h5>
+            <h6 class="card-subtitle">Subtítulo do Card</h6>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, quas vitae, porro dolorem esse ullam in
+              qui ex
+              veniam corrupti aliquid quia? Quia, possimus dolorum.
+            </p>
+            <a href="#" class="card-link">Link 1</a>
+            <a href="#" class="card-link">Link 2</a>
+            <a href="#" class="card-link">Link 3</a>
+          </div>
+          <h4 class="card-footer">Rodapé</h4>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+
+  </div>
+
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

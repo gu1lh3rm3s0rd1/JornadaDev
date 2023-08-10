@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios parte 3</title>
+
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h1>Trabalhando com Formularios e as Classes do Bootstrap 5</h1>
+  <hr>
+
+  <div class="container p-5">
+    <h3>Campos com tipos Fluantes</h3>
+    <div class="form-floating mb-3">
+      <input type="email" name="" id="email" class="form-control" placeholder=" ">
+      <label for="email" class="form-label">E-mail</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" name="" id="senha" class="form-control" placeholder=" ">
+      <label for="senha" class="form-label">Senha</label>
+    </div>
+    <div class="form-floating">
+      <textarea name="" id="msg" class="form-control" style="height: 100px; resize: none;" placeholder=" "></textarea>
+      <label for="msg">Mensagem</label>
+    </div>
+    <hr>
+
+    <div class="form-floating">
+      <select name="" id="cidade" class="form-select" placeholder=" ">
+        <option value="" selected> Selecione</option>
+        <option value="">Cidade 1</option>
+        <option value="">Cidade 2</option>
+        <option value="">Cidade 3</option>
+        <option value="">Cidade 4</option>
+        <option value="">Cidade 5</option>
+      </select>
+      <label for="cidade">Cidade</label>
+    </div>
+  </div>
+  <hr>
+
+  <div class="container p-5">
+    <h3>Complementos de Campos</h3>
+    <div class="mb-3 input-group">
+      <input type="text" name="" id="nome" class="form-control">
+      <label for="" class="input-group-text">Nome Completo</label>
+    </div>
+    <div class="mb-3 input-group">
+      <label for="" class="input-group-text">R$</label>
+      <input type="text" name="" id="nome" class="form-control text-end">
+      <label for="nome" class="input-group-text">,00</label>
+    </div>
+    <div class="mb-3 input-group">
+      <input type="text" name="" id="nome" class="form-control">
+      <span for="nome" class="input-group-text">@</span>
+      <input type="text" name="" id="nome" class="form-control">
+    </div>
+    <div class="mb-3 input-group">
+      <label for="" class="input-group-text">Mensagem</label>
+      <textarea name="" id="texto" class="form-control"></textarea>
+    </div>
+    <div class="mb-3 input-group">
+      <div class="input-group-text">
+        <input type="checkbox" class="form-check-input mt-0">
+      </div>
+      <input type="text" class="form-control">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Nome Completo</span>
+      <input type="text" id="nome" class="form-control" placeholder="Primeiro Nome">
+      <input type="text" id="nome" class="form-control" placeholder="Sobrenome">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+      <span class="input-group-text">BRL</span>
+      <input type="text" class="form-control" placeholder="Valor">
+    </div>
+    <div class="mb-3 input-group">
+      <input type="search" class="form-control">
+      <button class="btn btn-outline-primary">Buscar</button>
+    </div>
+  </div>
+
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

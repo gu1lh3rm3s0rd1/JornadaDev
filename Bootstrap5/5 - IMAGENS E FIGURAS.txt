@@ -1,0 +1,33 @@
+IMAGENS E FIGURAS
+
+	O uso de imagens e figuras é facilitado através de classes CSS pré-definidas que permitem controlar o tamanho, alinhamento e responsividade das imagens. 
+Isso ajuda a criar layouts visualmente agradáveis e adaptáveis a diferentes dispositivos. Aqui estão algumas das principais classes e técnicas relacionadas 
+a imagens e figuras no Bootstrap 5:
+
+	1. **Classe `img-fluid`**: Esta classe é usada para tornar as imagens responsivas. Ela ajusta automaticamente o tamanho da imagem para que ela se adapte 
+ao tamanho da tela, garantindo que não haja quebras no layout quando o dispositivo é redimensionado.
+
+		<img src="caminho-para-a-imagem.jpg" alt="Descrição da imagem" class="img-fluid">
+
+	2. **Tamanhos de Imagem**: O Bootstrap 5 fornece classes para controlar o tamanho das imagens. Você pode usar `img-thumbnail` para adicionar um estilo 
+de moldura e sombreamento à imagem, ou usar classes como `w-25`, `w-50`, `w-75` para definir a largura da imagem.
+
+		<img src="caminho-para-a-imagem.jpg" alt="Descrição da imagem" class="img-thumbnail">
+		<img src="caminho-para-a-imagem.jpg" alt="Descrição da imagem" class="w-50">
+
+	3. **Alinhamento de Imagem**: Para alinhar imagens horizontalmente, você pode usar classes como `float-start` e `float-end` para alinhar a imagem à 
+esquerda e à direita, respectivamente. Use `mx-auto` para centralizar horizontalmente a imagem.
+
+		<img src="caminho-para-a-imagem.jpg" alt="Descrição da imagem" class="float-start">
+		<img src="caminho-para-a-imagem.jpg" alt="Descrição da imagem" class="float-end">
+		<img src="caminho-para-a-imagem.jpg" alt="Descrição da imagem" class="mx-auto">
+
+	4. **Figuras**: Para adicionar legendas a imagens, você pode usar a tag `<figure>` em conjunto com a classe `figure` e a tag `<figcaption>` para a legenda.
+
+		<figure class="figure">
+  			<img src="caminho-para-a-imagem.jpg" alt="Descrição da imagem" class="figure-img img-fluid">
+  			<figcaption class="figure-caption">Legenda da imagem</figcaption>
+		</figure>
+
+	Lembre-se de substituir `"caminho-para-a-imagem.jpg"` pelo caminho real da imagem que você deseja exibir. Essas classes e técnicas ajudam a otimizar
+a exibição e o comportamento das imagens em diferentes dispositivos, garantindo uma experiência de usuário consistente e agradável.

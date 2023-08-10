@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formularios parte 2</title>
+
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <h1>Trabalhando com Formularios e as Classes do Bootstrap 5</h1>
+  <hr />
+
+  <div class="container p-5">
+    <h3>Tipos de Inputs</h3>
+    <div class="mb-3">
+      <label for="" class="form-label">Opçao Desejada<span class="col-4">
+          <select name="" id="" class="form-select">
+            <option value="">Opção 1</option>
+            <option value="">Opção 2</option>
+            <option value="">Opção 3</option>
+            <option value="">Opção 4</option>
+            <option value="">Opção 5</option>
+            <option value="">Opção 6</option>
+          </select>
+        </span></label>
+    </div>
+    <hr />
+
+    <div class="mb-3">
+      <label for="" class="form-label">Opçao Desejada<span class="col-4">
+          <select name="" id="" class="form-select" multiple size="6">
+            <option value="">Opção 1</option>
+            <option value="">Opção 2</option>
+            <option value="">Opção 3</option>
+            <option value="">Opção 4</option>
+            <option value="">Opção 5</option>
+            <option value="">Opção 6</option>
+          </select>
+        </span></label>
+    </div>
+    <hr />
+
+    <div class="mb-3">
+      <label for="faixa" class="form-label">Range</label>
+      <input type="range" id="faixa" class="form-range" min="0" max="10" />
+    </div>
+    <hr />
+
+    <a href="#" class="btn btn-outline-success btn-sm">Link</a>
+    <a href="#" class="btn btn-outline-success">Link</a>
+    <a href="#" class="btn btn-outline-success btn-lg">Link</a>
+    <hr />
+
+    <button type="button" class="btn btn-warning" disabled>Botão</button>
+    <hr />
+
+    <button type="button" class="btn btn-secondary" data-bs-toggle="button">
+      Botão Marcavel
+    </button>
+  </div>
+  <hr />
+
+  <div class="container p-3">
+    <h3>Campos de Checagem</h3>
+
+    <div class="container p-5">
+      <h5 class="mb-3">checkbox</h5>
+      <div class="mb-3 form-check form-check-inline">
+        <input type="checkbox" name="novo" id="novo" class="form-check-input" />
+        <label for="novo" class="form-check-label">opcao 1</label>
+      </div>
+      <div class="mb-3 form-check form-check-inline">
+        <input type="checkbox" name="novo" id="novo" class="form-check-input" disabled />
+        <label for="novo" class="form-check-label">opcao 1</label>
+      </div>
+      <hr>
+
+      <h5 class="mb-3">radio</h5>
+      <div class="mb-3 form-check form-check-inline">
+        <input type="radio" name="velho" id="velho" class="form-check-input" disabled />
+        <label for="novo" class="form-check-label">opcao 1</label>
+      </div>
+      <div class="mb-3 form-check form-check-inline">
+        <input type="radio" name="usado" id="novo" class="form-check-input" />
+        <label for="novo" class="form-check-label">opcao 1</label>
+      </div>
+      <hr>
+
+      <h5 class="mb-3">liga/desliga</h5>
+      <div class="mb-3 form-switch">
+        <input type="checkbox" name="velhoo" id="velhoo" class="form-check-input" />
+        <label for="novo" class="form-check-label">opcao 1</label>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

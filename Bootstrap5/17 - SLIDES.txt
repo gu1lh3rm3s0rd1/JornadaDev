@@ -1,0 +1,61 @@
+CAROUSEL SLIDES
+
+	Um Carousel (ou Slide) é um componente visual muito utilizado para exibir imagens, conteúdo ou informações de forma interativa e atrativa em um formato 
+de carrossel que se move automaticamente ou em resposta a ações do usuário. O Bootstrap 5 oferece um componente de Carousel que facilita a criação desse tipo
+de funcionalidade em suas páginas da web.
+
+	Aqui estão os passos básicos para criar um Carousel Slide usando o Bootstrap 5:
+
+	1. Inclua os arquivos de CSS e JavaScript do Bootstrap em seu documento HTML. Você pode usar os links para os arquivos hospedados no CDN do Bootstrap:
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+	2. Crie a estrutura do Carousel no seu HTML. Use a classe `carousel` para definir a área do carrossel e `carousel-inner` para o conteúdo interno dos
+slides. Cada slide é representado por um elemento `<div>` com a classe `carousel-item`.
+
+		<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+	  		<div class="carousel-inner">
+    				<div class="carousel-item active">
+      					<img src="imagem1.jpg" class="d-block w-100" alt="Slide 1">
+    				</div>
+    				<div class="carousel-item">
+      					<img src="imagem2.jpg" class="d-block w-100" alt="Slide 2">
+    				</div>
+    				<div class="carousel-item">
+      					<img src="imagem3.jpg" class="d-block w-100" alt="Slide 3">
+    				</div>
+  			</div>
+		</div>
+
+	3. Adicione os controles de navegação ao seu Carousel. Use os elementos `<a>` com as classes `carousel-control-prev` e `carousel-control-next`.
+
+		<a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+  			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  			<span class="visually-hidden">Anterior</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+  			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+  			<span class="visually-hidden">Próximo</span>
+		</a>
+
+	4. Adicione indicadores de slide (pontos) para mostrar qual slide está ativo. Use a classe `carousel-indicators` e elementos `<li>` com a classe `active`.
+
+		<ol class="carousel-indicators">
+  			<li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+  			<li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+  			<li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+		</ol>
+
+	5. Inicie o Carousel via JavaScript. Use o código JavaScript para iniciar o carrossel e controlar sua interatividade.
+
+		const myCarousel = new bootstrap.Carousel(document.getElementById('carouselExample'), {
+  			interval: 3000, // Defina o intervalo de tempo entre os slides (em milissegundos)
+  			wrap: true // Permite que o carrossel "dê a volta" quando chegar ao último slide
+		});
+
+	Lembre-se de substituir os exemplos de imagens pelos URLs ou caminhos das suas próprias imagens. O código acima é um guia básico para criar um 
+Carousel Slide usando o Bootstrap 5. Você pode personalizar o estilo, a animação, os controles e os indicadores de acordo com suas necessidades. Consulte a 
+documentação oficial do Bootstrap 5 para mais detalhes e opções avançadas: 
+
+		https://getbootstrap.com/docs/5.3/components/carousel/

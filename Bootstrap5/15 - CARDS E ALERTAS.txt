@@ -1,0 +1,40 @@
+CARDS E ALERTAS COM AS CLASSES DO BOOTSTRAP 5
+
+CARDS 
+
+	Os cards são componentes versáteis e flexíveis que permitem exibir conteúdo de maneira organizada. Eles são úteis para criar blocos de informações, 
+produtos, postagens em redes sociais, entre outros. No Bootstrap 5, você pode usar a classe `card` para criar um card e, em seguida, adicionar outros elementos 
+dentro do card, como cabeçalho, corpo, rodapé e assim por diante.
+
+	Aqui está um exemplo básico de como criar um card:
+
+		<div class="card">
+  			<div class="card-body">
+    				<h5 class="card-title">Título do Card</h5>
+    				<p class="card-text">Conteúdo do card vai aqui.</p>
+ 			 </div>
+		</div>
+
+	Você também pode personalizar o card adicionando classes opcionais para estilizar o cabeçalho, o rodapé, a imagem, etc. Além disso, os cards também suportam 
+grupos de cards, carrosséis de cards e outros recursos avançados.
+
+
+ALERTAS
+
+	Os alertas são usados para exibir mensagens de sucesso, aviso, erro, informações, etc. Eles são ideais para fornecer feedback ao usuário sobre ações 
+realizadas no aplicativo. No Bootstrap 5, você pode usar a classe `alert` para criar um alerta.
+
+	Aqui está um exemplo de como criar um alerta:
+
+		<div class="alert alert-success" role="alert">
+  			Ação realizada com sucesso!
+		</div>
+
+	Existem diferentes classes de contexto que você pode usar para criar alertas com cores diferentes, como `alert-primary`, `alert-secondary`, `alert-danger`, 
+`alert-warning`, `alert-info`, `alert-success`.
+	Você também pode adicionar outros elementos dentro do alerta, como botões de fechamento ou até mesmo um cabeçalho, para personalizar ainda mais o seu alerta.
+	
+	Lembre-se de consultar a documentação oficial do Bootstrap 5 para obter mais detalhes e exemplos sobre como usar cards e alertas: 
+
+		https://getbootstrap.com/docs/5.0/components/card/ 
+		https://getbootstrap.com/docs/5.0/components/alerts/

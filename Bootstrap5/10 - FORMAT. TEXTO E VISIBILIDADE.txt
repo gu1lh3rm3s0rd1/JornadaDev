@@ -1,0 +1,35 @@
+FORMATAÇAO DE TEXTOS E CONFIG. DE VISIBILIDADE
+
+FORMATAÇAO DE TEXTOS
+
+	O Bootstrap 5 fornece classes CSS que permitem formatar o texto de maneira consistente e estilizada. Algumas classes úteis incluem:
+
+		- `.text-primary`, `.text-secondary`, `.text-success`, etc.: Essas classes definem a cor do texto de acordo com o esquema de cores do Bootstrap.
+		- `.text-muted`: Torna o texto cinza claro para indicar que é menos importante.
+		- `.text-uppercase`, `.text-lowercase`, `.text-capitalize`: Essas classes alteram a capitalização do texto.
+		- `.font-weight-bold`, `.font-weight-normal`, `.font-weight-light`: Controla o peso da fonte.
+		- `.text-justify`, `.text-left`, `.text-center`, `.text-right`: Alinha o texto no parágrafo.
+
+	Exemplo:
+
+		<p class="text-muted font-weight-bold text-center">Este é um parágrafo de exemplo.</p>
+
+
+CONFIGURAÇAO DE VISIBILIDADE
+
+	Permite controlar a visibilidade de elementos em diferentes tamanhos de tela usando classes de visibilidade.
+
+		- `.d-none`: Oculta o elemento em todos os tamanhos de tela.
+		- `.d-block`, `.d-inline`, `.d-inline-block`: Define o elemento como bloco, inline ou inline-block.
+		- `.d-sm-none`, `.d-md-none`, `.d-lg-none`, `.d-xl-none`: Oculta o elemento em tamanhos de tela específicos.
+		- `.d-sm-block`, `.d-md-inline`, `.d-lg-inline-block`, `.d-xl-flex`: Define a exibição do elemento em tamanhos de tela específicos.
+
+	Exemplo:
+
+		<div class="d-none d-lg-block">
+    			Este conteúdo é visível apenas em tamanhos de tela grandes.
+		</div>
+
+	Esses são apenas alguns exemplos das classes que o Bootstrap 5 oferece para formatação de texto e controle de visibilidade. Lembre-se de que o Bootstrap 
+é altamente personalizável, então você pode combinar essas classes para atingir o estilo e a visibilidade desejados em suas páginas web. Certifique-se de 
+consultar a documentação oficial do Bootstrap 5 para obter informações mais detalhadas sobre as classes e recursos disponíveis.

@@ -1,0 +1,88 @@
+COMPONENTES SIMPLES
+
+	Lembre-se de que o Bootstrap é uma estrutura de design que facilita a criação de interfaces responsivas e estilizadas.
+
+	1. **Botões:**
+	Os botões no Bootstrap vêm em várias classes que definem estilos diferentes, como `btn-primary`, `btn-secondary`, `btn-success`, etc.
+
+	Aqui está um exemplo:
+
+		<button class="btn btn-primary">Clique aqui</button>
+
+	2. **Alertas:**
+	Os alertas são úteis para mostrar mensagens de sucesso, erro, aviso, etc.:
+
+		<div class="alert alert-success" role="alert">
+  			Ação realizada com sucesso!
+		</div>
+
+	3. **Formulários:**
+	O Bootstrap facilita a criação de formulários responsivos e bem estilizados:
+
+		<form>
+  			<div class="mb-3">
+    				<label for="nome" class="form-label">Nome</label>
+    				<input type="text" class="form-control" id="nome">
+  			</div>
+  			<div class="mb-3">
+    				<label for="email" class="form-label">Email</label>
+    				<input type="email" class="form-control" id="email">
+  			</div>
+  			<button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+
+	4. **Card (Cartões):**
+	Os cartões são componentes flexíveis para exibir conteúdo:
+
+		<div class="card" style="width: 18rem;">
+  			<img src="imagem.jpg" class="card-img-top" alt="Imagem">
+  			<div class="card-body">
+    				<h5 class="card-title">Título do Cartão</h5>
+    				<p class="card-text">Conteúdo do cartão.</p>
+    				<a href="#" class="btn btn-primary">Saiba mais</a>
+  			</div>
+		</div>
+
+	5. **Nav (Navegação):**
+	Crie barras de navegação simples ou de abas:
+
+		<ul class="nav nav-tabs">
+  			<li class="nav-item">
+    				<a class="nav-link active" aria-current="page" href="#">Home</a>
+  			</li>
+  			<li class="nav-item">
+    				<a class="nav-link" href="#">Perfil</a>
+  			</li>
+  			<li class="nav-item">
+    				<a class="nav-link" href="#">Contato</a>
+  			</li>
+		</ul>
+
+	6. **Barra de Navegação (Navbar):**
+	Crie uma barra de navegação responsiva:
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  			<a class="navbar-brand" href="#">Logo</a>
+  			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+				aria-expanded="false" aria-label="Toggle navigation">
+    				<span class="navbar-toggler-icon"></span>
+ 	 		</button>
+  			<div class="collapse navbar-collapse" id="navbarNav">
+    				<ul class="navbar-nav">
+      					<li class="nav-item active">
+        					<a class="nav-link" href="#">Home</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="#">Recursos</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="#">Contato</a>
+      					</li>
+    				</ul>
+  			</div>
+		</nav>
+
+	Esses são apenas alguns exemplos de componentes simples que você pode criar usando o Bootstrap 5. A documentação oficial do Bootstrap é uma excelente
+fonte para aprender mais sobre todos os componentes e recursos disponíveis: 
+
+	https://getbootstrap.com/docs/5.3/getting-started/introduction/

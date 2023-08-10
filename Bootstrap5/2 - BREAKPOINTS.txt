@@ -1,0 +1,33 @@
+BREAKPOINTS
+	
+	Em Bootstrap 5, os breakpoints desempenham um papel crucial no desenvolvimento de design responsivo, permitindo que você ajuste o layout e o estilo 
+de seus elementos de página para diferentes tamanhos de tela e dispositivos. Breakpoints são pontos específicos nas larguras de tela em que seu layout pode 
+mudar para melhor se adaptar ao espaço disponível. Isso é especialmente importante para garantir que seu site ou aplicativo seja exibido de maneira adequada
+em uma variedade de dispositivos, desde smartphones e tablets até laptops e monitores maiores.
+	O Bootstrap 5 utiliza uma série de breakpoints predefinidos que correspondem a categorias de dispositivos comuns. Esses breakpoints são baseados em 
+larguras de tela mínimas e máximas. 
+
+	Aqui estão os breakpoints padrão do Bootstrap 5:
+
+		- Extra small (xs): Menos de 576px
+		- Small (sm): 576px a 767px
+		- Medium (md): 768px a 991px
+		- Large (lg): 992px a 1199px
+		- Extra large (xl): 1200px ou mais
+
+	A ideia principal por trás dos breakpoints é que você pode aplicar estilos específicos a cada intervalo de largura de tela, de modo que os elementos 
+da página se reorganizem, se redimensionem ou até mesmo se ocultem para proporcionar uma experiência de usuário otimizada.
+	Para aplicar estilos baseados em breakpoints no Bootstrap 5, você pode usar classes CSS especiais que são prefixadas com os nomes dos breakpoints. 
+
+	Por exemplo:
+
+		<div class="container">
+  			<p class="text-center text-sm-left">Este texto é centralizado em telas pequenas (small) e alinhado à esquerda em telas maiores.</p>
+		</div>
+
+	No exemplo acima, a classe `text-center` é aplicada em todas as larguras de tela, mas a classe `text-sm-left` só terá efeito em telas pequenas (576px a 767px),
+onde o texto será alinhado à esquerda.
+	Lembrando que, além das classes específicas de breakpoints, o Bootstrap 5 também oferece o sistema de grid flexível, que é uma maneira poderosa de 
+criar layouts responsivos com base nos breakpoints.
+	Ao entender e utilizar os breakpoints do Bootstrap 5, você poderá criar designs consistentes e adaptáveis, proporcionando uma experiência de usuário
+agradável em todos os tipos de dispositivos e tamanhos de tela.

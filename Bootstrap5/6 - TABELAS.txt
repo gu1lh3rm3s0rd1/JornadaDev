@@ -1,0 +1,68 @@
+TABELAS COM BOOTSTRAP5
+
+	As tabelas são um elemento fundamental em muitos layouts de página, e o Bootstrap torna mais fácil projetar e adaptar tabelas para diferentes dispositivos. 
+Aqui estão algumas informações sobre como trabalhar com tabelas no Bootstrap 5:
+
+	### Criação de Tabelas Básicas:
+	Para criar uma tabela simples no Bootstrap 5, você pode usar a estrutura HTML básica de tabelas, mas aplicando as classes do Bootstrap para estilização. 
+As classes mais importantes a serem conhecidas são:
+
+		- `table`: A classe base para estilizar uma tabela.
+		- `table-striped`: Adiciona listras alternadas em linhas para melhor legibilidade.
+		- `table-bordered`: Adiciona bordas às células e à tabela.
+		- `table-hover`: Adiciona destaque nas linhas quando o cursor é colocado sobre elas.
+
+	Exemplo de criação de uma tabela básica com estilos:
+
+		<table class="table table-striped table-bordered table-hover">
+  			<thead>
+    				<tr>
+      					<th>ID</th>
+      					<th>Nome</th>
+      					<th>Email</th>
+    				</tr>
+  			</thead>
+  			<tbody>
+    				<tr>
+      					<td>1</td>
+      					<td>João</td>
+      					<td>joao@example.com</td>
+    				</tr>
+    				<!-- Outras linhas da tabela -->
+  			</tbody>
+		</table>
+
+	### Tabelas Responsivas:
+	O Bootstrap 5 facilita a criação de tabelas responsivas que se ajustam a diferentes tamanhos de tela. A classe `table-responsive` permite que a tabela
+seja rolada horizontalmente quando a tela é muito estreita para exibir todas as colunas. Isso evita que a tabela se torne inutilizável em dispositivos móveis.
+
+	Exemplo de tabela responsiva:
+
+		<div class="table-responsive">
+  			<table class="table">
+    			<!-- Conteúdo da tabela -->
+  			</table>
+		</div>
+
+	### Estilização de Cabeçalho e Corpo:
+	No Bootstrap 5, você também pode estilizar cabeçalhos e corpos de tabela de forma independente, aplicando classes como `thead-dark` e `thead-light` 
+para cabeçalhos escuros e claros, respectivamente. 
+	Isso ajuda a melhorar a legibilidade e a aparência da tabela.
+
+	Exemplo de cabeçalho escuro:
+
+		<table class="table">
+  			<thead class="thead-dark">
+    				<tr>
+      					<th>ID</th>
+      					<th>Nome</th>
+      					<th>Email</th>
+    				</tr>
+  			</thead>
+  			<tbody>
+    				<!-- Linhas da tabela -->
+  			</tbody>
+		</table>
+
+	Essas são apenas algumas das possibilidades oferecidas pelo Bootstrap 5 para trabalhar com tabelas. O framework permite criar tabelas estilizadas e 
+responsivas com facilidade, proporcionando uma experiência mais agradável para os usuários em dispositivos de diferentes tamanhos.

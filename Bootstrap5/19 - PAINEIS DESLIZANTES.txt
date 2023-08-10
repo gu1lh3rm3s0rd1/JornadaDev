@@ -1,0 +1,41 @@
+PAINEIS DESLIZANTES
+
+	Os painéis deslizantes são componentes interativos que permitem exibir e ocultar conteúdo em uma página da web, geralmente em resposta a ações do 
+usuário, como um clique em um botão.
+
+	Aqui está um exemplo simples de como criar um painel deslizante usando o Bootstrap 5:
+
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+  			<meta charset="UTF-8">
+  			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  			<title>Painel Deslizante</title>
+  			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+		</head>
+		<body>
+  			<div class="container mt-5">
+    				<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#panelContent" aria-expanded="false">
+      					Clique para mostrar/ocultar o painel
+    				</button>
+    				<div class="collapse mt-3" id="panelContent">
+      					<div class="card card-body">
+        					Conteúdo do painel deslizante. Este é um exemplo simples de como criar um painel deslizante usando o Bootstrap 5.
+      					</div>
+    				</div>
+  			</div>
+
+  			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+		</body>
+		</html>
+
+	Neste exemplo, usamos a classe `collapse` do Bootstrap para criar o painel deslizante. O botão com a classe `btn btn-primary` possui os atributos 
+`data-bs-toggle` e `data-bs-target` que controlam qual conteúdo será mostrado ou ocultado quando o botão for clicado. O `aria-expanded` é utilizado para 
+indicar se o conteúdo está expandido ou não para fins de acessibilidade.
+
+	Certifique-se de incluir os arquivos CSS e JavaScript do Bootstrap para que os estilos e comportamentos funcionem corretamente.
+
+	Lembrando que o Bootstrap oferece várias opções e personalizações para criar painéis deslizantes mais complexos e customizados, portanto, sinta-se 
+à vontade para explorar a documentação oficial do Bootstrap para obter mais detalhes e recursos avançados: 
+
+		https://getbootstrap.com/docs/5.3/components/collapse/

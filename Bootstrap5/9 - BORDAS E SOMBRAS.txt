@@ -1,0 +1,43 @@
+BORDAS E SOMBRAS
+
+	As bordas e sombras são elementos fundamentais para melhorar a estética e a usabilidade dos componentes da interface. O framework oferece classes CSS 
+predefinidas que facilitam a adição de bordas e sombras aos elementos HTML, proporcionando um visual mais atraente e uma sensação de profundidade.
+
+BORDER - BORDAS
+
+	As classes de borda em Bootstrap 5 são utilizadas para adicionar contornos visuais a elementos, tais como divs, botões, imagens, entre outros. Algumas
+classes de borda incluem:
+
+		.border: Adiciona uma borda simples a um elemento.
+		.border-0: Remove a borda de um elemento.
+		.border-top, .border-end, .border-bottom, .border-start: Adiciona uma borda somente em uma direção específica.
+		.rounded: Arredonda as bordas do elemento.
+		.rounded-circle: Arredonda o elemento criando um formato circular.
+		.rounded-pill: Arredonda o elemento criando bordas arredondadas em estilo de pílula.
+		.rounded-0: Remove o arredondamento das bordas do elemento.
+
+
+SHADOW - SOMBRAS
+
+	As classes de sombra em Bootstrap 5 adicionam efeitos de sombra aos elementos, criando uma sensação de profundidade e destaque. Algumas classes de 
+sombra incluem:
+
+		.shadow: Adiciona uma sombra sutil ao elemento.
+		.shadow-lg: Adiciona uma sombra mais intensa, criando um efeito mais perceptível.
+		.shadow-sm: Adiciona uma sombra mais suave ao elemento.
+		.shadow-none: Remove a sombra do elemento.
+
+	Exemplo de uso de bordas e sombras em Bootstrap 5:
+
+		<div class="border rounded p-3 shadow">
+    			Este é um elemento com borda arredondada, preenchimento e uma sombra sutil.
+		</div>
+
+		<button class="btn btn-primary border-0 rounded-pill shadow-lg">
+    			Botão com estilo de pílula, borda removida e sombra intensa.
+		</button>
+
+		<img src="imagem.jpg" class="img-fluid border border-secondary rounded-circle shadow-sm" alt="Imagem">
+
+	Lembre-se de que as classes de borda e sombra em Bootstrap 5 podem ser combinadas de acordo com as necessidades do seu design. Isso permite que você
+crie elementos visualmente atraentes e agradáveis, mantendo a consistência e a responsividade que o framework oferece.

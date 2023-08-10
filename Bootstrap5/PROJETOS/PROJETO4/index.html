@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid</title>
+
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+  <style>
+    .h400 {
+      height: 400px;
+    }
+
+    .h100 {
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Sistema de Layout em Grid</h1>
+  <hr />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 bg-dark bg-opacity-25 h100"></div>
+      <div class="col-3 bg-dark bg-opacity-75 h400"></div>
+      <div class="col-9 bg-dark bg-opacity-50 h400"></div>
+      <div class="col-12 bg-dark bg-opacity-30 h100"></div>
+    </div>
+  </div>
+  <hr />
+
+  <h1>Layout Responsivo</h1>
+  <hr />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 bg-dark bg-opacity-25 h100"></div>
+      <div class="col-12 col-sm-3 bg-dark bg-opacity-75 h400"></div>
+      <div class="col-12 col-sm-9 bg-dark bg-opacity-50 h400"></div>
+      <div class="col-12 bg-dark bg-opacity-30 h100"></div>
+    </div>
+  </div>
+
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

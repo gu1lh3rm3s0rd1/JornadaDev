@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formularios parte 1</title>
+
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <h1>Trabalhando com Formularios e as Classes do Bootstrap 5</h1>
+  <hr>
+
+  <div class="container p-5">
+    <h3>Formulario de exemplo 1</h3>
+    <form action="">
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail: </label>
+        <input type="email" id="email" class="form-control" placeholder="Digite o seu e-mail" />
+      </div>
+      <div class="form-text">Nunca divulgaremos seu e-mail com campos de terceiros.</div>
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha: </label>
+        <input type="text" id="senha" class="form-control" placeholder="Digite sua senha" />
+      </div>
+      <div class="mb-3">
+        <input type="checkbox" id="lembrar" />
+        <label for="lembrar" class="form-check-label">Lembrar de mim</label>
+      </div>
+      <button type="submit" class="btn btn-dark">Enviar</button>
+    </form>
+    <hr>
+
+    <h3>Formulario de exemplo 2 - readonly</h3>
+    <form action="">
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail: </label>
+        <input type="email" id="email" class="form-control" readonly value="estaiagrio.ti@gmail.com" />
+      </div>
+      <div class="form-text">Nunca divulgaremos seu e-mail com campos de terceiros.</div>
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha: </label>
+        <input type="text" id="senha" class="form-control" readonly value="*************" />
+      </div>
+      <div class="mb-3">
+        <input type="checkbox" id="lembrar" />
+        <label for="lembrar" class="form-check-label">Lembrar de mim</label>
+      </div>
+      <button type="submit" class="btn btn-dark">Enviar</button>
+    </form>
+    <hr>
+
+    <h3>Alguns tipos de input</h3>
+    <input type="file" id="arquivo" class="form-control mb-3">
+    <input type="color" name="cor" id="cor" class="form-control">
+    <hr>
+
+    <h3>Select com options list</h3>
+    <div class="mb-3">
+      <label for="" class="form-label">Cidade</label>
+      <input type="text" class="form-control" placeholder="Digite para buscar..." list="cidades">
+      <datalist id="cidades">
+        <option value="Cidade 1"></option>
+        <option value="Cidade 2"></option>
+        <option value="Cidade 3"></option>
+        <option value="Cidade 4"></option>
+        <option value="Cidade 5"></option>
+        <option value="Cidade 6"></option>
+      </datalist>
+    </div>
+  </div>
+
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
